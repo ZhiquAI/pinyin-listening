@@ -334,6 +334,42 @@ function App() {
   const currentImageUrl = currentItem?.imageUrl ?? getVocabularyImage(currentItem?.character ?? '');
   const selectedImageUrl = getVocabularyImage(selectedItem.character);
 
+  // 预加载当前课时及相邻卡片的图片，实现翻页秒开无白屏
+  useEffect(() => {
+    if (!currentDayItems || currentDayItems.length === 0) return;
+
+    // 优先预加载相邻后一张和前一张
+    const preloadIndices = [
+      currentCardIndex + 1,
+      currentCardIndex - 1,
+      currentCardIndex + 2,
+    ];
+
+    preloadIndices.forEach((idx) => {
+      if (idx >= 0 && idx < currentDayItems.length) {
+        const item = currentDayItems[idx];
+        const url = item?.imageUrl ?? getVocabularyImage(item?.character ?? '');
+        if (url) {
+          const img = new Image();
+          img.src = url;
+        }
+      }
+    });
+
+    // 闲置时异步预热本课剩余全部图片（整课通常仅 4-8 张，共约 150KB）
+    const timer = setTimeout(() => {
+      currentDayItems.forEach((item) => {
+        const url = item?.imageUrl ?? getVocabularyImage(item?.character ?? '');
+        if (url) {
+          const img = new Image();
+          img.src = url;
+        }
+      });
+    }, 150);
+
+    return () => clearTimeout(timer);
+  }, [currentCardIndex, currentDayItems]);
+
   // 当前课时的完成度统计
   const completionStats = useMemo(() => {
     const starredInThisDay = filterStarredItems(rawDayItems, starredIds);
@@ -756,6 +792,8 @@ function App() {
                         alt={currentItem.character}
                         className="real-card-img"
                         draggable={false}
+                        loading="eager"
+                        decoding="async"
                       />
                     ) : (
                       <div className="card-placeholder-art">

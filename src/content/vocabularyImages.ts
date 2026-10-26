@@ -6,5 +6,6 @@ export function getVocabularyImage(character: string): string | undefined {
   if (!image) return undefined;
   const base = typeof import.meta !== 'undefined' && import.meta.env?.BASE_URL ? import.meta.env.BASE_URL : './';
   const prefix = base.endsWith('/') ? base : `${base}/`;
-  return `${prefix}images/vocabulary/${image.file}`;
+  const fileName = image.file.replace(/\.png$/i, '.webp');
+  return `${prefix}images/vocabulary/${fileName}`;
 }
