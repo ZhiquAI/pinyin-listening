@@ -340,11 +340,17 @@ function App() {
     return calculateCompletionStats(rawDayItems.length, starredInThisDay.length);
   }, [rawDayItems, starredIds]);
 
-  // 1. 播放老师式自然带读（带拼读）
+  // 1. 播放自录真实原声（带拼读或整词）
   const handlePlaySpelling = useCallback(
     (itemToPlay?: DictationItem) => {
       const item = itemToPlay || currentItem;
       if (!item) return;
+
+      // 若未录音，绝不播放机械音，直接贴心开启实时录音引导！
+      if (!hasCustomAudioData(item.id)) {
+        handleToggleInlineRecord(item.id);
+        return;
+      }
 
       stopSpellingAudio(); resetWriting();
       setIsSpeaking(true);
@@ -354,16 +360,25 @@ function App() {
         onPlaybackStart: () => setWritingReplay((prev) => ({ itemId: item.id, count: prev.count + 1 })),
         onEnd: () => setIsSpeaking(false),
         onError: () => setIsSpeaking(false),
+        onNeedRecord: () => {
+          setIsSpeaking(false);
+          handleToggleInlineRecord(item.id);
+        },
       });
     },
-    [currentItem]
+    [currentItem, handleToggleInlineRecord]
   );
 
-  // 2. 播放整词原声（仅读词）
+  // 2. 播放整词自录原声
   const handlePlayWord = useCallback(
     (itemToPlay?: DictationItem) => {
       const item = itemToPlay || currentItem;
       if (!item) return;
+
+      if (!hasCustomAudioData(item.id)) {
+        handleToggleInlineRecord(item.id);
+        return;
+      }
 
       stopSpellingAudio(); resetWriting();
       setIsSpeaking(true);
@@ -373,9 +388,13 @@ function App() {
         onPlaybackStart: () => setWritingReplay((prev) => ({ itemId: item.id, count: prev.count + 1 })),
         onEnd: () => setIsSpeaking(false),
         onError: () => setIsSpeaking(false),
+        onNeedRecord: () => {
+          setIsSpeaking(false);
+          handleToggleInlineRecord(item.id);
+        },
       });
     },
-    [currentItem]
+    [currentItem, handleToggleInlineRecord]
   );
 
   // 默认发音入口（根据当前 audioMode 决定是带拼读还是仅读词）
@@ -765,7 +784,7 @@ function App() {
                       <p className="writing-caption">听一听，看看拼音怎么写</p>
                     <div className="card-action-buttons">
                       <button
-                        className={`listen-button play-btn ${isSpeaking ? 'speaking' : ''} ${hasCustomAudioData(currentItem.id) ? 'has-custom-voice' : ''}`}
+                        className={`listen-button play-btn ${isSpeaking ? 'speaking' : ''} ${hasCustomAudioData(currentItem.id) ? 'has-custom-voice' : 'need-record'}`}
                         onMouseDown={(e) => e.stopPropagation()}
                         onTouchStart={(e) => e.stopPropagation()}
                         onClick={(e) => {
@@ -779,10 +798,8 @@ function App() {
                           {isSpeaking
                             ? '正在朗读…'
                             : hasCustomAudioData(currentItem.id)
-                            ? '点读我的原声'
-                            : audioMode === 'spelling'
-                            ? '听老师拼读'
-                            : '听词语读音'}
+                            ? '▶ 点读我的原声'
+                            : '🎙 尚未录音 · 点此录入'}
                         </span>
                       </button>
 
@@ -825,10 +842,10 @@ function App() {
                             e.stopPropagation();
                             handleDeleteCustomAudio(currentItem.id);
                           }}
-                          title="恢复系统默认发音"
-                          aria-label="恢复系统发音"
+                          title="删除我的录音"
+                          aria-label="删除录音"
                         >
-                          恢复系统音
+                          删除录音
                         </button>
                       )}
                     </div>
@@ -839,8 +856,10 @@ function App() {
                   <div className="card-tap-indicator">
                     {maskMode !== 'all' && !revealed ? (
                       <span className="reveal-badge">轻触揭晓答案 · 左右滑动换词</span>
+                    ) : hasCustomAudioData(currentItem.id) ? (
+                      <span>{isSpeaking ? '正在播放我的真实原声…' : '已启用我的原声 · 轻触卡片点读'}</span>
                     ) : (
-                      <span>{isSpeaking ? '正在朗读，跟着读一读' : '点一下听读，左右滑动换词'}</span>
+                      <span>尚未录入原声 · 点上方【录我声音】为宝贝配音</span>
                     )}
                   </div>
                 </div>

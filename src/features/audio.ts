@@ -1,12 +1,8 @@
 /**
- * 听写发音核心路由器
- * 优先且全面采用本地高保真 MP3 真人普通话播音员原声
+ * 听写发音核心模块
+ * 100% 采用实时自录真实人声配音，彻底移除机械合成音与浏览器机械朗读。
  */
 
-import {
-  playNaturalWordAudio,
-  stopPinyinAudio,
-} from './pinyinSound';
 import { getCustomAudioData } from './customAudio';
 
 export interface PlayItemTarget {
@@ -21,31 +17,31 @@ export interface PlayOptions {
   onPlaybackStart?: () => void;
   onEnd?: () => void;
   onError?: (err: unknown) => void;
+  onNeedRecord?: () => void;
 }
 
 let activeCustomWordAudio: HTMLAudioElement | null = null;
 
 export function stopAnySpeech(): void {
-  stopPinyinAudio();
   if (activeCustomWordAudio) {
     activeCustomWordAudio.pause();
     activeCustomWordAudio.currentTime = 0;
     activeCustomWordAudio = null;
   }
-  if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
-    try {
-      window.speechSynthesis.cancel();
-    } catch {}
-  }
 }
 
 /**
- * 播放词条发音：100% 优先播放家长自录音频，其次本地真人播音员 MP3
+ * 播放词条发音：100% 仅播放实时录制真人原声
  */
-export function playItemNaturally(target: PlayItemTarget, options: PlayOptions = {}): void {
+export function playItemNaturally(target: PlayItemTarget, options: PlayOptions = {}): boolean {
   stopAnySpeech();
 
-  // 0. 优先播放家长自录音频
+  if (typeof window === 'undefined' || typeof Audio === 'undefined') {
+    options.onEnd?.();
+    return false;
+  }
+
+  // 100% 仅播放用户实时自录的原声
   if (target.id) {
     const customData = getCustomAudioData(target.id);
     if (customData) {
@@ -65,74 +61,28 @@ export function playItemNaturally(target: PlayItemTarget, options: PlayOptions =
         activeCustomWordAudio = null;
         options.onError?.(err);
       });
-      return;
+      return true;
     }
   }
 
-  // 直接调用本地 MP3 队列发音
-  playNaturalWordAudio(target.pinyin, {
-    onStart: options.onStart,
-    onPlaybackStart: options.onPlaybackStart,
-    onEnd: options.onEnd,
-    onError: (err) => {
-      console.warn('MP3 playback failed, fallback to SpeechSynthesis:', err);
-      fallbackBrowserSpeech(target, options);
-    },
-  });
+  // 未录音时绝不播放机械音，直接触发需要录音提示
+  options.onNeedRecord?.();
+  options.onEnd?.();
+  return false;
 }
 
 export function canUseBrowserSpeech(text: string): boolean {
   return /[\u3400-\u9fff]/u.test(text);
 }
 
-function fallbackBrowserSpeech(target: PlayItemTarget, options: PlayOptions): void {
-  if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
-    options.onEnd?.();
-    return;
-  }
-
-  const textToSpeak = canUseBrowserSpeech(target.character)
-    ? target.character
-    : target.speechHint || target.character;
-
-  try {
-    window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(textToSpeak);
-    utterance.lang = 'zh-CN';
-    utterance.rate = 0.85;
-    utterance.onstart = () => options.onPlaybackStart?.();
-
-    utterance.onend = () => options.onEnd?.();
-    utterance.onerror = (e) => {
-      options.onError?.(e);
-      options.onEnd?.();
-    };
-
-    window.speechSynthesis.speak(utterance);
-  } catch (err) {
-    options.onError?.(err);
-    options.onEnd?.();
-  }
-}
-
-export function speakText(text: string, options: { rate?: number; onEnd?: () => void } = {}): void {
-  if (typeof window === 'undefined' || !('speechSynthesis' in window)) return;
-  try {
-    window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'zh-CN';
-    utterance.rate = options.rate ?? 0.85;
-    if (options.onEnd) utterance.onend = options.onEnd;
-    window.speechSynthesis.speak(utterance);
-  } catch {}
-}
-
-export function getSpokenTextForDictation(target: { character: string; pinyin: string; speechHint?: string }): string {
-  if (target.speechHint && target.speechHint.trim().length > 0) {
-    return target.speechHint;
-  }
+export function getSpokenTextForDictation(target: { character: string; pinyin?: string; speechHint?: string }): string {
   if (canUseBrowserSpeech(target.character)) {
     return target.character;
   }
-  return target.pinyin;
+  return target.speechHint || target.character;
+}
+
+export function speakText(_text: string, options: PlayOptions = {}): void {
+  options.onNeedRecord?.();
+  options.onEnd?.();
 }

@@ -997,3 +997,15 @@ svg { width: 24px; height: 24px; flex-shrink: 0; }
   transform-origin: center;
   transition: transform 0.08s cubic-bezier(0.2, 0.8, 0.4, 1);
 }
+
+/* 尚未录音时的播放按钮提示状态 */
+.listen-button.play-btn.need-record {
+  background: #f1f5f9 !important;
+  color: #64748b !important;
+  border: 1.5px dashed #cbd5e1 !important;
+}
+
+.listen-button.play-btn.need-record:hover {
+  background: #e2e8f0 !important;
+  color: #334155 !important;
+}
