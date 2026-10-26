@@ -65,8 +65,20 @@ function App() {
   const [tab, setTab] = useState<Tab>('read');
   const courseDialogRef = useRef<HTMLDialogElement>(null);
   const settingsDialogRef = useRef<HTMLDialogElement>(null);
-  const [selectedWeek, setSelectedWeek] = useState<number>(9);
-  const [selectedDayIndex, setSelectedDayIndex] = useState<number>(0);
+  const [selectedWeek, setSelectedWeek] = useState<number>(() => {
+    if (typeof window !== 'undefined' && window.localStorage) {
+      const saved = window.localStorage.getItem('pinyin_last_week');
+      if (saved) return parseInt(saved, 10);
+    }
+    return 9;
+  });
+  const [selectedDayIndex, setSelectedDayIndex] = useState<number>(() => {
+    if (typeof window !== 'undefined' && window.localStorage) {
+      const saved = window.localStorage.getItem('pinyin_last_day');
+      if (saved) return parseInt(saved, 10);
+    }
+    return 1; // 默认直接进入最新 10月27日 (周二) 听写预告
+  });
   const [currentCardIndex, setCurrentCardIndex] = useState<number>(0);
   const [maskMode, setMaskMode] = useState<MaskMode>('all');
 
@@ -296,10 +308,17 @@ function App() {
   const availableWeeks = useMemo(() => getAvailableWeeks(), []);
   const currentWeekData = useMemo(() => getWeekData(selectedWeek), [selectedWeek]);
 
-  // 错题持久化
+  // 错题与课时持久化
   useEffect(() => {
     saveStarredIds(starredIds);
   }, [starredIds]);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.localStorage) {
+      window.localStorage.setItem('pinyin_last_week', String(selectedWeek));
+      window.localStorage.setItem('pinyin_last_day', String(selectedDayIndex));
+    }
+  }, [selectedWeek, selectedDayIndex]);
 
   // 当前课时原始所有词条
   const rawDayItems: DictationItem[] = useMemo(() => {
@@ -617,7 +636,11 @@ function App() {
       <header className="topbar">
         <div className="brand-mark"><span className="brand-dot" />拼音小岛</div>
         <button className="course-picker" onClick={() => courseDialogRef.current?.showModal()} aria-haspopup="dialog">
-          <span>第{selectedWeek}周 · {currentWeekData?.days[selectedDayIndex]?.dayLabel.match(/《(.+?)》/)?.[1] ?? '选择课时'}</span>
+          <span>
+            {currentWeekData?.days[selectedDayIndex]?.dayLabel
+              ? currentWeekData.days[selectedDayIndex].dayLabel.replace(/ · 《.+?》.*/, '')
+              : `第${selectedWeek}周 · 课时选择`}
+          </span>
           <Icon name="down" />
         </button>
         <button className="icon-button settings-button" aria-label="练习设置" onClick={() => settingsDialogRef.current?.showModal()} aria-haspopup="dialog"><Icon name="settings" /></button>
@@ -1247,7 +1270,7 @@ function App() {
                   >
                     {currentWeekData.days.map((d, idx) => (
                       <option key={idx} value={idx}>
-                        {d.dayLabel} ({d.items.length}词)
+                        {d.dayLabel} ({d.items.length}词){d.dayLabel.includes('10月27日') ? ' ⭐ [最新]' : ''}
                       </option>
                     ))}
                   </select>

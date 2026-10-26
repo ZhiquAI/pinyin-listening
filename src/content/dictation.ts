@@ -1767,14 +1767,14 @@ export const dictationWeeks: DictationWeek[] = [
         ]
       },
       {
-        "dayLabel": "10月27日 (周二) 《语文园地三》第二课时",
+        "dayLabel": "10月27日 (周二) 听写预告 · 《语文园地三》",
         "items": [
           {
             "id": "w9_zhizhu",
             "character": "蜘蛛",
             "pinyin": "zhī zhū",
             "week": 9,
-            "dayLabel": "10月27日 (周二) 《语文园地三》第二课时",
+            "dayLabel": "10月27日 (周二) 听写预告 · 《语文园地三》",
             "category": "翘舌音",
             "teachingSteps": [
               "zh",
@@ -1791,7 +1791,7 @@ export const dictationWeeks: DictationWeek[] = [
             "character": "喝茶",
             "pinyin": "hē chá",
             "week": 9,
-            "dayLabel": "10月27日 (周二) 《语文园地三》第二课时",
+            "dayLabel": "10月27日 (周二) 听写预告 · 《语文园地三》",
             "category": "翘舌音",
             "teachingSteps": [
               "h",
@@ -1808,7 +1808,7 @@ export const dictationWeeks: DictationWeek[] = [
             "character": "字母",
             "pinyin": "zì mǔ",
             "week": 9,
-            "dayLabel": "10月27日 (周二) 《语文园地三》第二课时",
+            "dayLabel": "10月27日 (周二) 听写预告 · 《语文园地三》",
             "category": "平舌音",
             "teachingSteps": [
               "zì",
@@ -1823,7 +1823,7 @@ export const dictationWeeks: DictationWeek[] = [
             "character": "擦玻璃",
             "pinyin": "cā bō li",
             "week": 9,
-            "dayLabel": "10月27日 (周二) 《语文园地三》第二课时",
+            "dayLabel": "10月27日 (周二) 听写预告 · 《语文园地三》",
             "category": "多音节",
             "teachingSteps": [
               "c",
@@ -1841,7 +1841,7 @@ export const dictationWeeks: DictationWeek[] = [
             "character": "宿舍",
             "pinyin": "sù shè",
             "week": 9,
-            "dayLabel": "10月27日 (周二) 《语文园地三》第二课时",
+            "dayLabel": "10月27日 (周二) 听写预告 · 《语文园地三》",
             "category": "平翘舌组合",
             "teachingSteps": [
               "s",
@@ -1858,7 +1858,7 @@ export const dictationWeeks: DictationWeek[] = [
             "character": "书架",
             "pinyin": "shū jià",
             "week": 9,
-            "dayLabel": "10月27日 (周二) 《语文园地三》第二课时",
+            "dayLabel": "10月27日 (周二) 听写预告 · 《语文园地三》",
             "category": "翘舌三拼",
             "teachingSteps": [
               "sh",
@@ -1876,7 +1876,7 @@ export const dictationWeeks: DictationWeek[] = [
             "character": "吃西瓜",
             "pinyin": "chī xī guā",
             "week": 9,
-            "dayLabel": "10月27日 (周二) 《语文园地三》第二课时",
+            "dayLabel": "10月27日 (周二) 听写预告 · 《语文园地三》",
             "category": "三字音节",
             "teachingSteps": [
               "chī",
@@ -1895,7 +1895,7 @@ export const dictationWeeks: DictationWeek[] = [
             "character": "骑马",
             "pinyin": "qí mǎ",
             "week": 9,
-            "dayLabel": "10月27日 (周二) 《语文园地三》第二课时",
+            "dayLabel": "10月27日 (周二) 听写预告 · 《语文园地三》",
             "category": "两拼音节",
             "teachingSteps": [
               "q",
@@ -1912,7 +1912,7 @@ export const dictationWeeks: DictationWeek[] = [
             "character": "刷牙",
             "pinyin": "shuā yá",
             "week": 9,
-            "dayLabel": "10月27日 (周二) 《语文园地三》第二课时",
+            "dayLabel": "10月27日 (周二) 听写预告 · 《语文园地三》",
             "category": "翘舌三拼",
             "teachingSteps": [
               "sh",
@@ -3880,7 +3880,7 @@ export const dictationItems: DictationItem[] = [
     "character": "蜘蛛",
     "pinyin": "zhī zhū",
     "week": 9,
-    "dayLabel": "10月27日 (周二) 《语文园地三》第二课时",
+    "dayLabel": "10月27日 (周二) 听写预告 · 《语文园地三》",
     "category": "翘舌音",
     "teachingSteps": [
       "zh",
@@ -3897,7 +3897,7 @@ export const dictationItems: DictationItem[] = [
     "character": "喝茶",
     "pinyin": "hē chá",
     "week": 9,
-    "dayLabel": "10月27日 (周二) 《语文园地三》第二课时",
+    "dayLabel": "10月27日 (周二) 听写预告 · 《语文园地三》",
     "category": "翘舌音",
     "teachingSteps": [
       "h",
@@ -3914,7 +3914,7 @@ export const dictationItems: DictationItem[] = [
     "character": "字母",
     "pinyin": "zì mǔ",
     "week": 9,
-    "dayLabel": "10月27日 (周二) 《语文园地三》第二课时",
+    "dayLabel": "10月27日 (周二) 听写预告 · 《语文园地三》",
     "category": "平舌音",
     "teachingSteps": [
       "zì",
@@ -3929,7 +3929,7 @@ export const dictationItems: DictationItem[] = [
     "character": "擦玻璃",
     "pinyin": "cā bō li",
     "week": 9,
-    "dayLabel": "10月27日 (周二) 《语文园地三》第二课时",
+    "dayLabel": "10月27日 (周二) 听写预告 · 《语文园地三》",
     "category": "多音节",
     "teachingSteps": [
       "c",
@@ -3947,7 +3947,7 @@ export const dictationItems: DictationItem[] = [
     "character": "宿舍",
     "pinyin": "sù shè",
     "week": 9,
-    "dayLabel": "10月27日 (周二) 《语文园地三》第二课时",
+    "dayLabel": "10月27日 (周二) 听写预告 · 《语文园地三》",
     "category": "平翘舌组合",
     "teachingSteps": [
       "s",
@@ -3964,7 +3964,7 @@ export const dictationItems: DictationItem[] = [
     "character": "书架",
     "pinyin": "shū jià",
     "week": 9,
-    "dayLabel": "10月27日 (周二) 《语文园地三》第二课时",
+    "dayLabel": "10月27日 (周二) 听写预告 · 《语文园地三》",
     "category": "翘舌三拼",
     "teachingSteps": [
       "sh",
@@ -3982,7 +3982,7 @@ export const dictationItems: DictationItem[] = [
     "character": "吃西瓜",
     "pinyin": "chī xī guā",
     "week": 9,
-    "dayLabel": "10月27日 (周二) 《语文园地三》第二课时",
+    "dayLabel": "10月27日 (周二) 听写预告 · 《语文园地三》",
     "category": "三字音节",
     "teachingSteps": [
       "chī",
@@ -4001,7 +4001,7 @@ export const dictationItems: DictationItem[] = [
     "character": "骑马",
     "pinyin": "qí mǎ",
     "week": 9,
-    "dayLabel": "10月27日 (周二) 《语文园地三》第二课时",
+    "dayLabel": "10月27日 (周二) 听写预告 · 《语文园地三》",
     "category": "两拼音节",
     "teachingSteps": [
       "q",
@@ -4018,7 +4018,7 @@ export const dictationItems: DictationItem[] = [
     "character": "刷牙",
     "pinyin": "shuā yá",
     "week": 9,
-    "dayLabel": "10月27日 (周二) 《语文园地三》第二课时",
+    "dayLabel": "10月27日 (周二) 听写预告 · 《语文园地三》",
     "category": "翘舌三拼",
     "teachingSteps": [
       "sh",
