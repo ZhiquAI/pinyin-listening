@@ -223,60 +223,92 @@ export function processAudioSamples(
   return processed;
 }
 
-// 7. 前端极速母带处理并返回 DataURL
+// 7. 前端极速母带处理并返回 DataURL (带双重兼容与 1500ms 超时安全熔断)
 export async function enhanceAudioBlob(audioBlob: Blob): Promise<string> {
-  const AudioCtx =
-    typeof window !== 'undefined'
-      ? window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext
-      : null;
+  // 安全熔断定时器：绝不超过 1.5 秒，保证录音 100% 能够保存，避免在任何设备上卡死
+  const timeoutPromise = new Promise<never>((_, reject) =>
+    setTimeout(() => reject(new Error('Audio DSP decode timeout')), 1500)
+  );
 
-  if (!AudioCtx) {
-    return new Promise((resolve) => {
-      const reader = new FileReader();
-      reader.onloadend = () => resolve(reader.result as string);
-      reader.readAsDataURL(audioBlob);
-    });
-  }
+  const processPromise = (async () => {
+    const AudioCtx =
+      typeof window !== 'undefined'
+        ? window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext
+        : null;
 
-  const ctx = new AudioCtx();
-  try {
-    const arrayBuffer = await audioBlob.arrayBuffer();
-    const audioBuffer = await ctx.decodeAudioData(arrayBuffer);
+    if (!AudioCtx) throw new Error('No AudioContext');
 
-    const numChannels = audioBuffer.numberOfChannels;
-    const length = audioBuffer.length;
-    const sampleRate = audioBuffer.sampleRate;
-    const monoData = new Float32Array(length);
-
-    if (numChannels === 1) {
-      monoData.set(audioBuffer.getChannelData(0));
-    } else {
-      const ch0 = audioBuffer.getChannelData(0);
-      const ch1 = audioBuffer.getChannelData(1);
-      for (let i = 0; i < length; i++) {
-        monoData[i] = (ch0[i] + ch1[i]) * 0.5;
-      }
-    }
-
-    const processed = processAudioSamples(monoData, sampleRate);
-    const wavBlob = encodeFloat32ToWavBlob(processed, sampleRate);
-
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.onloadend = () => resolve(reader.result as string);
-      reader.onerror = reject;
-      reader.readAsDataURL(wavBlob);
-    });
-  } catch (err) {
-    console.warn('In-memory DSP enhancement fallback due to:', err);
-    return new Promise((resolve) => {
-      const reader = new FileReader();
-      reader.onloadend = () => resolve(reader.result as string);
-      reader.readAsDataURL(audioBlob);
-    });
-  } finally {
+    const ctx = new AudioCtx();
     try {
-      await ctx.close();
-    } catch {}
+      if (ctx.state === 'suspended') {
+        await ctx.resume().catch(() => {});
+      }
+
+      const arrayBuffer = await audioBlob.arrayBuffer();
+
+      // 兼容标准 Promise 与部分 Safari 遗留回调签名
+      const audioBuffer = await new Promise<AudioBuffer>((resolve, reject) => {
+        let isDone = false;
+        try {
+          const res = ctx.decodeAudioData(
+            arrayBuffer,
+            (buf) => {
+              if (!isDone) { isDone = true; resolve(buf); }
+            },
+            (err) => {
+              if (!isDone) { isDone = true; reject(err); }
+            }
+          );
+          if (res && typeof (res as Promise<AudioBuffer>).then === 'function') {
+            (res as Promise<AudioBuffer>).then(
+              (buf) => { if (!isDone) { isDone = true; resolve(buf); } },
+              (err) => { if (!isDone) { isDone = true; reject(err); } }
+            );
+          }
+        } catch (e) {
+          reject(e);
+        }
+      });
+
+      const numChannels = audioBuffer.numberOfChannels;
+      const length = audioBuffer.length;
+      const sampleRate = audioBuffer.sampleRate;
+      const monoData = new Float32Array(length);
+
+      if (numChannels === 1) {
+        monoData.set(audioBuffer.getChannelData(0));
+      } else {
+        const ch0 = audioBuffer.getChannelData(0);
+        const ch1 = audioBuffer.getChannelData(1);
+        for (let i = 0; i < length; i++) {
+          monoData[i] = (ch0[i] + ch1[i]) * 0.5;
+        }
+      }
+
+      const processed = processAudioSamples(monoData, sampleRate);
+      const wavBlob = encodeFloat32ToWavBlob(processed, sampleRate);
+
+      return await new Promise<string>((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onloadend = () => resolve(reader.result as string);
+        reader.onerror = reject;
+        reader.readAsDataURL(wavBlob);
+      });
+    } finally {
+      try {
+        await ctx.close();
+      } catch {}
+    }
+  })();
+
+  try {
+    return await Promise.race([processPromise, timeoutPromise]);
+  } catch (err) {
+    console.warn('In-memory DSP fallback to raw recording due to:', err);
+    return new Promise((resolve) => {
+      const reader = new FileReader();
+      reader.onloadend = () => resolve(reader.result as string);
+      reader.readAsDataURL(audioBlob);
+    });
   }
 }

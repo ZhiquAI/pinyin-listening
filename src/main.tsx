@@ -147,12 +147,9 @@ function App() {
     }
     if (inlineRecorderRef.current && inlineRecorderRef.current.state === 'recording') {
       try {
+        inlineRecorderRef.current.requestData();
         inlineRecorderRef.current.stop();
       } catch {}
-    }
-    if (inlineStreamRef.current) {
-      inlineStreamRef.current.getTracks().forEach((t) => t.stop());
-      inlineStreamRef.current = null;
     }
     if (inlineTimerRef.current) {
       clearInterval(inlineTimerRef.current);
@@ -183,8 +180,9 @@ function App() {
         return;
       }
 
+      let stream: MediaStream;
       try {
-        const stream = await navigator.mediaDevices.getUserMedia({
+        stream = await navigator.mediaDevices.getUserMedia({
           audio: {
             channelCount: 1,
             echoCancellation: true,
@@ -192,30 +190,60 @@ function App() {
             autoGainControl: false,
           },
         });
+      } catch (err) {
+        console.warn('Advanced audio constraints rejected, fallback to basic:', err);
+        try {
+          stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        } catch (streamErr) {
+          console.error('Failed to get audio stream:', streamErr);
+          alert('无法获取麦克风权限，请在浏览器地址栏检查是否允许麦克风访问！');
+          return;
+        }
+      }
+
+      try {
         inlineStreamRef.current = stream;
         inlineChunksRef.current = [];
-        const mediaRecorder = new MediaRecorder(stream);
+
+        let mimeType = '';
+        if (typeof MediaRecorder !== 'undefined') {
+          const testTypes = ['audio/webm;codecs=opus', 'audio/webm', 'audio/mp4', 'audio/aac'];
+          for (const t of testTypes) {
+            if (MediaRecorder.isTypeSupported && MediaRecorder.isTypeSupported(t)) {
+              mimeType = t;
+              break;
+            }
+          }
+        }
+
+        const mediaRecorder = mimeType ? new MediaRecorder(stream, { mimeType }) : new MediaRecorder(stream);
         inlineRecorderRef.current = mediaRecorder;
 
         mediaRecorder.ondataavailable = (event) => {
-          if (event.data.size > 0) {
+          if (event.data && event.data.size > 0) {
             inlineChunksRef.current.push(event.data);
           }
         };
 
         mediaRecorder.onstop = async () => {
           const targetId = recordingTargetIdRef.current;
+          // 确保在数据接收完毕后安全释放麦克风硬件占用
+          if (inlineStreamRef.current) {
+            inlineStreamRef.current.getTracks().forEach((t) => t.stop());
+            inlineStreamRef.current = null;
+          }
+
           if (targetId && inlineChunksRef.current.length > 0) {
             setSaveStatus('降噪处理中…');
             const audioBlob = new Blob(inlineChunksRef.current, {
-              type: mediaRecorder.mimeType || 'audio/webm',
+              type: mediaRecorder.mimeType || mimeType || 'audio/webm',
             });
             try {
               // 纯前端内存极速母带处理：高通防喷 + 低通抑噪 + 软拐点降噪门 + 响度标准化 + 16位无损WAV
               const enhancedDataUrl = await enhanceAudioBlob(audioBlob);
               saveCustomAudioData(targetId, enhancedDataUrl);
               setCustomAudioVersion((v) => v + 1);
-              setSaveStatus('✓ 已降噪保存');
+              setSaveStatus('✓ 已保存');
               setTimeout(() => setSaveStatus(''), 1800);
             } catch (err) {
               console.warn('Audio enhancement fallback:', err);
@@ -230,10 +258,9 @@ function App() {
               };
               reader.readAsDataURL(audioBlob);
             }
-          }
-          if (inlineStreamRef.current) {
-            inlineStreamRef.current.getTracks().forEach((t) => t.stop());
-            inlineStreamRef.current = null;
+          } else {
+            setSaveStatus('未录入声音');
+            setTimeout(() => setSaveStatus(''), 1500);
           }
         };
 
@@ -269,7 +296,8 @@ function App() {
           rafIdRef.current = requestAnimationFrame(updateWaveform);
         }
 
-        mediaRecorder.start();
+        // 以 100ms 为单位高频派发切片，防止最后截断丢字
+        mediaRecorder.start(100);
         setIsInlineRecording(true);
         setInlineSeconds(0);
         inlineTimerRef.current = window.setInterval(() => {
@@ -283,7 +311,7 @@ function App() {
         }, 1000);
       } catch (err) {
         console.error('Failed to start inline record:', err);
-        alert('无法获取麦克风，请在浏览器地址栏允许麦克风权限后重试！');
+        alert('无法启动录音，请重试！');
       }
     },
     [isInlineRecording, stopInlineRecording]

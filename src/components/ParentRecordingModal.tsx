@@ -102,8 +102,9 @@ export const ParentRecordingModal: React.FC<ParentRecordingModalProps> = ({
       return;
     }
 
+    let stream: MediaStream;
     try {
-      const stream = await navigator.mediaDevices.getUserMedia({
+      stream = await navigator.mediaDevices.getUserMedia({
         audio: {
           channelCount: 1,
           echoCancellation: true,
@@ -111,46 +112,75 @@ export const ParentRecordingModal: React.FC<ParentRecordingModalProps> = ({
           autoGainControl: false,
         },
       });
+    } catch (e) {
+      console.warn('Strict constraints rejected, fallback to basic audio:', e);
+      try {
+        stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      } catch (streamErr) {
+        console.error('Failed to get media devices:', streamErr);
+        setErrorMessage('无法获取麦克风权限，请在浏览器地址栏允许麦克风权限，或上传本地录音文件。');
+        return;
+      }
+    }
+
+    try {
       audioChunksRef.current = [];
-      const mediaRecorder = new MediaRecorder(stream);
+
+      let mimeType = '';
+      if (typeof MediaRecorder !== 'undefined') {
+        const testTypes = ['audio/webm;codecs=opus', 'audio/webm', 'audio/mp4', 'audio/aac'];
+        for (const t of testTypes) {
+          if (MediaRecorder.isTypeSupported && MediaRecorder.isTypeSupported(t)) {
+            mimeType = t;
+            break;
+          }
+        }
+      }
+
+      const mediaRecorder = mimeType ? new MediaRecorder(stream, { mimeType }) : new MediaRecorder(stream);
       mediaRecorderRef.current = mediaRecorder;
 
       mediaRecorder.ondataavailable = (event) => {
-        if (event.data.size > 0) {
+        if (event.data && event.data.size > 0) {
           audioChunksRef.current.push(event.data);
         }
       };
 
       mediaRecorder.onstop = async () => {
         setIsProcessingAudio(true);
-        const audioBlob = new Blob(audioChunksRef.current, {
-          type: mediaRecorder.mimeType || 'audio/webm',
-        });
-        try {
-          // 纯前端内存降噪防喷与响度标准化
-          const enhancedDataUrl = await enhanceAudioBlob(audioBlob);
-          setRecordedBase64(enhancedDataUrl);
-          setRecordedBlobUrl(enhancedDataUrl);
-          setSaveToast('✓ 已自动完成降噪防喷与响度均衡');
-          setTimeout(() => setSaveToast(null), 2000);
-        } catch {
-          const blobUrl = URL.createObjectURL(audioBlob);
-          setRecordedBlobUrl(blobUrl);
-          const reader = new FileReader();
-          reader.onloadend = () => {
-            if (typeof reader.result === 'string') {
-              setRecordedBase64(reader.result);
-            }
-          };
-          reader.readAsDataURL(audioBlob);
-        } finally {
-          setIsProcessingAudio(false);
-        }
-
         stream.getTracks().forEach((track) => track.stop());
+
+        if (audioChunksRef.current.length > 0) {
+          const audioBlob = new Blob(audioChunksRef.current, {
+            type: mediaRecorder.mimeType || mimeType || 'audio/webm',
+          });
+          try {
+            // 纯前端内存降噪防喷与响度标准化
+            const enhancedDataUrl = await enhanceAudioBlob(audioBlob);
+            setRecordedBase64(enhancedDataUrl);
+            setRecordedBlobUrl(enhancedDataUrl);
+            setSaveToast('✓ 已自动完成降噪防喷与响度均衡');
+            setTimeout(() => setSaveToast(null), 2000);
+          } catch {
+            const blobUrl = URL.createObjectURL(audioBlob);
+            setRecordedBlobUrl(blobUrl);
+            const reader = new FileReader();
+            reader.onloadend = () => {
+              if (typeof reader.result === 'string') {
+                setRecordedBase64(reader.result);
+              }
+            };
+            reader.readAsDataURL(audioBlob);
+          } finally {
+            setIsProcessingAudio(false);
+          }
+        } else {
+          setIsProcessingAudio(false);
+          setErrorMessage('录音时间过短或未采集到声音，请重新录制');
+        }
       };
 
-      mediaRecorder.start();
+      mediaRecorder.start(100);
       setIsRecording(true);
       setRecordSeconds(0);
 
@@ -158,15 +188,20 @@ export const ParentRecordingModal: React.FC<ParentRecordingModalProps> = ({
         setRecordSeconds((sec) => sec + 1);
       }, 1000);
     } catch (err) {
-      console.error('Failed to get media devices:', err);
-      setErrorMessage('无法获取麦克风权限，请在浏览器地址栏允许麦克风权限，或上传本地录音文件。');
+      console.error('Failed to start recording:', err);
+      setErrorMessage('无法启动麦克风录制，请重试');
     }
   };
 
   // 停止录音
   const stopRecording = () => {
     if (mediaRecorderRef.current && isRecording) {
-      mediaRecorderRef.current.stop();
+      try {
+        if (mediaRecorderRef.current.state === 'recording') {
+          mediaRecorderRef.current.requestData();
+        }
+        mediaRecorderRef.current.stop();
+      } catch {}
       setIsRecording(false);
       if (timerRef.current) {
         clearInterval(timerRef.current);
