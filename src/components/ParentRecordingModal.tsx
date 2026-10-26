@@ -6,6 +6,7 @@ import {
   saveCustomAudioData,
   deleteCustomAudioData,
 } from '../features/customAudio';
+import { enhanceAudioBlob } from '../features/audioDSP';
 import { playTeacherSpelling, stopSpellingAudio } from '../features/spellingEngine';
 
 interface ParentRecordingModalProps {
@@ -32,6 +33,7 @@ export const ParentRecordingModal: React.FC<ParentRecordingModalProps> = ({
   const [recordedBlobUrl, setRecordedBlobUrl] = useState<string | null>(null);
   const [recordedBase64, setRecordedBase64] = useState<string | null>(null);
   const [isPlayingPreview, setIsPlayingPreview] = useState<boolean>(false);
+  const [isProcessingAudio, setIsProcessingAudio] = useState<boolean>(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [hasExistingCustom, setHasExistingCustom] = useState<boolean>(false);
   const [saveToast, setSaveToast] = useState<string | null>(null);
@@ -101,7 +103,14 @@ export const ParentRecordingModal: React.FC<ParentRecordingModalProps> = ({
     }
 
     try {
-      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const stream = await navigator.mediaDevices.getUserMedia({
+        audio: {
+          channelCount: 1,
+          echoCancellation: true,
+          noiseSuppression: true,
+          autoGainControl: false,
+        },
+      });
       audioChunksRef.current = [];
       const mediaRecorder = new MediaRecorder(stream);
       mediaRecorderRef.current = mediaRecorder;
@@ -112,20 +121,31 @@ export const ParentRecordingModal: React.FC<ParentRecordingModalProps> = ({
         }
       };
 
-      mediaRecorder.onstop = () => {
+      mediaRecorder.onstop = async () => {
+        setIsProcessingAudio(true);
         const audioBlob = new Blob(audioChunksRef.current, {
           type: mediaRecorder.mimeType || 'audio/webm',
         });
-        const blobUrl = URL.createObjectURL(audioBlob);
-        setRecordedBlobUrl(blobUrl);
-
-        const reader = new FileReader();
-        reader.onloadend = () => {
-          if (typeof reader.result === 'string') {
-            setRecordedBase64(reader.result);
-          }
-        };
-        reader.readAsDataURL(audioBlob);
+        try {
+          // 纯前端内存降噪防喷与响度标准化
+          const enhancedDataUrl = await enhanceAudioBlob(audioBlob);
+          setRecordedBase64(enhancedDataUrl);
+          setRecordedBlobUrl(enhancedDataUrl);
+          setSaveToast('✓ 已自动完成降噪防喷与响度均衡');
+          setTimeout(() => setSaveToast(null), 2000);
+        } catch {
+          const blobUrl = URL.createObjectURL(audioBlob);
+          setRecordedBlobUrl(blobUrl);
+          const reader = new FileReader();
+          reader.onloadend = () => {
+            if (typeof reader.result === 'string') {
+              setRecordedBase64(reader.result);
+            }
+          };
+          reader.readAsDataURL(audioBlob);
+        } finally {
+          setIsProcessingAudio(false);
+        }
 
         stream.getTracks().forEach((track) => track.stop());
       };
@@ -207,23 +227,35 @@ export const ParentRecordingModal: React.FC<ParentRecordingModalProps> = ({
   };
 
   // 处理本地音频文件上传
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
 
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      const result = event.target?.result;
-      if (typeof result === 'string') {
-        setRecordedBase64(result);
-        setRecordedBlobUrl(result);
-        setErrorMessage(null);
-      }
-    };
-    reader.onerror = () => {
-      setErrorMessage('读取音频文件失败，请确保格式为 mp3、wav 或 m4a。');
-    };
-    reader.readAsDataURL(file);
+    setIsProcessingAudio(true);
+    try {
+      const enhancedDataUrl = await enhanceAudioBlob(file);
+      setRecordedBase64(enhancedDataUrl);
+      setRecordedBlobUrl(enhancedDataUrl);
+      setErrorMessage(null);
+      setSaveToast('✓ 本地音频已自动完成降噪防喷与响度均衡');
+      setTimeout(() => setSaveToast(null), 2000);
+    } catch {
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        const result = event.target?.result;
+        if (typeof result === 'string') {
+          setRecordedBase64(result);
+          setRecordedBlobUrl(result);
+          setErrorMessage(null);
+        }
+      };
+      reader.onerror = () => {
+        setErrorMessage('读取音频文件失败，请确保格式为 mp3、wav 或 m4a。');
+      };
+      reader.readAsDataURL(file);
+    } finally {
+      setIsProcessingAudio(false);
+    }
   };
 
   const hasPaging = itemsList && itemsList.length > 1;
@@ -297,6 +329,11 @@ export const ParentRecordingModal: React.FC<ParentRecordingModalProps> = ({
 
         {/* 录音主操作区 */}
         <div className="recorder-action-panel">
+          {isProcessingAudio && (
+            <div className="processing-audio-banner" style={{ padding: '8px 12px', background: '#eff6ff', color: '#2563eb', borderRadius: 8, fontSize: 14, margin: '8px 0', textAlign: 'center', fontWeight: 600 }}>
+              ⚡ 正在内存中极速降噪防喷与均衡响度…
+            </div>
+          )}
           {isRecording ? (
             <div className="recording-live-box">
               <div className="recording-pulse-dot" />

@@ -31,6 +31,7 @@ import {
   saveCustomAudioData,
   deleteCustomAudioData,
 } from './features/customAudio';
+import { enhanceAudioBlob } from './features/audioDSP';
 import { ParentRecordingModal } from './components/ParentRecordingModal';
 import { PinyinWriting } from './components/PinyinWriting';
 import './styles.css';
@@ -148,8 +149,7 @@ function App() {
     setIsInlineRecording(false);
     setInlineSeconds(0);
     setAudioLevel(0);
-    setSaveStatus('✓ 已保存');
-    setTimeout(() => setSaveStatus(''), 1500);
+    setSaveStatus('降噪处理中…');
   }, []);
 
   const handleToggleInlineRecord = useCallback(
@@ -172,7 +172,14 @@ function App() {
       }
 
       try {
-        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        const stream = await navigator.mediaDevices.getUserMedia({
+          audio: {
+            channelCount: 1,
+            echoCancellation: true,
+            noiseSuppression: true,
+            autoGainControl: false,
+          },
+        });
         inlineStreamRef.current = stream;
         inlineChunksRef.current = [];
         const mediaRecorder = new MediaRecorder(stream);
@@ -184,20 +191,33 @@ function App() {
           }
         };
 
-        mediaRecorder.onstop = () => {
+        mediaRecorder.onstop = async () => {
           const targetId = recordingTargetIdRef.current;
           if (targetId && inlineChunksRef.current.length > 0) {
+            setSaveStatus('降噪处理中…');
             const audioBlob = new Blob(inlineChunksRef.current, {
               type: mediaRecorder.mimeType || 'audio/webm',
             });
-            const reader = new FileReader();
-            reader.onloadend = () => {
-              if (typeof reader.result === 'string') {
-                saveCustomAudioData(targetId, reader.result);
-                setCustomAudioVersion((v) => v + 1);
-              }
-            };
-            reader.readAsDataURL(audioBlob);
+            try {
+              // 纯前端内存极速母带处理：高通防喷 + 低通抑噪 + 软拐点降噪门 + 响度标准化 + 16位无损WAV
+              const enhancedDataUrl = await enhanceAudioBlob(audioBlob);
+              saveCustomAudioData(targetId, enhancedDataUrl);
+              setCustomAudioVersion((v) => v + 1);
+              setSaveStatus('✓ 已降噪保存');
+              setTimeout(() => setSaveStatus(''), 1800);
+            } catch (err) {
+              console.warn('Audio enhancement fallback:', err);
+              const reader = new FileReader();
+              reader.onloadend = () => {
+                if (typeof reader.result === 'string') {
+                  saveCustomAudioData(targetId, reader.result);
+                  setCustomAudioVersion((v) => v + 1);
+                  setSaveStatus('✓ 已保存');
+                  setTimeout(() => setSaveStatus(''), 1500);
+                }
+              };
+              reader.readAsDataURL(audioBlob);
+            }
           }
           if (inlineStreamRef.current) {
             inlineStreamRef.current.getTracks().forEach((t) => t.stop());
