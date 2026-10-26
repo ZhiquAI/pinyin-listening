@@ -39,7 +39,7 @@ type Tab = 'read' | 'today' | 'basics' | 'parent';
 type MaskMode = 'all' | 'hidePinyin' | 'hideHanzi';
 type AudioMode = 'spelling' | 'word';
 
-type IconName = 'down' | 'left' | 'right' | 'check' | 'close' | 'speaker' | 'star' | 'settings' | 'book' | 'trophy' | 'letters' | 'person' | 'mic';
+type IconName = 'down' | 'left' | 'right' | 'check' | 'close' | 'speaker' | 'star' | 'settings' | 'book' | 'trophy' | 'letters' | 'person' | 'mic' | 'stop';
 function Icon({ name }: { name: IconName }) {
   const paths: Record<IconName, React.ReactNode> = {
     down: <path d="m6 9 6 6 6-6" />,
@@ -55,6 +55,7 @@ function Icon({ name }: { name: IconName }) {
     letters: <><path d="m3 19 5-14 5 14M5 14h6m6-4h4l-4 9h4" /></>,
     person: <><circle cx="12" cy="7" r="4" /><path d="M4 21v-2a8 8 0 0 1 16 0v2" /></>,
     mic: <><rect x="9" y="2" width="6" height="12" rx="3" /><path d="M5 10v2a7 7 0 0 0 14 0v-2m-7 9v3m-4 0h8" /></>,
+    stop: <rect x="6" y="6" width="12" height="12" rx="2.5" fill="currentColor" stroke="none" />,
   };
   return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{paths[name]}</svg>;
 }
@@ -104,23 +105,21 @@ function App() {
     setIsRecordModalOpen(true);
   };
 
-  // 卡片实时即录即播状态与智能静音检测
+  // 卡片实时即录即播状态（纯手动录制，点击开始，录完再次点击完成保存）
   const [isInlineRecording, setIsInlineRecording] = useState(false);
   const [inlineSeconds, setInlineSeconds] = useState(0);
-  const [audioLevel, setAudioLevel] = useState(0); // 0 ~ 1 动态音量波形
-  const [silenceStatus, setSilenceStatus] = useState<string>(''); // 智能提示
+  const [audioLevel, setAudioLevel] = useState(0); // 0 ~ 1 动态音量波形反馈
+  const [saveStatus, setSaveStatus] = useState<string>(''); // 保存状态提示
   const inlineRecorderRef = useRef<MediaRecorder | null>(null);
   const inlineStreamRef = useRef<MediaStream | null>(null);
   const inlineChunksRef = useRef<Blob[]>([]);
   const inlineTimerRef = useRef<number | null>(null);
   const recordingTargetIdRef = useRef<string | null>(null);
 
-  // Web Audio 与静音检测 Ref
+  // Web Audio 频谱可视化 Ref（仅用于动态音量波形条，不作任何自动停顿检测）
   const audioContextRef = useRef<AudioContext | null>(null);
   const analyserRef = useRef<AnalyserNode | null>(null);
   const rafIdRef = useRef<number | null>(null);
-  const hasSpokenRef = useRef(false);
-  const silenceStartRef = useRef<number | null>(null);
 
   const stopInlineRecording = useCallback(() => {
     if (rafIdRef.current) {
@@ -149,10 +148,8 @@ function App() {
     setIsInlineRecording(false);
     setInlineSeconds(0);
     setAudioLevel(0);
-    hasSpokenRef.current = false;
-    silenceStartRef.current = null;
-    setSilenceStatus('✓ 已保存');
-    setTimeout(() => setSilenceStatus(''), 1500);
+    setSaveStatus('✓ 已保存');
+    setTimeout(() => setSaveStatus(''), 1500);
   }, []);
 
   const handleToggleInlineRecord = useCallback(
@@ -167,9 +164,7 @@ function App() {
       stopSpellingAudio();
       resetWriting();
       recordingTargetIdRef.current = itemId;
-      setSilenceStatus('请开始读…');
-      hasSpokenRef.current = false;
-      silenceStartRef.current = null;
+      setSaveStatus('');
 
       if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
         alert('您的浏览器暂不支持直接录音，请在设置中允许麦克风权限。');
@@ -210,7 +205,7 @@ function App() {
           }
         };
 
-        // 挂载 Web Audio API 频谱分析器与智能静音检测
+        // 挂载 Web Audio API 频谱分析器用于波形视觉跳动反馈
         const AudioCtx = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
         if (AudioCtx) {
           const ctx = new AudioCtx();
@@ -224,7 +219,7 @@ function App() {
           const bufferLen = analyser.frequencyBinCount;
           const dataArr = new Uint8Array(bufferLen);
 
-          const checkWaveformAndSilence = () => {
+          const updateWaveform = () => {
             if (!analyserRef.current) return;
             analyserRef.current.getByteFrequencyData(dataArr);
 
@@ -236,36 +231,10 @@ function App() {
             const level = Math.min(1, avg / 80);
             setAudioLevel(level);
 
-            const now = Date.now();
-            // 音量超过 14，判定已经开始发声读拼音
-            if (avg > 14) {
-              hasSpokenRef.current = true;
-              silenceStartRef.current = null;
-              setSilenceStatus('正在录音…');
-            } else if (hasSpokenRef.current) {
-              // 读完后音量降至静音门限（<= 9）
-              if (avg <= 9) {
-                if (!silenceStartRef.current) {
-                  silenceStartRef.current = now;
-                  setSilenceStatus('检测停顿中…');
-                } else {
-                  const silenceElapsed = now - silenceStartRef.current;
-                  if (silenceElapsed >= 1000) {
-                    // 持续静音满 1 秒，智能自动停止并保存！
-                    stopInlineRecording();
-                    return;
-                  }
-                }
-              } else {
-                silenceStartRef.current = null;
-                setSilenceStatus('正在录音…');
-              }
-            }
-
-            rafIdRef.current = requestAnimationFrame(checkWaveformAndSilence);
+            rafIdRef.current = requestAnimationFrame(updateWaveform);
           };
 
-          rafIdRef.current = requestAnimationFrame(checkWaveformAndSilence);
+          rafIdRef.current = requestAnimationFrame(updateWaveform);
         }
 
         mediaRecorder.start();
@@ -273,8 +242,8 @@ function App() {
         setInlineSeconds(0);
         inlineTimerRef.current = window.setInterval(() => {
           setInlineSeconds((s) => {
-            // 最长 8 秒自动兜底截止
-            if (s >= 7) {
+            // 最长 30 秒安全兜底截止，防止长时间误开
+            if (s >= 29) {
               stopInlineRecording();
             }
             return s + 1;
@@ -285,7 +254,7 @@ function App() {
         alert('无法获取麦克风，请在浏览器地址栏允许麦克风权限后重试！');
       }
     },
-    [isInlineRecording, resetWriting, stopInlineRecording]
+    [isInlineRecording, stopInlineRecording]
   );
 
   const handleDeleteCustomAudio = useCallback((itemId: string) => {
@@ -849,22 +818,27 @@ function App() {
                           e.stopPropagation();
                           handleToggleInlineRecord(currentItem.id);
                         }}
-                        title={isInlineRecording ? '点击可提前手动停止' : '点击开始录音（读完停顿1秒自动停止保存）'}
+                        title={isInlineRecording ? '点击完成并保存录音' : '点击开始录音，录完再次点击完成保存'}
                       >
                         {isInlineRecording ? (
-                          <div className="waveform-visualizer" aria-hidden="true">
-                            <span className="wave-bar bar-1" style={{ transform: `scaleY(${Math.max(0.2, audioLevel * 1.6)})` }} />
-                            <span className="wave-bar bar-2" style={{ transform: `scaleY(${Math.max(0.25, audioLevel * 2.3)})` }} />
-                            <span className="wave-bar bar-3" style={{ transform: `scaleY(${Math.max(0.3, audioLevel * 3.0)})` }} />
-                            <span className="wave-bar bar-4" style={{ transform: `scaleY(${Math.max(0.25, audioLevel * 2.1)})` }} />
-                            <span className="wave-bar bar-5" style={{ transform: `scaleY(${Math.max(0.2, audioLevel * 1.5)})` }} />
-                          </div>
+                          <>
+                            <div className="waveform-visualizer" aria-hidden="true">
+                              <span className="wave-bar bar-1" style={{ transform: `scaleY(${Math.max(0.2, audioLevel * 1.6)})` }} />
+                              <span className="wave-bar bar-2" style={{ transform: `scaleY(${Math.max(0.25, audioLevel * 2.3)})` }} />
+                              <span className="wave-bar bar-3" style={{ transform: `scaleY(${Math.max(0.3, audioLevel * 3.0)})` }} />
+                              <span className="wave-bar bar-4" style={{ transform: `scaleY(${Math.max(0.25, audioLevel * 2.1)})` }} />
+                              <span className="wave-bar bar-5" style={{ transform: `scaleY(${Math.max(0.2, audioLevel * 1.5)})` }} />
+                            </div>
+                            <Icon name="stop" />
+                          </>
                         ) : (
                           <Icon name="mic" />
                         )}
                         <span>
                           {isInlineRecording
-                            ? (silenceStatus || `录制中 ${inlineSeconds}s`)
+                            ? `录制中 ${inlineSeconds}s · 点击完成`
+                            : saveStatus
+                            ? saveStatus
                             : hasCustomAudioData(currentItem.id)
                             ? '重录声音'
                             : '录我声音'}
@@ -892,7 +866,9 @@ function App() {
 
                   {/* 底部翻牌或发音提示 */}
                   <div className="card-tap-indicator">
-                    {maskMode !== 'all' && !revealed ? (
+                    {isInlineRecording ? (
+                      <span style={{ color: '#be123c', fontWeight: 600 }}>录音中… 录完后点击上方红色按钮即可完成保存</span>
+                    ) : maskMode !== 'all' && !revealed ? (
                       <span className="reveal-badge">轻触揭晓答案 · 左右滑动换词</span>
                     ) : hasCustomAudioData(currentItem.id) ? (
                       <span>{isSpeaking ? '正在播放我的真实原声…' : '已启用我的原声 · 轻触卡片点读'}</span>
