@@ -1,0 +1,15 @@
+{
+  "count": 99,
+  "missing": 0,
+  "duplicate_hashes": 0,
+  "total_mb": 230.0,
+  "dimensions": {
+    "(1536, 1024)": 99
+  },
+  "checks": [
+    "All PNG files decode successfully",
+    "No missing files",
+    "No duplicate filenames or hashes",
+    "All 99 thumbnails visually reviewed; abstract concepts require word and audio context"
+  ]
+}

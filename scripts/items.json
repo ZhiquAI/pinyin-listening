@@ -1,0 +1,2091 @@
+[
+  {
+    "id": "w5_a1",
+    "character": "ā",
+    "pinyin": "ā",
+    "week": 5,
+    "dayLabel": "9月28日 (周一) 《i u ü》第一课时",
+    "category": "单韵母",
+    "teachingSteps": [
+      "ā"
+    ],
+    "speechHint": "一声 啊"
+  },
+  {
+    "id": "w5_a2",
+    "character": "á",
+    "pinyin": "á",
+    "week": 5,
+    "dayLabel": "9月28日 (周一) 《i u ü》第一课时",
+    "category": "单韵母",
+    "teachingSteps": [
+      "á"
+    ],
+    "speechHint": "二声 啊"
+  },
+  {
+    "id": "w5_a3",
+    "character": "ǎ",
+    "pinyin": "ǎ",
+    "week": 5,
+    "dayLabel": "9月28日 (周一) 《i u ü》第一课时",
+    "category": "单韵母",
+    "teachingSteps": [
+      "ǎ"
+    ],
+    "speechHint": "三声 啊"
+  },
+  {
+    "id": "w5_a4",
+    "character": "à",
+    "pinyin": "à",
+    "week": 5,
+    "dayLabel": "9月28日 (周一) 《i u ü》第一课时",
+    "category": "单韵母",
+    "teachingSteps": [
+      "à"
+    ],
+    "speechHint": "四声 啊"
+  },
+  {
+    "id": "w5_o1",
+    "character": "ō",
+    "pinyin": "ō",
+    "week": 5,
+    "dayLabel": "9月28日 (周一) 《i u ü》第一课时",
+    "category": "单韵母",
+    "teachingSteps": [
+      "ō"
+    ],
+    "speechHint": "一声 喔"
+  },
+  {
+    "id": "w5_o2",
+    "character": "ó",
+    "pinyin": "ó",
+    "week": 5,
+    "dayLabel": "9月28日 (周一) 《i u ü》第一课时",
+    "category": "单韵母",
+    "teachingSteps": [
+      "ó"
+    ],
+    "speechHint": "二声 喔"
+  },
+  {
+    "id": "w5_o3",
+    "character": "ǒ",
+    "pinyin": "ǒ",
+    "week": 5,
+    "dayLabel": "9月28日 (周一) 《i u ü》第一课时",
+    "category": "单韵母",
+    "teachingSteps": [
+      "ǒ"
+    ],
+    "speechHint": "三声 喔"
+  },
+  {
+    "id": "w5_o4",
+    "character": "ò",
+    "pinyin": "ò",
+    "week": 5,
+    "dayLabel": "9月28日 (周一) 《i u ü》第一课时",
+    "category": "单韵母",
+    "teachingSteps": [
+      "ò"
+    ],
+    "speechHint": "四声 喔"
+  },
+  {
+    "id": "w5_e1",
+    "character": "ē",
+    "pinyin": "ē",
+    "week": 5,
+    "dayLabel": "9月28日 (周一) 《i u ü》第一课时",
+    "category": "单韵母",
+    "teachingSteps": [
+      "ē"
+    ],
+    "speechHint": "一声 鹅"
+  },
+  {
+    "id": "w5_e2",
+    "character": "é",
+    "pinyin": "é",
+    "week": 5,
+    "dayLabel": "9月28日 (周一) 《i u ü》第一课时",
+    "category": "单韵母",
+    "teachingSteps": [
+      "é"
+    ],
+    "speechHint": "二声 鹅"
+  },
+  {
+    "id": "w5_e3",
+    "character": "ě",
+    "pinyin": "ě",
+    "week": 5,
+    "dayLabel": "9月28日 (周一) 《i u ü》第一课时",
+    "category": "单韵母",
+    "teachingSteps": [
+      "ě"
+    ],
+    "speechHint": "三声 恶"
+  },
+  {
+    "id": "w5_e4",
+    "character": "è",
+    "pinyin": "è",
+    "week": 5,
+    "dayLabel": "9月28日 (周一) 《i u ü》第一课时",
+    "category": "单韵母",
+    "teachingSteps": [
+      "è"
+    ],
+    "speechHint": "四声 饿"
+  },
+  {
+    "id": "w5_i1",
+    "character": "ī",
+    "pinyin": "ī",
+    "week": 5,
+    "dayLabel": "9月29日 (周二) 《i u ü》第二课时",
+    "category": "单韵母",
+    "teachingSteps": [
+      "ī"
+    ],
+    "speechHint": "一声 衣"
+  },
+  {
+    "id": "w5_i2",
+    "character": "í",
+    "pinyin": "í",
+    "week": 5,
+    "dayLabel": "9月29日 (周二) 《i u ü》第二课时",
+    "category": "单韵母",
+    "teachingSteps": [
+      "í"
+    ],
+    "speechHint": "二声 姨"
+  },
+  {
+    "id": "w5_i3",
+    "character": "ǐ",
+    "pinyin": "ǐ",
+    "week": 5,
+    "dayLabel": "9月29日 (周二) 《i u ü》第二课时",
+    "category": "单韵母",
+    "teachingSteps": [
+      "ǐ"
+    ],
+    "speechHint": "三声 椅"
+  },
+  {
+    "id": "w5_i4",
+    "character": "ì",
+    "pinyin": "ì",
+    "week": 5,
+    "dayLabel": "9月29日 (周二) 《i u ü》第二课时",
+    "category": "单韵母",
+    "teachingSteps": [
+      "ì"
+    ],
+    "speechHint": "四声 意"
+  },
+  {
+    "id": "w5_u1",
+    "character": "ū",
+    "pinyin": "ū",
+    "week": 5,
+    "dayLabel": "9月29日 (周二) 《i u ü》第二课时",
+    "category": "单韵母",
+    "teachingSteps": [
+      "ū"
+    ],
+    "speechHint": "一声 乌"
+  },
+  {
+    "id": "w5_u2",
+    "character": "ú",
+    "pinyin": "ú",
+    "week": 5,
+    "dayLabel": "9月29日 (周二) 《i u ü》第二课时",
+    "category": "单韵母",
+    "teachingSteps": [
+      "ú"
+    ],
+    "speechHint": "二声 无"
+  },
+  {
+    "id": "w5_u3",
+    "character": "ǔ",
+    "pinyin": "ǔ",
+    "week": 5,
+    "dayLabel": "9月29日 (周二) 《i u ü》第二课时",
+    "category": "单韵母",
+    "teachingSteps": [
+      "ǔ"
+    ],
+    "speechHint": "三声 五"
+  },
+  {
+    "id": "w5_u4",
+    "character": "ù",
+    "pinyin": "ù",
+    "week": 5,
+    "dayLabel": "9月29日 (周二) 《i u ü》第二课时",
+    "category": "单韵母",
+    "teachingSteps": [
+      "ù"
+    ],
+    "speechHint": "四声 雾"
+  },
+  {
+    "id": "w5_v1",
+    "character": "ǖ",
+    "pinyin": "ǖ",
+    "week": 5,
+    "dayLabel": "9月29日 (周二) 《i u ü》第二课时",
+    "category": "单韵母",
+    "teachingSteps": [
+      "ǖ"
+    ],
+    "speechHint": "一声 迂"
+  },
+  {
+    "id": "w5_v2",
+    "character": "ǘ",
+    "pinyin": "ǘ",
+    "week": 5,
+    "dayLabel": "9月29日 (周二) 《i u ü》第二课时",
+    "category": "单韵母",
+    "teachingSteps": [
+      "ǘ"
+    ],
+    "speechHint": "二声 鱼"
+  },
+  {
+    "id": "w5_v3",
+    "character": "ǚ",
+    "pinyin": "ǚ",
+    "week": 5,
+    "dayLabel": "9月29日 (周二) 《i u ü》第二课时",
+    "category": "单韵母",
+    "teachingSteps": [
+      "ǚ"
+    ],
+    "speechHint": "三声 雨"
+  },
+  {
+    "id": "w5_v4",
+    "character": "ǜ",
+    "pinyin": "ǜ",
+    "week": 5,
+    "dayLabel": "9月29日 (周二) 《i u ü》第二课时",
+    "category": "单韵母",
+    "teachingSteps": [
+      "ǜ"
+    ],
+    "speechHint": "四声 玉"
+  },
+  {
+    "id": "w6_baba",
+    "character": "爸爸",
+    "pinyin": "bà ba",
+    "week": 6,
+    "dayLabel": "10月8日 (周四) 《b p m f》第二课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "b",
+      "à",
+      "bà",
+      "ba",
+      "bà ba"
+    ]
+  },
+  {
+    "id": "w6_mama",
+    "character": "妈妈",
+    "pinyin": "mā ma",
+    "week": 6,
+    "dayLabel": "10月8日 (周四) 《b p m f》第二课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "m",
+      "ā",
+      "mā",
+      "ma",
+      "mā ma"
+    ]
+  },
+  {
+    "id": "w6_mabu",
+    "character": "抹布",
+    "pinyin": "mā bù",
+    "week": 6,
+    "dayLabel": "10月8日 (周四) 《b p m f》第二课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "m",
+      "ā",
+      "mā",
+      "b",
+      "ù",
+      "bù",
+      "mā bù"
+    ]
+  },
+  {
+    "id": "w6_pipa",
+    "character": "琵琶",
+    "pinyin": "pí pa",
+    "week": 6,
+    "dayLabel": "10月8日 (周四) 《b p m f》第二课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "p",
+      "í",
+      "pí",
+      "p",
+      "a",
+      "pa",
+      "pí pa"
+    ]
+  },
+  {
+    "id": "w6_pubu",
+    "character": "瀑布",
+    "pinyin": "pù bù",
+    "week": 6,
+    "dayLabel": "10月8日 (周四) 《b p m f》第二课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "p",
+      "ù",
+      "pù",
+      "b",
+      "ù",
+      "bù",
+      "pù bù"
+    ]
+  },
+  {
+    "id": "w6_muma",
+    "character": "木马",
+    "pinyin": "mù mǎ",
+    "week": 6,
+    "dayLabel": "10月8日 (周四) 《b p m f》第二课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "m",
+      "ù",
+      "mù",
+      "m",
+      "ǎ",
+      "mǎ",
+      "mù mǎ"
+    ]
+  },
+  {
+    "id": "w6_dadi",
+    "character": "大地",
+    "pinyin": "dà dì",
+    "week": 6,
+    "dayLabel": "10月9日 (周五) 《d t n l》第一课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "d",
+      "à",
+      "dà",
+      "d",
+      "ì",
+      "dì",
+      "dà dì"
+    ]
+  },
+  {
+    "id": "w6_malu",
+    "character": "马路",
+    "pinyin": "mǎ lù",
+    "week": 6,
+    "dayLabel": "10月9日 (周五) 《d t n l》第一课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "m",
+      "ǎ",
+      "mǎ",
+      "l",
+      "ù",
+      "lù",
+      "mǎ lù"
+    ]
+  },
+  {
+    "id": "w6_nitu_w6",
+    "character": "泥土",
+    "pinyin": "ní tǔ",
+    "week": 6,
+    "dayLabel": "10月9日 (周五) 《d t n l》第一课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "n",
+      "í",
+      "ní",
+      "t",
+      "ǔ",
+      "tǔ",
+      "ní tǔ"
+    ]
+  },
+  {
+    "id": "w6_ditu_w6",
+    "character": "地图",
+    "pinyin": "dì tú",
+    "week": 6,
+    "dayLabel": "10月9日 (周五) 《d t n l》第一课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "d",
+      "ì",
+      "dì",
+      "t",
+      "ú",
+      "tú",
+      "dì tú"
+    ]
+  },
+  {
+    "id": "w6_laba",
+    "character": "喇叭",
+    "pinyin": "lǎ ba",
+    "week": 6,
+    "dayLabel": "10月9日 (周五) 《d t n l》第一课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "l",
+      "ǎ",
+      "lǎ",
+      "ba",
+      "lǎ ba"
+    ]
+  },
+  {
+    "id": "w6_fumu_w6",
+    "character": "父母",
+    "pinyin": "fù mǔ",
+    "week": 6,
+    "dayLabel": "10月9日 (周五) 《d t n l》第一课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "f",
+      "ù",
+      "fù",
+      "m",
+      "ǔ",
+      "mǔ",
+      "fù mǔ"
+    ]
+  },
+  {
+    "id": "w6_labi_w6",
+    "character": "蜡笔",
+    "pinyin": "là bǐ",
+    "week": 6,
+    "dayLabel": "10月10日 (周六) 《d t n l》第二课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "l",
+      "à",
+      "là",
+      "b",
+      "ǐ",
+      "bǐ",
+      "là bǐ"
+    ]
+  },
+  {
+    "id": "w6_dami_w6",
+    "character": "大米",
+    "pinyin": "dà mǐ",
+    "week": 6,
+    "dayLabel": "10月10日 (周六) 《d t n l》第二课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "d",
+      "à",
+      "dà",
+      "m",
+      "ǐ",
+      "mǐ",
+      "dà mǐ"
+    ]
+  },
+  {
+    "id": "w6_futi_w6",
+    "character": "扶梯",
+    "pinyin": "fú tī",
+    "week": 6,
+    "dayLabel": "10月10日 (周六) 《d t n l》第二课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "f",
+      "ú",
+      "fú",
+      "t",
+      "ī",
+      "tī",
+      "fú tī"
+    ]
+  },
+  {
+    "id": "w6_tudi",
+    "character": "土地",
+    "pinyin": "tǔ dì",
+    "week": 6,
+    "dayLabel": "10月10日 (周六) 《d t n l》第二课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "t",
+      "ǔ",
+      "tǔ",
+      "d",
+      "ì",
+      "dì",
+      "tǔ dì"
+    ]
+  },
+  {
+    "id": "w6_nuli_w6",
+    "character": "努力",
+    "pinyin": "nǔ lì",
+    "week": 6,
+    "dayLabel": "10月10日 (周六) 《d t n l》第二课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "n",
+      "ǔ",
+      "nǔ",
+      "l",
+      "ì",
+      "lì",
+      "nǔ lì"
+    ]
+  },
+  {
+    "id": "w6_lifa_w6",
+    "character": "理发",
+    "pinyin": "lǐ fà",
+    "week": 6,
+    "dayLabel": "10月10日 (周六) 《d t n l》第二课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "l",
+      "ǐ",
+      "lǐ",
+      "f",
+      "à",
+      "fà",
+      "lǐ fà"
+    ]
+  },
+  {
+    "id": "w7_nitu",
+    "character": "泥土",
+    "pinyin": "ní tǔ",
+    "week": 7,
+    "dayLabel": "10月12日 (周一) 《语文园地二》第一课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "n",
+      "í",
+      "ní",
+      "t",
+      "ǔ",
+      "tǔ",
+      "ní tǔ"
+    ]
+  },
+  {
+    "id": "w7_lifa",
+    "character": "理发",
+    "pinyin": "lǐ fà",
+    "week": 7,
+    "dayLabel": "10月12日 (周一) 《语文园地二》第一课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "l",
+      "ǐ",
+      "lǐ",
+      "f",
+      "à",
+      "fà",
+      "lǐ fà"
+    ]
+  },
+  {
+    "id": "w7_dupi",
+    "character": "肚皮",
+    "pinyin": "dù pí",
+    "week": 7,
+    "dayLabel": "10月12日 (周一) 《语文园地二》第一课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "d",
+      "ù",
+      "dù",
+      "p",
+      "í",
+      "pí",
+      "dù pí"
+    ]
+  },
+  {
+    "id": "w7_nuli",
+    "character": "努力",
+    "pinyin": "nǔ lì",
+    "week": 7,
+    "dayLabel": "10月12日 (周一) 《语文园地二》第一课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "n",
+      "ǔ",
+      "nǔ",
+      "l",
+      "ì",
+      "lì",
+      "nǔ lì"
+    ]
+  },
+  {
+    "id": "w7_mofa",
+    "character": "魔法",
+    "pinyin": "mó fǎ",
+    "week": 7,
+    "dayLabel": "10月12日 (周一) 《语文园地二》第一课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "m",
+      "ó",
+      "mó",
+      "f",
+      "ǎ",
+      "fǎ",
+      "mó fǎ"
+    ]
+  },
+  {
+    "id": "w7_dadu",
+    "character": "打赌",
+    "pinyin": "dǎ dǔ",
+    "week": 7,
+    "dayLabel": "10月12日 (周一) 《语文园地二》第一课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "d",
+      "ǎ",
+      "dǎ",
+      "d",
+      "ǔ",
+      "dǔ",
+      "dǎ dǔ"
+    ]
+  },
+  {
+    "id": "w7_labi",
+    "character": "蜡笔",
+    "pinyin": "là bǐ",
+    "week": 7,
+    "dayLabel": "10月13日 (周二) 《语文园地二》第二课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "l",
+      "à",
+      "là",
+      "b",
+      "ǐ",
+      "bǐ",
+      "là bǐ"
+    ]
+  },
+  {
+    "id": "w7_dami",
+    "character": "大米",
+    "pinyin": "dà mǐ",
+    "week": 7,
+    "dayLabel": "10月13日 (周二) 《语文园地二》第二课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "d",
+      "à",
+      "dà",
+      "m",
+      "ǐ",
+      "mǐ",
+      "dà mǐ"
+    ]
+  },
+  {
+    "id": "w7_futi",
+    "character": "扶梯",
+    "pinyin": "fú tī",
+    "week": 7,
+    "dayLabel": "10月13日 (周二) 《语文园地二》第二课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "f",
+      "ú",
+      "fú",
+      "t",
+      "ī",
+      "tī",
+      "fú tī"
+    ]
+  },
+  {
+    "id": "w7_ditu",
+    "character": "地图",
+    "pinyin": "dì tú",
+    "week": 7,
+    "dayLabel": "10月13日 (周二) 《语文园地二》第二课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "d",
+      "ì",
+      "dì",
+      "t",
+      "ú",
+      "tú",
+      "dì tú"
+    ]
+  },
+  {
+    "id": "w7_papo",
+    "character": "爬坡",
+    "pinyin": "pá pō",
+    "week": 7,
+    "dayLabel": "10月13日 (周二) 《语文园地二》第二课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "p",
+      "á",
+      "pá",
+      "p",
+      "ō",
+      "pō",
+      "pá pō"
+    ]
+  },
+  {
+    "id": "w7_fumu",
+    "character": "父母",
+    "pinyin": "fù mǔ",
+    "week": 7,
+    "dayLabel": "10月13日 (周二) 《语文园地二》第二课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "f",
+      "ù",
+      "fù",
+      "m",
+      "ǔ",
+      "mǔ",
+      "fù mǔ"
+    ]
+  },
+  {
+    "id": "w7_gege",
+    "character": "哥哥",
+    "pinyin": "gē ge",
+    "week": 7,
+    "dayLabel": "10月14日 (周三) 《g k h》第一课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "g",
+      "ē",
+      "gē",
+      "ge",
+      "gē ge"
+    ]
+  },
+  {
+    "id": "w7_heka",
+    "character": "贺卡",
+    "pinyin": "hè kǎ",
+    "week": 7,
+    "dayLabel": "10月14日 (周三) 《g k h》第一课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "h",
+      "è",
+      "hè",
+      "k",
+      "ǎ",
+      "kǎ",
+      "hè kǎ"
+    ]
+  },
+  {
+    "id": "w7_huahua",
+    "character": "画画",
+    "pinyin": "huà hua",
+    "week": 7,
+    "dayLabel": "10月14日 (周三) 《g k h》第一课时",
+    "category": "三拼音节",
+    "teachingSteps": [
+      "h",
+      "u",
+      "à",
+      "huà",
+      "huà hua"
+    ]
+  },
+  {
+    "id": "w7_hehua",
+    "character": "荷花",
+    "pinyin": "hé huā",
+    "week": 7,
+    "dayLabel": "10月14日 (周三) 《g k h》第一课时",
+    "category": "三拼音节",
+    "teachingSteps": [
+      "h",
+      "é",
+      "hé",
+      "h",
+      "u",
+      "ā",
+      "huā",
+      "hé huā"
+    ]
+  },
+  {
+    "id": "w7_didi",
+    "character": "弟弟",
+    "pinyin": "dì di",
+    "week": 7,
+    "dayLabel": "10月14日 (周三) 《g k h》第一课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "d",
+      "ì",
+      "dì",
+      "di",
+      "dì di"
+    ]
+  },
+  {
+    "id": "w7_like",
+    "character": "立刻",
+    "pinyin": "lì kè",
+    "week": 7,
+    "dayLabel": "10月14日 (周三) 《g k h》第一课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "l",
+      "ì",
+      "lì",
+      "k",
+      "è",
+      "kè",
+      "lì kè"
+    ]
+  },
+  {
+    "id": "w7_gezi",
+    "character": "鸽子",
+    "pinyin": "gē zi",
+    "week": 7,
+    "dayLabel": "10月15日 (周四) 《g k h》第二课时",
+    "category": "整体认读",
+    "teachingSteps": [
+      "g",
+      "ē",
+      "gē",
+      "zi",
+      "gē zi"
+    ]
+  },
+  {
+    "id": "w7_gululu",
+    "character": "咕噜噜",
+    "pinyin": "gū lū lū",
+    "week": 7,
+    "dayLabel": "10月15日 (周四) 《g k h》第二课时",
+    "category": "三字音节",
+    "teachingSteps": [
+      "g",
+      "ū",
+      "gū",
+      "l",
+      "ū",
+      "lū",
+      "gū lū lū"
+    ]
+  },
+  {
+    "id": "w7_huoguo",
+    "character": "火锅",
+    "pinyin": "huǒ guō",
+    "week": 7,
+    "dayLabel": "10月15日 (周四) 《g k h》第二课时",
+    "category": "三拼音节",
+    "teachingSteps": [
+      "h",
+      "u",
+      "ǒ",
+      "huǒ",
+      "g",
+      "u",
+      "ō",
+      "guō",
+      "huǒ guō"
+    ]
+  },
+  {
+    "id": "w7_gufu",
+    "character": "姑父",
+    "pinyin": "gū fu",
+    "week": 7,
+    "dayLabel": "10月15日 (周四) 《g k h》第二课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "g",
+      "ū",
+      "gū",
+      "fu",
+      "gū fu"
+    ]
+  },
+  {
+    "id": "w7_dage",
+    "character": "大哥",
+    "pinyin": "dà gē",
+    "week": 7,
+    "dayLabel": "10月15日 (周四) 《g k h》第二课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "d",
+      "à",
+      "dà",
+      "g",
+      "ē",
+      "gē",
+      "dà gē"
+    ]
+  },
+  {
+    "id": "w7_huaduo",
+    "character": "花朵",
+    "pinyin": "huā duǒ",
+    "week": 7,
+    "dayLabel": "10月15日 (周四) 《g k h》第二课时",
+    "category": "三拼音节",
+    "teachingSteps": [
+      "h",
+      "u",
+      "ā",
+      "huā",
+      "d",
+      "u",
+      "ǒ",
+      "duǒ",
+      "huā duǒ"
+    ]
+  },
+  {
+    "id": "w7_lvdi",
+    "character": "绿地",
+    "pinyin": "lǜ dì",
+    "week": 7,
+    "dayLabel": "10月16日 (周五) 复习本周学过课程",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "l",
+      "ǜ",
+      "lǜ",
+      "d",
+      "ì",
+      "dì",
+      "lǜ dì"
+    ]
+  },
+  {
+    "id": "w7_fumo",
+    "character": "抚摸",
+    "pinyin": "fǔ mō",
+    "week": 7,
+    "dayLabel": "10月16日 (周五) 复习本周学过课程",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "f",
+      "ǔ",
+      "fǔ",
+      "m",
+      "ō",
+      "mō",
+      "fǔ mō"
+    ]
+  },
+  {
+    "id": "w7_kele",
+    "character": "可乐",
+    "pinyin": "kě lè",
+    "week": 7,
+    "dayLabel": "10月16日 (周五) 复习本周学过课程",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "k",
+      "ě",
+      "kě",
+      "l",
+      "è",
+      "lè",
+      "kě lè"
+    ]
+  },
+  {
+    "id": "w7_guaguo",
+    "character": "瓜果",
+    "pinyin": "guā guǒ",
+    "week": 7,
+    "dayLabel": "10月16日 (周五) 复习本周学过课程",
+    "category": "三拼音节",
+    "teachingSteps": [
+      "g",
+      "u",
+      "ā",
+      "guā",
+      "g",
+      "u",
+      "ǒ",
+      "guǒ",
+      "guā guǒ"
+    ]
+  },
+  {
+    "id": "w7_dafo",
+    "character": "大佛",
+    "pinyin": "dà fó",
+    "week": 7,
+    "dayLabel": "10月16日 (周五) 复习本周学过课程",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "d",
+      "à",
+      "dà",
+      "f",
+      "ó",
+      "fó",
+      "dà fó"
+    ]
+  },
+  {
+    "id": "w8_tusi",
+    "character": "吐丝",
+    "pinyin": "tǔ sī",
+    "week": 8,
+    "dayLabel": "10月19日 (周一) 《z c s》第一课时",
+    "category": "平舌音",
+    "teachingSteps": [
+      "t",
+      "ǔ",
+      "tǔ",
+      "s",
+      "ī",
+      "sī",
+      "tǔ sī"
+    ]
+  },
+  {
+    "id": "w8_ziji",
+    "character": "自己",
+    "pinyin": "zì jǐ",
+    "week": 8,
+    "dayLabel": "10月19日 (周一) 《z c s》第一课时",
+    "category": "整体认读",
+    "teachingSteps": [
+      "zì",
+      "j",
+      "ǐ",
+      "jǐ",
+      "zì jǐ"
+    ]
+  },
+  {
+    "id": "w8_ciyu",
+    "character": "词语",
+    "pinyin": "cí yǔ",
+    "week": 8,
+    "dayLabel": "10月19日 (周一) 《z c s》第一课时",
+    "category": "整体认读",
+    "teachingSteps": [
+      "cí",
+      "yǔ",
+      "cí yǔ"
+    ]
+  },
+  {
+    "id": "w8_juzi",
+    "character": "句子",
+    "pinyin": "jù zi",
+    "week": 8,
+    "dayLabel": "10月19日 (周一) 《z c s》第一课时",
+    "category": "整体认读",
+    "teachingSteps": [
+      "j",
+      "ù",
+      "jù",
+      "zi",
+      "jù zi"
+    ]
+  },
+  {
+    "id": "w8_zimu_w8",
+    "character": "字母",
+    "pinyin": "zì mǔ",
+    "week": 8,
+    "dayLabel": "10月19日 (周一) 《z c s》第一课时",
+    "category": "平舌音",
+    "teachingSteps": [
+      "zì",
+      "m",
+      "ǔ",
+      "mǔ",
+      "zì mǔ"
+    ]
+  },
+  {
+    "id": "w8_cuxi",
+    "character": "粗细",
+    "pinyin": "cū xì",
+    "week": 8,
+    "dayLabel": "10月19日 (周一) 《z c s》第一课时",
+    "category": "平舌音",
+    "teachingSteps": [
+      "c",
+      "ū",
+      "cū",
+      "x",
+      "ì",
+      "xì",
+      "cū xì"
+    ]
+  },
+  {
+    "id": "w8_zinv",
+    "character": "子女",
+    "pinyin": "zǐ nǚ",
+    "week": 8,
+    "dayLabel": "10月20日 (周二) 《z c s》第二课时",
+    "category": "平舌音",
+    "teachingSteps": [
+      "zǐ",
+      "n",
+      "ǚ",
+      "nǚ",
+      "zǐ nǚ"
+    ]
+  },
+  {
+    "id": "w8_ciqi",
+    "character": "瓷器",
+    "pinyin": "cí qì",
+    "week": 8,
+    "dayLabel": "10月20日 (周二) 《z c s》第二课时",
+    "category": "平舌音",
+    "teachingSteps": [
+      "cí",
+      "q",
+      "ì",
+      "qì",
+      "cí qì"
+    ]
+  },
+  {
+    "id": "w8_sesu",
+    "character": "色素",
+    "pinyin": "sè sù",
+    "week": 8,
+    "dayLabel": "10月20日 (周二) 《z c s》第二课时",
+    "category": "平舌音",
+    "teachingSteps": [
+      "s",
+      "è",
+      "sè",
+      "s",
+      "ù",
+      "sù",
+      "sè sù"
+    ]
+  },
+  {
+    "id": "w8_cesuo",
+    "character": "厕所",
+    "pinyin": "cè suǒ",
+    "week": 8,
+    "dayLabel": "10月20日 (周二) 《z c s》第二课时",
+    "category": "平舌三拼",
+    "teachingSteps": [
+      "c",
+      "è",
+      "cè",
+      "s",
+      "u",
+      "ǒ",
+      "suǒ",
+      "cè suǒ"
+    ]
+  },
+  {
+    "id": "w8_cuoti",
+    "character": "错题",
+    "pinyin": "cuò tí",
+    "week": 8,
+    "dayLabel": "10月20日 (周二) 《z c s》第二课时",
+    "category": "平舌三拼",
+    "teachingSteps": [
+      "c",
+      "u",
+      "ò",
+      "cuò",
+      "t",
+      "í",
+      "tí",
+      "cuò tí"
+    ]
+  },
+  {
+    "id": "w8_zuoxia",
+    "character": "坐下",
+    "pinyin": "zuò xià",
+    "week": 8,
+    "dayLabel": "10月20日 (周二) 《z c s》第二课时",
+    "category": "平舌三拼",
+    "teachingSteps": [
+      "z",
+      "u",
+      "ò",
+      "zuò",
+      "x",
+      "i",
+      "à",
+      "xià",
+      "zuò xià"
+    ]
+  },
+  {
+    "id": "w8_cazhuozi_w8",
+    "character": "擦桌子",
+    "pinyin": "cā zhuō zi",
+    "week": 8,
+    "dayLabel": "10月22日 (周四) 《zh ch sh r》第二课时",
+    "category": "翘舌音",
+    "teachingSteps": [
+      "c",
+      "ā",
+      "cā",
+      "zh",
+      "u",
+      "ō",
+      "zhuō",
+      "zi",
+      "cā zhuō zi"
+    ]
+  },
+  {
+    "id": "w8_zhezhi",
+    "character": "折纸",
+    "pinyin": "zhé zhǐ",
+    "week": 8,
+    "dayLabel": "10月22日 (周四) 《zh ch sh r》第二课时",
+    "category": "翘舌音",
+    "teachingSteps": [
+      "zh",
+      "é",
+      "zhé",
+      "zh",
+      "ǐ",
+      "zhǐ",
+      "zhé zhǐ"
+    ]
+  },
+  {
+    "id": "w8_chihe",
+    "character": "吃喝",
+    "pinyin": "chī hē",
+    "week": 8,
+    "dayLabel": "10月22日 (周四) 《zh ch sh r》第二课时",
+    "category": "翘舌音",
+    "teachingSteps": [
+      "chī",
+      "h",
+      "ē",
+      "hē",
+      "chī hē"
+    ]
+  },
+  {
+    "id": "w8_dushu",
+    "character": "读书",
+    "pinyin": "dú shū",
+    "week": 8,
+    "dayLabel": "10月22日 (周四) 《zh ch sh r》第二课时",
+    "category": "翘舌音",
+    "teachingSteps": [
+      "d",
+      "ú",
+      "dú",
+      "sh",
+      "ū",
+      "shū",
+      "dú shū"
+    ]
+  },
+  {
+    "id": "w8_rili",
+    "character": "日历",
+    "pinyin": "rì lì",
+    "week": 8,
+    "dayLabel": "10月22日 (周四) 《zh ch sh r》第二课时",
+    "category": "翘舌音",
+    "teachingSteps": [
+      "rì",
+      "l",
+      "ì",
+      "lì",
+      "rì lì"
+    ]
+  },
+  {
+    "id": "w8_shuohua",
+    "character": "说话",
+    "pinyin": "shuō huà",
+    "week": 8,
+    "dayLabel": "10月22日 (周四) 《zh ch sh r》第二课时",
+    "category": "翘舌三拼",
+    "teachingSteps": [
+      "sh",
+      "u",
+      "ō",
+      "shuō",
+      "h",
+      "u",
+      "à",
+      "huà",
+      "shuō huà"
+    ]
+  },
+  {
+    "id": "w8_yu",
+    "character": "鱼",
+    "pinyin": "yú",
+    "week": 8,
+    "dayLabel": "10月23日 (周五) 《y w》第一课时",
+    "category": "整体认读",
+    "teachingSteps": [
+      "yú"
+    ]
+  },
+  {
+    "id": "w8_yazi",
+    "character": "鸭子",
+    "pinyin": "yā zi",
+    "week": 8,
+    "dayLabel": "10月23日 (周五) 《y w》第一课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "y",
+      "ā",
+      "yā",
+      "zi",
+      "yā zi"
+    ]
+  },
+  {
+    "id": "w8_wuya",
+    "character": "乌鸦",
+    "pinyin": "wū yā",
+    "week": 8,
+    "dayLabel": "10月23日 (周五) 《y w》第一课时",
+    "category": "整体认读",
+    "teachingSteps": [
+      "wū",
+      "y",
+      "ā",
+      "yā",
+      "wū yā"
+    ]
+  },
+  {
+    "id": "w8_mayi",
+    "character": "蚂蚁",
+    "pinyin": "mǎ yǐ",
+    "week": 8,
+    "dayLabel": "10月23日 (周五) 《y w》第一课时",
+    "category": "整体认读",
+    "teachingSteps": [
+      "m",
+      "ǎ",
+      "mǎ",
+      "yǐ",
+      "mǎ yǐ"
+    ]
+  },
+  {
+    "id": "w8_faya",
+    "character": "发芽",
+    "pinyin": "fā yá",
+    "week": 8,
+    "dayLabel": "10月23日 (周五) 《y w》第一课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "f",
+      "ā",
+      "fā",
+      "y",
+      "á",
+      "yá",
+      "fā yá"
+    ]
+  },
+  {
+    "id": "w8_yuyi",
+    "character": "雨衣",
+    "pinyin": "yǔ yī",
+    "week": 8,
+    "dayLabel": "10月23日 (周五) 《y w》第一课时",
+    "category": "整体认读",
+    "teachingSteps": [
+      "yǔ",
+      "yī",
+      "yǔ yī"
+    ]
+  },
+  {
+    "id": "w8_huxu",
+    "character": "胡须",
+    "pinyin": "hú xū",
+    "week": 8,
+    "dayLabel": "10月23日 (周五) 《y w》第一课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "h",
+      "ú",
+      "hú",
+      "x",
+      "ū",
+      "xū",
+      "hú xū"
+    ]
+  },
+  {
+    "id": "w8_jujia",
+    "character": "居家",
+    "pinyin": "jū jiā",
+    "week": 8,
+    "dayLabel": "10月23日 (周五) 《y w》第一课时",
+    "category": "两拼三拼",
+    "teachingSteps": [
+      "j",
+      "ū",
+      "jū",
+      "j",
+      "i",
+      "ā",
+      "jiā",
+      "jū jiā"
+    ]
+  },
+  {
+    "id": "w9_juzi",
+    "character": "橘子",
+    "pinyin": "jú zi",
+    "week": 9,
+    "dayLabel": "10月26日 (周一) 《语文园地三》第一课时",
+    "category": "整体认读",
+    "teachingSteps": [
+      "j",
+      "ú",
+      "jú",
+      "zi",
+      "jú zi"
+    ]
+  },
+  {
+    "id": "w9_zuguo",
+    "character": "祖国",
+    "pinyin": "zǔ guó",
+    "week": 9,
+    "dayLabel": "10月26日 (周一) 《语文园地三》第一课时",
+    "category": "平舌三拼",
+    "teachingSteps": [
+      "z",
+      "ǔ",
+      "zǔ",
+      "g",
+      "u",
+      "ó",
+      "guó",
+      "zǔ guó"
+    ]
+  },
+  {
+    "id": "w9_cazhuozi",
+    "character": "擦桌子",
+    "pinyin": "cā zhuō zi",
+    "week": 9,
+    "dayLabel": "10月26日 (周一) 《语文园地三》第一课时",
+    "category": "平翘结合",
+    "teachingSteps": [
+      "c",
+      "ā",
+      "cā",
+      "zh",
+      "u",
+      "ō",
+      "zhuō",
+      "zi",
+      "cā zhuō zi"
+    ]
+  },
+  {
+    "id": "w9_richu",
+    "character": "日出",
+    "pinyin": "rì chū",
+    "week": 9,
+    "dayLabel": "10月26日 (周一) 《语文园地三》第一课时",
+    "category": "翘舌整体认读",
+    "teachingSteps": [
+      "rì",
+      "ch",
+      "ū",
+      "chū",
+      "rì chū"
+    ]
+  },
+  {
+    "id": "w9_shuzi",
+    "character": "梳子",
+    "pinyin": "shū zi",
+    "week": 9,
+    "dayLabel": "10月26日 (周一) 《语文园地三》第一课时",
+    "category": "翘舌音",
+    "teachingSteps": [
+      "sh",
+      "ū",
+      "shū",
+      "zi",
+      "shū zi"
+    ]
+  },
+  {
+    "id": "w9_recha",
+    "character": "热茶",
+    "pinyin": "rè chá",
+    "week": 9,
+    "dayLabel": "10月26日 (周一) 《语文园地三》第一课时",
+    "category": "翘舌音",
+    "teachingSteps": [
+      "r",
+      "è",
+      "rè",
+      "ch",
+      "á",
+      "chá",
+      "rè chá"
+    ]
+  },
+  {
+    "id": "w9_zhichi",
+    "character": "直尺",
+    "pinyin": "zhí chǐ",
+    "week": 9,
+    "dayLabel": "10月26日 (周一) 《语文园地三》第一课时",
+    "category": "翘舌整体认读",
+    "teachingSteps": [
+      "zhí",
+      "chǐ",
+      "zhí chǐ"
+    ]
+  },
+  {
+    "id": "w9_zhishi",
+    "character": "知识",
+    "pinyin": "zhī shi",
+    "week": 9,
+    "dayLabel": "10月26日 (周一) 《语文园地三》第一课时",
+    "category": "翘舌整体认读",
+    "teachingSteps": [
+      "zhī",
+      "shi",
+      "zhī shi"
+    ]
+  },
+  {
+    "id": "w9_lishi",
+    "character": "历史",
+    "pinyin": "lì shǐ",
+    "week": 9,
+    "dayLabel": "10月26日 (周一) 《语文园地三》第一课时",
+    "category": "两拼翘舌",
+    "teachingSteps": [
+      "l",
+      "ì",
+      "lì",
+      "shǐ",
+      "lì shǐ"
+    ]
+  },
+  {
+    "id": "w9_zhizhu",
+    "character": "蜘蛛",
+    "pinyin": "zhī zhū",
+    "week": 9,
+    "dayLabel": "10月27日 (周二) 《语文园地三》第二课时",
+    "category": "翘舌音",
+    "teachingSteps": [
+      "zh",
+      "ī",
+      "zhī",
+      "zh",
+      "ū",
+      "zhū",
+      "zhī zhū"
+    ]
+  },
+  {
+    "id": "w9_hecha",
+    "character": "喝茶",
+    "pinyin": "hē chá",
+    "week": 9,
+    "dayLabel": "10月27日 (周二) 《语文园地三》第二课时",
+    "category": "翘舌音",
+    "teachingSteps": [
+      "h",
+      "ē",
+      "hē",
+      "ch",
+      "á",
+      "chá",
+      "hē chá"
+    ]
+  },
+  {
+    "id": "w9_zimu",
+    "character": "字母",
+    "pinyin": "zì mǔ",
+    "week": 9,
+    "dayLabel": "10月27日 (周二) 《语文园地三》第二课时",
+    "category": "平舌音",
+    "teachingSteps": [
+      "zì",
+      "m",
+      "ǔ",
+      "mǔ",
+      "zì mǔ"
+    ]
+  },
+  {
+    "id": "w9_caboli",
+    "character": "擦玻璃",
+    "pinyin": "cā bō li",
+    "week": 9,
+    "dayLabel": "10月27日 (周二) 《语文园地三》第二课时",
+    "category": "多音节",
+    "teachingSteps": [
+      "c",
+      "ā",
+      "cā",
+      "b",
+      "ō",
+      "bō",
+      "li",
+      "cā bō li"
+    ]
+  },
+  {
+    "id": "w9_sushe",
+    "character": "宿舍",
+    "pinyin": "sù shè",
+    "week": 9,
+    "dayLabel": "10月27日 (周二) 《语文园地三》第二课时",
+    "category": "平翘舌组合",
+    "teachingSteps": [
+      "s",
+      "ù",
+      "sù",
+      "sh",
+      "è",
+      "shè",
+      "sù shè"
+    ]
+  },
+  {
+    "id": "w9_shujia",
+    "character": "书架",
+    "pinyin": "shū jià",
+    "week": 9,
+    "dayLabel": "10月27日 (周二) 《语文园地三》第二课时",
+    "category": "翘舌三拼",
+    "teachingSteps": [
+      "sh",
+      "ū",
+      "shū",
+      "j",
+      "i",
+      "à",
+      "jià",
+      "shū jià"
+    ]
+  },
+  {
+    "id": "w9_chixigua",
+    "character": "吃西瓜",
+    "pinyin": "chī xī guā",
+    "week": 9,
+    "dayLabel": "10月27日 (周二) 《语文园地三》第二课时",
+    "category": "三字音节",
+    "teachingSteps": [
+      "chī",
+      "x",
+      "ī",
+      "xī",
+      "g",
+      "u",
+      "ā",
+      "guā",
+      "chī xī guā"
+    ]
+  },
+  {
+    "id": "w9_qima",
+    "character": "骑马",
+    "pinyin": "qí mǎ",
+    "week": 9,
+    "dayLabel": "10月27日 (周二) 《语文园地三》第二课时",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "q",
+      "í",
+      "qí",
+      "m",
+      "ǎ",
+      "mǎ",
+      "qí mǎ"
+    ]
+  },
+  {
+    "id": "w9_shuaya",
+    "character": "刷牙",
+    "pinyin": "shuā yá",
+    "week": 9,
+    "dayLabel": "10月27日 (周二) 《语文园地三》第二课时",
+    "category": "翘舌三拼",
+    "teachingSteps": [
+      "sh",
+      "u",
+      "ā",
+      "shuā",
+      "y",
+      "á",
+      "yá",
+      "shuā yá"
+    ]
+  },
+  {
+    "id": "w9_tuodi",
+    "character": "拖地",
+    "pinyin": "tuō dì",
+    "week": 9,
+    "dayLabel": "10月29日 (周四) 《ai ei ui》第二课时",
+    "category": "复韵母/三拼",
+    "teachingSteps": [
+      "t",
+      "u",
+      "ō",
+      "tuō",
+      "d",
+      "ì",
+      "dì",
+      "tuō dì"
+    ]
+  },
+  {
+    "id": "w9_baluobo",
+    "character": "拔萝卜",
+    "pinyin": "bá luó bo",
+    "week": 9,
+    "dayLabel": "10月29日 (周四) 《ai ei ui》第二课时",
+    "category": "轻声词",
+    "teachingSteps": [
+      "b",
+      "á",
+      "bá",
+      "l",
+      "u",
+      "ó",
+      "luó",
+      "bo",
+      "bá luó bo"
+    ]
+  },
+  {
+    "id": "w9_paidui_1",
+    "character": "排队",
+    "pinyin": "pái duì",
+    "week": 9,
+    "dayLabel": "10月29日 (周四) 《ai ei ui》第二课时",
+    "category": "复韵母",
+    "teachingSteps": [
+      "p",
+      "ái",
+      "pái",
+      "d",
+      "uì",
+      "duì",
+      "pái duì"
+    ]
+  },
+  {
+    "id": "w9_luobo",
+    "character": "萝卜",
+    "pinyin": "luó bo",
+    "week": 9,
+    "dayLabel": "10月29日 (周四) 《ai ei ui》第二课时",
+    "category": "轻声词",
+    "teachingSteps": [
+      "l",
+      "u",
+      "ó",
+      "luó",
+      "bo",
+      "luó bo"
+    ]
+  },
+  {
+    "id": "w9_baicai",
+    "character": "白菜",
+    "pinyin": "bái cài",
+    "week": 9,
+    "dayLabel": "10月29日 (周四) 《ai ei ui》第二课时",
+    "category": "复韵母",
+    "teachingSteps": [
+      "b",
+      "ái",
+      "bái",
+      "c",
+      "ài",
+      "cài",
+      "bái cài"
+    ]
+  },
+  {
+    "id": "w9_shucai",
+    "character": "蔬菜",
+    "pinyin": "shū cài",
+    "week": 9,
+    "dayLabel": "10月29日 (周四) 《ai ei ui》第二课时",
+    "category": "复韵母",
+    "teachingSteps": [
+      "sh",
+      "ū",
+      "shū",
+      "c",
+      "ài",
+      "cài",
+      "shū cài"
+    ]
+  },
+  {
+    "id": "w9_xigua",
+    "character": "西瓜",
+    "pinyin": "xī guā",
+    "week": 9,
+    "dayLabel": "10月29日 (周四) 《ai ei ui》第二课时",
+    "category": "三拼音节",
+    "teachingSteps": [
+      "x",
+      "ī",
+      "xī",
+      "g",
+      "u",
+      "ā",
+      "guā",
+      "xī guā"
+    ]
+  },
+  {
+    "id": "w9_shuiguo",
+    "character": "水果",
+    "pinyin": "shuǐ guǒ",
+    "week": 9,
+    "dayLabel": "10月29日 (周四) 《ai ei ui》第二课时",
+    "category": "复韵母三拼",
+    "teachingSteps": [
+      "sh",
+      "uǐ",
+      "shuǐ",
+      "g",
+      "u",
+      "ǒ",
+      "guǒ",
+      "shuǐ guǒ"
+    ]
+  },
+  {
+    "id": "w9_yali",
+    "character": "鸭梨",
+    "pinyin": "yā lí",
+    "week": 9,
+    "dayLabel": "10月30日 (周五) 《ao ou iu》",
+    "category": "两拼音节",
+    "teachingSteps": [
+      "y",
+      "ā",
+      "yā",
+      "l",
+      "í",
+      "lí",
+      "yā lí"
+    ]
+  },
+  {
+    "id": "w9_paidui_2",
+    "character": "排队",
+    "pinyin": "pái duì",
+    "week": 9,
+    "dayLabel": "10月30日 (周五) 《ao ou iu》",
+    "category": "复韵母",
+    "teachingSteps": [
+      "p",
+      "ái",
+      "pái",
+      "d",
+      "uì",
+      "duì",
+      "pái duì"
+    ]
+  },
+  {
+    "id": "w9_xiaoqiao",
+    "character": "小桥",
+    "pinyin": "xiǎo qiáo",
+    "week": 9,
+    "dayLabel": "10月30日 (周五) 《ao ou iu》",
+    "category": "三拼复韵母",
+    "teachingSteps": [
+      "x",
+      "i",
+      "ǎo",
+      "xiǎo",
+      "q",
+      "i",
+      "áo",
+      "qiáo",
+      "xiǎo qiáo"
+    ]
+  },
+  {
+    "id": "w9_chuiliu",
+    "character": "垂柳",
+    "pinyin": "chuí liǔ",
+    "week": 9,
+    "dayLabel": "10月30日 (周五) 《ao ou iu》",
+    "category": "复韵母",
+    "teachingSteps": [
+      "ch",
+      "uí",
+      "chuí",
+      "l",
+      "iǔ",
+      "liǔ",
+      "chuí liǔ"
+    ]
+  },
+  {
+    "id": "w9_taohua",
+    "character": "桃花",
+    "pinyin": "táo huā",
+    "week": 9,
+    "dayLabel": "10月30日 (周五) 《ao ou iu》",
+    "category": "复韵母三拼",
+    "teachingSteps": [
+      "t",
+      "áo",
+      "táo",
+      "h",
+      "u",
+      "ā",
+      "huā",
+      "táo huā"
+    ]
+  },
+  {
+    "id": "w9_liushui",
+    "character": "流水",
+    "pinyin": "liú shuǐ",
+    "week": 9,
+    "dayLabel": "10月30日 (周五) 《ao ou iu》",
+    "category": "复韵母",
+    "teachingSteps": [
+      "l",
+      "iú",
+      "liú",
+      "sh",
+      "uǐ",
+      "shuǐ",
+      "liú shuǐ"
+    ]
+  },
+  {
+    "id": "w9_huochai",
+    "character": "火柴",
+    "pinyin": "huǒ chái",
+    "week": 9,
+    "dayLabel": "10月30日 (周五) 《ao ou iu》",
+    "category": "复韵母三拼",
+    "teachingSteps": [
+      "h",
+      "u",
+      "ǒ",
+      "huǒ",
+      "ch",
+      "ái",
+      "chái",
+      "huǒ chái"
+    ]
+  },
+  {
+    "id": "w9_caimiyu",
+    "character": "猜谜语",
+    "pinyin": "cāi mí yǔ",
+    "week": 9,
+    "dayLabel": "10月30日 (周五) 《ao ou iu》",
+    "category": "复韵母整体认读",
+    "teachingSteps": [
+      "c",
+      "āi",
+      "cāi",
+      "m",
+      "í",
+      "mí",
+      "yǔ",
+      "cāi mí yǔ"
+    ]
+  },
+  {
+    "id": "w9_chuiniu",
+    "character": "吹牛",
+    "pinyin": "chuī niú",
+    "week": 9,
+    "dayLabel": "10月30日 (周五) 《ao ou iu》",
+    "category": "复韵母",
+    "teachingSteps": [
+      "ch",
+      "uī",
+      "chuī",
+      "n",
+      "iú",
+      "niú",
+      "chuī niú"
+    ]
+  }
+]

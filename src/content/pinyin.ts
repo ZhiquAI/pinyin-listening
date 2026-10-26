@@ -1,0 +1,2 @@
+export function toneLabel(tone: number): string { return tone === 0 ? '轻声' : `${tone}声`; }
+export function tonePlacement(pinyin: string): string { const lower=pinyin.toLowerCase(); if(lower.includes('a')) return 'a'; if(lower.includes('e')) return 'e'; if(lower.includes('ou')) return 'o'; if(lower.includes('iu')) return 'u'; if(lower.includes('ui')) return 'i'; return lower.match(/[aeiouü]/)?.[0] ?? ''; }
