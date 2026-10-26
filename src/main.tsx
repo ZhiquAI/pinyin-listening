@@ -30,7 +30,15 @@ import {
   hasCustomAudioData,
   saveCustomAudioData,
   deleteCustomAudioData,
+  getAllCustomRecordedIds,
+  exportAllCustomAudioJson,
 } from './features/customAudio';
+import {
+  getGitHubToken,
+  saveGitHubToken,
+  syncSingleAudioToGitHub,
+  syncAllAudiosToGitHub,
+} from './features/githubSync';
 import { enhanceAudioBlob } from './features/audioDSP';
 import { ParentRecordingModal } from './components/ParentRecordingModal';
 import { PinyinWriting } from './components/PinyinWriting';
@@ -105,6 +113,49 @@ function App() {
   const [isDragging, setIsDragging] = useState<boolean>(false);
   const touchStartXRef = useRef<number | null>(null);
   const touchStartYRef = useRef<number | null>(null);
+
+  // iPad GitHub 同步状态
+  const [githubTokenInput, setGithubTokenInput] = useState<string>(() => getGitHubToken());
+  const [isSyncingGitHub, setIsSyncingGitHub] = useState<boolean>(false);
+  const [syncProgress, setSyncProgress] = useState<string>('');
+  const [syncStatusMsg, setSyncStatusMsg] = useState<string>('');
+
+  const handleSyncAllToGitHub = async () => {
+    if (!githubTokenInput.trim()) {
+      alert('请先在下方输入您的 GitHub Personal Access Token！');
+      return;
+    }
+    setIsSyncingGitHub(true);
+    setSyncStatusMsg('');
+    try {
+      const res = await syncAllAudiosToGitHub((cur, total, id) => {
+        setSyncProgress(`${cur}/${total}`);
+      });
+      if (res.success > 0) {
+        setSyncStatusMsg(`✓ 成功同步 ${res.success} 条原声音频至 GitHub 仓库！GitHub Actions 正在自动发布。`);
+      } else {
+        setSyncStatusMsg('暂无需要同步的录音。');
+      }
+    } catch (err: unknown) {
+      setSyncStatusMsg(`同步失败：${err instanceof Error ? err.message : String(err)}`);
+    } finally {
+      setIsSyncingGitHub(false);
+      setSyncProgress('');
+    }
+  };
+
+  const handleExportBackup = () => {
+    const jsonStr = exportAllCustomAudioJson();
+    const blob = new Blob([jsonStr], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `pinyin_listening_records_${new Date().toISOString().slice(0, 10)}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
   const maxDragDistanceRef = useRef<number>(0);
 
   // 家长真人原声录制室状态
@@ -243,8 +294,24 @@ function App() {
               const enhancedDataUrl = await enhanceAudioBlob(audioBlob);
               saveCustomAudioData(targetId, enhancedDataUrl);
               setCustomAudioVersion((v) => v + 1);
-              setSaveStatus('✓ 已保存');
-              setTimeout(() => setSaveStatus(''), 1800);
+
+              // 若在 iPad / 浏览器上配置了 GitHub Token，自动后台推送到 GitHub 仓库
+              if (getGitHubToken()) {
+                setSaveStatus('✓ 本地已保存 · 正在同步GitHub…');
+                syncSingleAudioToGitHub(targetId, enhancedDataUrl, currentItem?.character)
+                  .then(() => {
+                    setSaveStatus('✓ 已同步至GitHub！');
+                    setTimeout(() => setSaveStatus(''), 2500);
+                  })
+                  .catch((syncErr) => {
+                    console.warn('Auto sync to GitHub failed:', syncErr);
+                    setSaveStatus('✓ 已保存至iPad (云端同步需检查Token)');
+                    setTimeout(() => setSaveStatus(''), 2500);
+                  });
+              } else {
+                setSaveStatus('✓ 已保存');
+                setTimeout(() => setSaveStatus(''), 1800);
+              }
             } catch (err) {
               console.warn('Audio enhancement fallback:', err);
               const reader = new FileReader();
@@ -1369,6 +1436,48 @@ function App() {
         </section>
         <label className="setting-switch"><span>换词时自动朗读</span><input type="checkbox" role="switch" checked={autoPlayOnFlip} onChange={(e) => setAutoPlayOnFlip(e.target.checked)} /></label>
         {currentItem && <button className="record-entry" onClick={() => { settingsDialogRef.current?.close(); openRecordModal(currentItem); }}><Icon name="mic" /><span>{hasCustomAudioData(currentItem.id) ? '管理' : '录制'}「{currentItem.character}」的家长原声</span><Icon name="right" /></button>}
+
+        {/* iPad GitHub 录音同步中心 */}
+        <section className="setting-section github-sync-section">
+          <h3>☁️ iPad 录音同步至 GitHub</h3>
+          <p className="dialog-note" style={{ marginBottom: 8 }}>
+            输入 GitHub Token 后，iPad 录完的声音可一键直接推送到 GitHub 仓库并自动全网发布，任何设备打开网站都能听到！
+          </p>
+          <div className="github-token-input-group">
+            <input
+              type="password"
+              className="token-input"
+              placeholder="输入 GitHub Personal Access Token (PAT)"
+              value={githubTokenInput}
+              onChange={(e) => {
+                setGithubTokenInput(e.target.value);
+                saveGitHubToken(e.target.value);
+              }}
+            />
+          </div>
+          <div className="sync-actions-row" style={{ marginTop: 10, display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+            <button
+              className="action-btn sync-github-btn"
+              disabled={isSyncingGitHub}
+              onClick={handleSyncAllToGitHub}
+            >
+              {isSyncingGitHub ? `🚀 同步中 (${syncProgress})...` : `🚀 一键将所有录音同步到 GitHub (${getAllCustomRecordedIds().length}条)`}
+            </button>
+            <button
+              className="action-btn export-backup-btn"
+              onClick={handleExportBackup}
+              title="下载所有录音的备份文件"
+            >
+              📥 导出录音备份
+            </button>
+          </div>
+          {syncStatusMsg && (
+            <p className="sync-status-msg" style={{ marginTop: 8, fontSize: 13, color: syncStatusMsg.startsWith('✓') ? '#16a34a' : '#ea580c' }}>
+              {syncStatusMsg}
+            </p>
+          )}
+        </section>
+
         <button className="dialog-done" onClick={() => settingsDialogRef.current?.close()}>完成</button>
       </dialog>
 

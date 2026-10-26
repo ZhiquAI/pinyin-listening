@@ -1009,3 +1009,69 @@ svg { width: 24px; height: 24px; flex-shrink: 0; }
   background: #e2e8f0 !important;
   color: #334155 !important;
 }
+
+/* ==================== GitHub 同步面板样式 ==================== */
+.github-sync-section {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 14px 16px;
+  border: 1px solid #e2e8f0;
+  margin-top: 10px;
+}
+
+.github-token-input-group {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.token-input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: monospace;
+  background: #ffffff;
+  color: #1e293b;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.token-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.sync-actions-row .action-btn {
+  padding: 9px 15px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.15s;
+}
+
+.sync-actions-row .sync-github-btn {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.sync-actions-row .sync-github-btn:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.sync-actions-row .sync-github-btn:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+.sync-actions-row .export-backup-btn {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.sync-actions-row .export-backup-btn:hover {
+  background: #cbd5e1;
+}
