@@ -978,3 +978,22 @@ svg { width: 24px; height: 24px; flex-shrink: 0; }
     font-size: 18px;
   }
 }
+
+/* ==================== 动态波形频谱条 ==================== */
+.waveform-visualizer {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  height: 22px;
+  padding: 0 4px;
+}
+
+.wave-bar {
+  display: inline-block;
+  width: 3.5px;
+  height: 18px;
+  background: #e11d48;
+  border-radius: 999px;
+  transform-origin: center;
+  transition: transform 0.08s cubic-bezier(0.2, 0.8, 0.4, 1);
+}
