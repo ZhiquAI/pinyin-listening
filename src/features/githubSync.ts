@@ -81,9 +81,10 @@ async function getFileSha(
       const data = (await res.json()) as GitHubFileResponse;
       return data.sha || null;
     }
-    return null;
-  } catch {
-    return null;
+    if (res.status === 404) return null;
+    throw new Error(`读取 GitHub 文件失败（${res.status}）`);
+  } catch (error) {
+    throw error;
   }
 }
 
@@ -140,8 +141,11 @@ export async function syncSingleAudioToGitHub(
   }
 
   // 剥离 dataUrl 头部，纯 Base64 内容
-  const base64Content = dataUrl.replace(/^data:audio\/\w+;base64,/, '');
-  const filePath = `public/audio/custom/${itemId}.wav`;
+  const match = /^data:audio\/(wav|wave|x-wav|webm|mp4|aac)(?:;[^,]*)?;base64,([\s\S]+)$/.exec(dataUrl);
+  if (!match) throw new Error('不支持此录音格式');
+  const extension = ['wave', 'x-wav'].includes(match[1]) ? 'wav' : match[1];
+  const base64Content = match[2];
+  const filePath = `public/audio/custom/${itemId}.${extension}`;
   const commitMsg = `feat(audio): iPad录入原声 [${characterName || itemId}]`;
 
   // 1. 上传音频本身
@@ -169,7 +173,8 @@ export async function syncSingleAudioToGitHub(
         manifest = JSON.parse(rawJson);
       }
     }
-    manifest[itemId] = `${itemId}.wav`;
+    if (!res.ok && res.status !== 404) throw new Error(`读取录音索引失败（${res.status}）`);
+    manifest[itemId] = `${itemId}.${extension}`;
 
     const newManifestJson = JSON.stringify(manifest, null, 2);
     // Base64 编码 UTF-8 字符串
@@ -184,7 +189,7 @@ export async function syncSingleAudioToGitHub(
       manifestPayload.sha = manifestSha;
     }
 
-    await fetch(`https://api.github.com/repos/${repo}/contents/${manifestPath}`, {
+    const updateResponse = await fetch(`https://api.github.com/repos/${repo}/contents/${manifestPath}`, {
       method: 'PUT',
       headers: {
         Authorization: `token ${token}`,
@@ -193,8 +198,9 @@ export async function syncSingleAudioToGitHub(
       },
       body: JSON.stringify(manifestPayload),
     });
+    if (!updateResponse.ok) throw new Error(`更新录音索引失败（${updateResponse.status}）`);
   } catch (manifestErr) {
-    console.warn('Failed to update remote manifest.json:', manifestErr);
+    throw new Error(`录音已上传，但索引更新失败：${manifestErr instanceof Error ? manifestErr.message : String(manifestErr)}`);
   }
 
   return true;
@@ -228,8 +234,11 @@ export async function syncAllAudiosToGitHub(
 
     onProgress?.(i + 1, ids.length, id);
     try {
-      const base64Content = dataUrl.replace(/^data:audio\/\w+;base64,/, '');
-      const filePath = `public/audio/custom/${id}.wav`;
+      const match = /^data:audio\/(wav|wave|x-wav|webm|mp4|aac)(?:;[^,]*)?;base64,([\s\S]+)$/.exec(dataUrl);
+      if (!match) throw new Error('不支持此录音格式');
+      const extension = ['wave', 'x-wav'].includes(match[1]) ? 'wav' : match[1];
+      const base64Content = match[2];
+      const filePath = `public/audio/custom/${id}.${extension}`;
       await pushFileToGitHub(
         repo,
         filePath,
@@ -237,7 +246,7 @@ export async function syncAllAudiosToGitHub(
         `feat(audio): iPad批量同步原声 [${id}]`,
         token
       );
-      manifestUpdates[id] = `${id}.wav`;
+      manifestUpdates[id] = `${id}.${extension}`;
       successCount++;
     } catch (err) {
       console.error(`Failed to push audio for ${id}:`, err);
@@ -267,6 +276,7 @@ export async function syncAllAudiosToGitHub(
           manifest = JSON.parse(rawJson);
         }
       }
+      if (!res.ok && res.status !== 404) throw new Error(`读取录音索引失败（${res.status}）`);
       Object.assign(manifest, manifestUpdates);
       const newManifestJson = JSON.stringify(manifest, null, 2);
       const encodedManifest = btoa(unescape(encodeURIComponent(newManifestJson)));
@@ -280,7 +290,7 @@ export async function syncAllAudiosToGitHub(
         manifestPayload.sha = manifestSha;
       }
 
-      await fetch(`https://api.github.com/repos/${repo}/contents/${manifestPath}`, {
+      const updateResponse = await fetch(`https://api.github.com/repos/${repo}/contents/${manifestPath}`, {
         method: 'PUT',
         headers: {
           Authorization: `token ${token}`,
@@ -289,8 +299,9 @@ export async function syncAllAudiosToGitHub(
         },
         body: JSON.stringify(manifestPayload),
       });
+      if (!updateResponse.ok) throw new Error(`更新录音索引失败（${updateResponse.status}）`);
     } catch (err) {
-      console.warn('Failed to batch update remote manifest:', err);
+      throw new Error(`录音已上传，但索引更新失败：${err instanceof Error ? err.message : String(err)}`);
     }
   }
 

@@ -987,5 +987,1985 @@
     "height": 1024,
     "sha256": "60959e0f2995dbfa0151faa2b258162bc79775f3cc1225ee7dffec4beebbc4b0",
     "url": "/images/vocabulary/wash.webp"
+  },
+  {
+    "word": "桌椅",
+    "file": "read_d04_18.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d04_18.png"
+  },
+  {
+    "word": "伯伯",
+    "file": "read_d01_03.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d01_03.png"
+  },
+  {
+    "word": "婆婆",
+    "file": "read_d01_04.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d01_04.png"
+  },
+  {
+    "word": "秘密",
+    "file": "read_d01_05.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d01_05.png"
+  },
+  {
+    "word": "木筏",
+    "file": "read_d01_11.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d01_11.png"
+  },
+  {
+    "word": "笔墨",
+    "file": "read_d01_13.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d01_13.png"
+  },
+  {
+    "word": "密码",
+    "file": "read_d01_14.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d01_14.png"
+  },
+  {
+    "word": "布匹",
+    "file": "read_d01_16.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d01_16.png"
+  },
+  {
+    "word": "皮肤",
+    "file": "read_d01_17.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d01_17.png"
+  },
+  {
+    "word": "枇杷",
+    "file": "read_d01_18.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d01_18.png"
+  },
+  {
+    "word": "拔牙",
+    "file": "read_d01_19.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d01_19.png"
+  },
+  {
+    "word": "皮衣",
+    "file": "read_d01_21.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d01_21.png"
+  },
+  {
+    "word": "批发",
+    "file": "read_d01_22.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d01_22.png"
+  },
+  {
+    "word": "斧子",
+    "file": "read_d01_23.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d01_23.png"
+  },
+  {
+    "word": "答题",
+    "file": "read_d02_04.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d02_04.png"
+  },
+  {
+    "word": "嘀嗒",
+    "file": "read_d02_06.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d02_06.png"
+  },
+  {
+    "word": "哪里",
+    "file": "read_d02_07.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d02_07.png"
+  },
+  {
+    "word": "大马",
+    "file": "read_d02_08.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d02_08.png"
+  },
+  {
+    "word": "徒弟",
+    "file": "read_d02_11.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d02_11.png"
+  },
+  {
+    "word": "踏步",
+    "file": "read_d02_15.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d02_15.png"
+  },
+  {
+    "word": "法律",
+    "file": "read_d02_16.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d02_16.png"
+  },
+  {
+    "word": "大度",
+    "file": "read_d02_17.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d02_17.png"
+  },
+  {
+    "word": "打靶",
+    "file": "read_d02_22.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d02_22.png"
+  },
+  {
+    "word": "骆驼",
+    "file": "read_d02_23.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d02_23.png"
+  },
+  {
+    "word": "驴",
+    "file": "read_d02_24.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d02_24.png"
+  },
+  {
+    "word": "打鼓",
+    "file": "read_d03_02.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d03_02.png"
+  },
+  {
+    "word": "狐狸",
+    "file": "read_d03_03.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d03_03.png"
+  },
+  {
+    "word": "葫芦",
+    "file": "read_d03_04.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d03_04.png"
+  },
+  {
+    "word": "拔河",
+    "file": "read_d03_05.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d03_05.png"
+  },
+  {
+    "word": "隔壁",
+    "file": "read_d03_06.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d03_06.png"
+  },
+  {
+    "word": "顾客",
+    "file": "read_d03_09.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d03_09.png"
+  },
+  {
+    "word": "刻苦",
+    "file": "read_d03_11.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d03_11.png"
+  },
+  {
+    "word": "可怕",
+    "file": "read_d03_12.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d03_12.png"
+  },
+  {
+    "word": "河马",
+    "file": "read_d03_13.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d03_13.png"
+  },
+  {
+    "word": "姑姑",
+    "file": "read_d03_14.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d03_14.png"
+  },
+  {
+    "word": "蘑菇",
+    "file": "read_d03_15.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d03_15.png"
+  },
+  {
+    "word": "图画",
+    "file": "read_d03_17.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d03_17.png"
+  },
+  {
+    "word": "果皮",
+    "file": "read_d03_21.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d03_21.png"
+  },
+  {
+    "word": "大火",
+    "file": "read_d03_22.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d03_22.png"
+  },
+  {
+    "word": "梨花",
+    "file": "read_d03_24.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d03_24.png"
+  },
+  {
+    "word": "哈密瓜",
+    "file": "read_d03_25.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d03_25.png"
+  },
+  {
+    "word": "鲤鱼",
+    "file": "read_d04_03.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d04_03.png"
+  },
+  {
+    "word": "玉米",
+    "file": "read_d04_05.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d04_05.png"
+  },
+  {
+    "word": "牙齿",
+    "file": "read_d04_07.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d04_07.png"
+  },
+  {
+    "word": "鸡窝",
+    "file": "read_d04_08.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d04_08.png"
+  },
+  {
+    "word": "织布",
+    "file": "read_d04_09.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d04_09.png"
+  },
+  {
+    "word": "阿姨",
+    "file": "read_d04_10.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d04_10.png"
+  },
+  {
+    "word": "屋子",
+    "file": "read_d04_11.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d04_11.png"
+  },
+  {
+    "word": "衣服",
+    "file": "read_d04_12.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d04_12.png"
+  },
+  {
+    "word": "椅子",
+    "file": "read_d04_13.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d04_13.png"
+  },
+  {
+    "word": "大雾",
+    "file": "read_d04_14.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d04_14.png"
+  },
+  {
+    "word": "下雨",
+    "file": "read_d04_15.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d04_15.png"
+  },
+  {
+    "word": "袜子",
+    "file": "read_d04_17.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d04_17.png"
+  },
+  {
+    "word": "木屋",
+    "file": "read_d04_19.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d04_19.png"
+  },
+  {
+    "word": "娃娃",
+    "file": "read_d04_20.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d04_20.png"
+  },
+  {
+    "word": "鳄鱼",
+    "file": "read_d04_21.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d04_21.png"
+  },
+  {
+    "word": "机器",
+    "file": "read_d05_01.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d05_01.png"
+  },
+  {
+    "word": "积木",
+    "file": "read_d05_02.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d05_02.png"
+  },
+  {
+    "word": "母鸡",
+    "file": "read_d05_03.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d05_03.png"
+  },
+  {
+    "word": "起立",
+    "file": "read_d05_05.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d05_05.png"
+  },
+  {
+    "word": "马戏",
+    "file": "read_d05_06.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d05_06.png"
+  },
+  {
+    "word": "复习",
+    "file": "read_d05_07.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d05_07.png"
+  },
+  {
+    "word": "打气",
+    "file": "read_d05_08.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d05_08.png"
+  },
+  {
+    "word": "集体",
+    "file": "read_d05_09.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d05_09.png"
+  },
+  {
+    "word": "下棋",
+    "file": "read_d05_11.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d05_11.png"
+  },
+  {
+    "word": "国家",
+    "file": "read_d05_12.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d05_12.png"
+  },
+  {
+    "word": "记录",
+    "file": "read_d05_13.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d05_13.png"
+  },
+  {
+    "word": "巨大",
+    "file": "read_d05_14.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d05_14.png"
+  },
+  {
+    "word": "菊花",
+    "file": "read_d05_15.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d05_15.png"
+  },
+  {
+    "word": "歌曲",
+    "file": "read_d05_16.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d05_16.png"
+  },
+  {
+    "word": "乐趣",
+    "file": "read_d05_17.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d05_17.png"
+  },
+  {
+    "word": "过去",
+    "file": "read_d05_18.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d05_18.png"
+  },
+  {
+    "word": "必须",
+    "file": "read_d05_19.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d05_19.png"
+  },
+  {
+    "word": "加法",
+    "file": "read_d05_20.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d05_20.png"
+  },
+  {
+    "word": "国旗",
+    "file": "read_d05_21.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d05_21.png"
+  },
+  {
+    "word": "搭积木",
+    "file": "read_d05_22.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d05_22.png"
+  },
+  {
+    "word": "大家",
+    "file": "read_d05_23.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d05_23.png"
+  },
+  {
+    "word": "垃圾",
+    "file": "read_d05_24.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d05_24.png"
+  },
+  {
+    "word": "许多",
+    "file": "read_d05_26.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d05_26.png"
+  },
+  {
+    "word": "生字",
+    "file": "read_d06_01.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d06_01.png"
+  },
+  {
+    "word": "仔细",
+    "file": "read_d06_05.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d06_05.png"
+  },
+  {
+    "word": "擦洗",
+    "file": "read_d06_08.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d06_08.png"
+  },
+  {
+    "word": "泼洒",
+    "file": "read_d06_09.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d06_09.png"
+  },
+  {
+    "word": "绿色",
+    "file": "read_d06_10.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d06_10.png"
+  },
+  {
+    "word": "紫色",
+    "file": "read_d06_11.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d06_11.png"
+  },
+  {
+    "word": "杂技",
+    "file": "read_d06_12.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d06_12.png"
+  },
+  {
+    "word": "盒子",
+    "file": "read_d06_14.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d06_14.png"
+  },
+  {
+    "word": "司机",
+    "file": "read_d06_15.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d06_15.png"
+  },
+  {
+    "word": "打字",
+    "file": "read_d06_16.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d06_16.png"
+  },
+  {
+    "word": "歌词",
+    "file": "read_d06_18.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d06_18.png"
+  },
+  {
+    "word": "速度",
+    "file": "read_d06_19.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d06_19.png"
+  },
+  {
+    "word": "祖父",
+    "file": "read_d06_22.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d06_22.png"
+  },
+  {
+    "word": "祖母",
+    "file": "read_d06_23.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d06_23.png"
+  },
+  {
+    "word": "竹子",
+    "file": "read_d07_04.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d07_04.png"
+  },
+  {
+    "word": "爪子",
+    "file": "read_d07_06.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d07_06.png"
+  },
+  {
+    "word": "值日",
+    "file": "read_d07_07.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d07_07.png"
+  },
+  {
+    "word": "蜡烛",
+    "file": "read_d07_08.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d07_08.png"
+  },
+  {
+    "word": "数字",
+    "file": "read_d07_10.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d07_10.png"
+  },
+  {
+    "word": "日子",
+    "file": "read_d07_12.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d07_12.png"
+  },
+  {
+    "word": "师傅",
+    "file": "read_d07_13.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d07_13.png"
+  },
+  {
+    "word": "厨师",
+    "file": "read_d07_14.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d07_14.png"
+  },
+  {
+    "word": "汽车",
+    "file": "read_d07_18.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d07_18.png"
+  },
+  {
+    "word": "扎针",
+    "file": "read_d07_21.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d07_21.png"
+  },
+  {
+    "word": "尺子",
+    "file": "read_d07_22.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d07_22.png"
+  },
+  {
+    "word": "插图",
+    "file": "read_d07_23.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d07_23.png"
+  },
+  {
+    "word": "沙发",
+    "file": "read_d07_24.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d07_24.png"
+  },
+  {
+    "word": "泥沙",
+    "file": "read_d07_25.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d07_25.png"
+  },
+  {
+    "word": "沙子",
+    "file": "read_d07_26.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d07_26.png"
+  },
+  {
+    "word": "蛇",
+    "file": "read_d07_27.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d07_27.png"
+  },
+  {
+    "word": "狮子",
+    "file": "read_d07_28.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d07_28.png"
+  },
+  {
+    "word": "菠萝",
+    "file": "read_d08_20.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d08_20.png"
+  },
+  {
+    "word": "奶奶",
+    "file": "read_d09_01.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d09_01.png"
+  },
+  {
+    "word": "妹妹",
+    "file": "read_d09_02.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d09_02.png"
+  },
+  {
+    "word": "梅花",
+    "file": "read_d09_05.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d09_05.png"
+  },
+  {
+    "word": "书柜",
+    "file": "read_d09_06.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d09_06.png"
+  },
+  {
+    "word": "乌龟",
+    "file": "read_d09_08.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d09_08.png"
+  },
+  {
+    "word": "回来",
+    "file": "read_d09_09.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d09_09.png"
+  },
+  {
+    "word": "女孩",
+    "file": "read_d09_10.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d09_10.png"
+  },
+  {
+    "word": "白鸽",
+    "file": "read_d09_11.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d09_11.png"
+  },
+  {
+    "word": "袋鼠",
+    "file": "read_d09_12.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d09_12.png"
+  },
+  {
+    "word": "杯子",
+    "file": "read_d09_16.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d09_16.png"
+  },
+  {
+    "word": "洒水",
+    "file": "read_d09_18.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d09_18.png"
+  },
+  {
+    "word": "喝水",
+    "file": "read_d09_21.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d09_21.png"
+  },
+  {
+    "word": "奇怪",
+    "file": "read_d09_22.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d09_22.png"
+  },
+  {
+    "word": "开水",
+    "file": "read_d09_23.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d09_23.png"
+  },
+  {
+    "word": "回家",
+    "file": "read_d09_24.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d09_24.png"
+  },
+  {
+    "word": "害怕",
+    "file": "read_d10_01.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d10_01.png"
+  },
+  {
+    "word": "废纸",
+    "file": "read_d10_02.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d10_02.png"
+  },
+  {
+    "word": "队伍",
+    "file": "read_d10_03.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d10_03.png"
+  },
+  {
+    "word": "开会",
+    "file": "read_d10_04.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d10_04.png"
+  },
+  {
+    "word": "海豚",
+    "file": "read_d10_05.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d10_05.png"
+  },
+  {
+    "word": "话梅",
+    "file": "read_d10_06.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d10_06.png"
+  },
+  {
+    "word": "快乐",
+    "file": "read_d10_07.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d10_07.png"
+  },
+  {
+    "word": "美丽",
+    "file": "read_d10_08.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d10_08.png"
+  },
+  {
+    "word": "海带",
+    "file": "read_d10_10.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d10_10.png"
+  },
+  {
+    "word": "美术",
+    "file": "read_d10_11.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d10_11.png"
+  },
+  {
+    "word": "黑色",
+    "file": "read_d10_12.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d10_12.png"
+  },
+  {
+    "word": "彩旗",
+    "file": "read_d10_13.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d10_13.png"
+  },
+  {
+    "word": "桂花",
+    "file": "read_d10_15.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d10_15.png"
+  },
+  {
+    "word": "尾巴",
+    "file": "read_d10_16.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d10_16.png"
+  },
+  {
+    "word": "火腿",
+    "file": "read_d10_17.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d10_17.png"
+  },
+  {
+    "word": "奶嘴",
+    "file": "read_d10_18.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d10_18.png"
+  },
+  {
+    "word": "吹喇叭",
+    "file": "read_d10_20.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d10_20.png"
+  },
+  {
+    "word": "小牛",
+    "file": "read_d11_05.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d11_05.png"
+  },
+  {
+    "word": "毛笔",
+    "file": "read_d11_06.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d11_06.png"
+  },
+  {
+    "word": "跳舞",
+    "file": "read_d11_08.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d11_08.png"
+  },
+  {
+    "word": "高矮",
+    "file": "read_d11_09.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d11_09.png"
+  },
+  {
+    "word": "葡萄",
+    "file": "read_d11_10.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d11_10.png"
+  },
+  {
+    "word": "跑步",
+    "file": "read_d11_11.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d11_11.png"
+  },
+  {
+    "word": "海鸥",
+    "file": "read_d11_12.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d11_12.png"
+  },
+  {
+    "word": "小猴",
+    "file": "read_d11_13.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d11_13.png"
+  },
+  {
+    "word": "皮球",
+    "file": "read_d11_14.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d11_14.png"
+  },
+  {
+    "word": "书包",
+    "file": "read_d11_15.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d11_15.png"
+  },
+  {
+    "word": "老师",
+    "file": "read_d11_16.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d11_16.png"
+  },
+  {
+    "word": "高楼",
+    "file": "read_d11_17.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d11_17.png"
+  },
+  {
+    "word": "教室",
+    "file": "read_d11_18.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d11_18.png"
+  },
+  {
+    "word": "走路",
+    "file": "read_d11_19.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d11_19.png"
+  },
+  {
+    "word": "花狗",
+    "file": "read_d11_20.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d11_20.png"
+  },
+  {
+    "word": "报纸",
+    "file": "read_d11_21.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d11_21.png"
+  },
+  {
+    "word": "休息",
+    "file": "read_d11_22.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d11_22.png"
+  },
+  {
+    "word": "手帕",
+    "file": "read_d11_23.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d11_23.png"
+  },
+  {
+    "word": "知道",
+    "file": "read_d11_24.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d11_24.png"
+  },
+  {
+    "word": "道理",
+    "file": "read_d11_25.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d11_25.png"
+  },
+  {
+    "word": "告诉",
+    "file": "read_d12_01.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d12_01.png"
+  },
+  {
+    "word": "早操",
+    "file": "read_d12_02.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d12_02.png"
+  },
+  {
+    "word": "梳头",
+    "file": "read_d12_03.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d12_03.png"
+  },
+  {
+    "word": "要求",
+    "file": "read_d12_04.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d12_04.png"
+  },
+  {
+    "word": "纽扣",
+    "file": "read_d12_05.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d12_05.png"
+  },
+  {
+    "word": "优秀",
+    "file": "read_d12_06.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d12_06.png"
+  },
+  {
+    "word": "禾苗",
+    "file": "read_d12_07.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d12_07.png"
+  },
+  {
+    "word": "茶杯",
+    "file": "read_d09_07.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d09_07.png"
+  },
+  {
+    "word": "飞机",
+    "file": "read_d09_13.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d09_13.png"
+  },
+  {
+    "word": "白兔",
+    "file": "read_d09_14.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d09_14.png"
+  },
+  {
+    "word": "退步",
+    "file": "read_d09_17.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d09_17.png"
+  },
+  {
+    "word": "孩子",
+    "file": "read_d09_19.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d09_19.png"
+  },
+  {
+    "word": "比赛",
+    "file": "read_d09_20.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d09_20.png"
+  },
+  {
+    "word": "皮带",
+    "file": "read_d10_14.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d10_14.png"
+  },
+  {
+    "word": "跳水",
+    "file": "read_d12_08.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d12_08.png"
+  },
+  {
+    "word": "打球",
+    "file": "read_d12_09.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d12_09.png"
+  },
+  {
+    "word": "牙膏",
+    "file": "read_d12_10.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d12_10.png"
+  },
+  {
+    "word": "考试",
+    "file": "read_d12_11.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d12_11.png"
+  },
+  {
+    "word": "脑袋",
+    "file": "read_d12_12.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d12_12.png"
+  },
+  {
+    "word": "水牛",
+    "file": "read_d12_13.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d12_13.png"
+  },
+  {
+    "word": "没有",
+    "file": "read_d12_14.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d12_14.png"
+  },
+  {
+    "word": "水蜜桃",
+    "file": "read_d12_15.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d12_15.png"
+  },
+  {
+    "word": "握手",
+    "file": "read_d12_16.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d12_16.png"
+  },
+  {
+    "word": "小刀",
+    "file": "read_d12_17.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d12_17.png"
+  },
+  {
+    "word": "毛皮",
+    "file": "read_d12_18.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d12_18.png"
+  },
+  {
+    "word": "油菜",
+    "file": "read_d12_19.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d12_19.png"
+  },
+  {
+    "word": "头发",
+    "file": "read_d12_20.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d12_20.png"
+  },
+  {
+    "word": "老牛",
+    "file": "read_d12_21.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d12_21.png"
+  },
+  {
+    "word": "嘴巴",
+    "file": "read_d12_22.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d12_22.png"
+  },
+  {
+    "word": "推车",
+    "file": "read_d12_23.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d12_23.png"
+  },
+  {
+    "word": "玫瑰花",
+    "file": "read_d13_03.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d13_03.png"
+  },
+  {
+    "word": "喇叭花",
+    "file": "read_d13_04.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d13_04.png"
+  },
+  {
+    "word": "石榴花",
+    "file": "read_d13_05.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d13_05.png"
+  },
+  {
+    "word": "手表",
+    "file": "read_d13_06.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d13_06.png"
+  },
+  {
+    "word": "小鸟",
+    "file": "read_d13_07.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d13_07.png"
+  },
+  {
+    "word": "多少",
+    "file": "read_d13_08.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d13_08.png"
+  },
+  {
+    "word": "招手",
+    "file": "read_d13_09.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d13_09.png"
+  },
+  {
+    "word": "水沟",
+    "file": "read_d13_10.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d13_10.png"
+  },
+  {
+    "word": "菠菜",
+    "file": "read_d13_11.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d13_11.png"
+  },
+  {
+    "word": "宝贝",
+    "file": "read_d13_12.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d13_12.png"
+  },
+  {
+    "word": "钥匙",
+    "file": "read_d13_13.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d13_13.png"
+  },
+  {
+    "word": "手套",
+    "file": "read_d13_15.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d13_15.png"
+  },
+  {
+    "word": "秋游",
+    "file": "read_d13_16.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d13_16.png"
+  },
+  {
+    "word": "走木桥",
+    "file": "read_d13_17.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d13_17.png"
+  },
+  {
+    "word": "皱眉头",
+    "file": "read_d13_19.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d13_19.png"
+  },
+  {
+    "word": "夜色",
+    "file": "read_d14_01.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d14_01.png"
+  },
+  {
+    "word": "雪花",
+    "file": "read_d14_02.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d14_02.png"
+  },
+  {
+    "word": "写作业",
+    "file": "read_d14_03.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d14_03.png"
+  },
+  {
+    "word": "学习",
+    "file": "read_d14_04.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d14_04.png"
+  },
+  {
+    "word": "切菜",
+    "file": "read_d14_05.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d14_05.png"
+  },
+  {
+    "word": "落叶",
+    "file": "read_d14_07.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d14_07.png"
+  },
+  {
+    "word": "叶子",
+    "file": "read_d14_08.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d14_08.png"
+  },
+  {
+    "word": "日月",
+    "file": "read_d14_09.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d14_09.png"
+  },
+  {
+    "word": "耳朵",
+    "file": "read_d14_10.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d14_10.png"
+  },
+  {
+    "word": "白雪",
+    "file": "read_d14_11.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d14_11.png"
+  },
+  {
+    "word": "喜鹊",
+    "file": "read_d14_12.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d14_12.png"
+  },
+  {
+    "word": "女儿",
+    "file": "read_d14_13.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d14_13.png"
+  },
+  {
+    "word": "儿子",
+    "file": "read_d14_14.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d14_14.png"
+  },
+  {
+    "word": "阅读",
+    "file": "read_d14_15.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d14_15.png"
+  },
+  {
+    "word": "布鞋",
+    "file": "read_d14_16.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d14_16.png"
+  },
+  {
+    "word": "蝴蝶",
+    "file": "read_d14_17.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d14_17.png"
+  },
+  {
+    "word": "谢谢",
+    "file": "read_d14_18.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d14_18.png"
+  },
+  {
+    "word": "贴画",
+    "file": "read_d14_19.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d14_19.png"
+  },
+  {
+    "word": "大街",
+    "file": "read_d14_20.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d14_20.png"
+  },
+  {
+    "word": "学校",
+    "file": "read_d14_21.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d14_21.png"
+  },
+  {
+    "word": "爷爷",
+    "file": "read_d14_22.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d14_22.png"
+  },
+  {
+    "word": "野兔",
+    "file": "read_d14_23.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d14_23.png"
+  },
+  {
+    "word": "月牙",
+    "file": "read_d14_24.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d14_24.png"
+  },
+  {
+    "word": "黑夜",
+    "file": "read_d14_25.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d14_25.png"
+  },
+  {
+    "word": "节日",
+    "file": "read_d14_26.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d14_26.png"
+  },
+  {
+    "word": "乐器",
+    "file": "read_d14_27.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d14_27.png"
+  },
+  {
+    "word": "茄子",
+    "file": "read_d14_28.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d14_28.png"
+  },
+  {
+    "word": "姐姐",
+    "file": "read_d14_29.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d14_29.png"
+  },
+  {
+    "word": "乐曲",
+    "file": "read_d15_01.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d15_01.png"
+  },
+  {
+    "word": "耳机",
+    "file": "read_d15_02.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d15_02.png"
+  },
+  {
+    "word": "月球",
+    "file": "read_d15_03.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d15_03.png"
+  },
+  {
+    "word": "发觉",
+    "file": "read_d15_04.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d15_04.png"
+  },
+  {
+    "word": "口诀",
+    "file": "read_d15_05.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d15_05.png"
+  },
+  {
+    "word": "特别",
+    "file": "read_d15_06.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d15_06.png"
+  },
+  {
+    "word": "结束",
+    "file": "read_d15_07.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d15_07.png"
+  },
+  {
+    "word": "铁路",
+    "file": "read_d15_12.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d15_12.png"
+  },
+  {
+    "word": "缺少",
+    "file": "read_d15_13.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d15_13.png"
+  },
+  {
+    "word": "麻雀",
+    "file": "read_d15_14.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d15_14.png"
+  },
+  {
+    "word": "小学",
+    "file": "read_d15_15.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d15_15.png"
+  },
+  {
+    "word": "越来越好",
+    "file": "read_d15_16.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d15_16.png"
+  },
+  {
+    "word": "蓝天",
+    "file": "read_d16_01.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d16_01.png"
+  },
+  {
+    "word": "白云",
+    "file": "read_d16_02.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d16_02.png"
+  },
+  {
+    "word": "草原",
+    "file": "read_d16_03.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d16_03.png"
+  },
+  {
+    "word": "森林",
+    "file": "read_d16_04.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d16_04.png"
+  },
+  {
+    "word": "轮船",
+    "file": "read_d16_05.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d16_05.png"
+  },
+  {
+    "word": "漫画",
+    "file": "read_d16_06.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d16_06.png"
+  },
+  {
+    "word": "弹琴",
+    "file": "read_d16_07.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d16_07.png"
+  },
+  {
+    "word": "炎热",
+    "file": "read_d16_08.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d16_08.png"
+  },
+  {
+    "word": "打针",
+    "file": "read_d16_09.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d16_09.png"
+  },
+  {
+    "word": "语文",
+    "file": "read_d16_10.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d16_10.png"
+  },
+  {
+    "word": "嫩绿",
+    "file": "read_d16_11.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d16_11.png"
+  },
+  {
+    "word": "灰尘",
+    "file": "read_d16_12.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d16_12.png"
+  },
+  {
+    "word": "辛苦",
+    "file": "read_d16_14.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d16_14.png"
+  },
+  {
+    "word": "满足",
+    "file": "read_d16_15.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d16_15.png"
+  },
+  {
+    "word": "军人",
+    "file": "read_d16_16.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d16_16.png"
+  },
+  {
+    "word": "春节",
+    "file": "read_d16_17.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d16_17.png"
+  },
+  {
+    "word": "孙女",
+    "file": "read_d16_18.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d16_18.png"
+  },
+  {
+    "word": "味道",
+    "file": "read_d15_08.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d15_08.png"
+  },
+  {
+    "word": "科学",
+    "file": "read_d15_09.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d15_09.png"
+  },
+  {
+    "word": "野外",
+    "file": "read_d15_10.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d15_10.png"
+  },
+  {
+    "word": "跳跃",
+    "file": "read_d15_11.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d15_11.png"
+  },
+  {
+    "word": "邻居",
+    "file": "read_d16_13.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d16_13.png"
+  },
+  {
+    "word": "棍子",
+    "file": "read_d16_19.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d16_19.png"
+  },
+  {
+    "word": "准备",
+    "file": "read_d16_20.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d16_20.png"
+  },
+  {
+    "word": "冠军",
+    "file": "read_d16_21.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d16_21.png"
+  },
+  {
+    "word": "圆圈",
+    "file": "read_d16_22.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d16_22.png"
+  },
+  {
+    "word": "蚯蚓",
+    "file": "read_d16_23.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d16_23.png"
+  },
+  {
+    "word": "粉笔",
+    "file": "read_d16_24.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d16_24.png"
+  },
+  {
+    "word": "游泳",
+    "file": "read_d17_01.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d17_01.png"
+  },
+  {
+    "word": "骑自行车",
+    "file": "read_d17_02.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d17_02.png"
+  },
+  {
+    "word": "打乒乓球",
+    "file": "read_d17_03.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d17_03.png"
+  },
+  {
+    "word": "明亮",
+    "file": "read_d17_04.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d17_04.png"
+  },
+  {
+    "word": "大象",
+    "file": "read_d17_05.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d17_05.png"
+  },
+  {
+    "word": "帮忙",
+    "file": "read_d17_06.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d17_06.png"
+  },
+  {
+    "word": "灯笼",
+    "file": "read_d17_07.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d17_07.png"
+  },
+  {
+    "word": "蜜蜂",
+    "file": "read_d17_09.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d17_09.png"
+  },
+  {
+    "word": "朋友",
+    "file": "read_d17_10.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d17_10.png"
+  },
+  {
+    "word": "门窗",
+    "file": "read_d17_11.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d17_11.png"
+  },
+  {
+    "word": "英雄",
+    "file": "read_d17_12.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d17_12.png"
+  },
+  {
+    "word": "放风筝",
+    "file": "read_d17_13.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d17_13.png"
+  },
+  {
+    "word": "跳高",
+    "file": "read_d17_15.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d17_15.png"
+  },
+  {
+    "word": "电影",
+    "file": "read_d17_16.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d17_16.png"
+  },
+  {
+    "word": "熊猫",
+    "file": "read_d17_17.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d17_17.png"
+  },
+  {
+    "word": "电冰箱",
+    "file": "read_d17_18.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d17_18.png"
+  },
+  {
+    "word": "红旗",
+    "file": "read_d17_19.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d17_19.png"
+  },
+  {
+    "word": "长颈鹿",
+    "file": "read_d18_02.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d18_02.png"
+  },
+  {
+    "word": "广场",
+    "file": "read_d18_03.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d18_03.png"
+  },
+  {
+    "word": "打羽毛球",
+    "file": "read_d18_04.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d18_04.png"
+  },
+  {
+    "word": "房屋",
+    "file": "read_d18_05.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d18_05.png"
+  },
+  {
+    "word": "爬山",
+    "file": "read_d18_06.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d18_06.png"
+  },
+  {
+    "word": "北京",
+    "file": "read_d18_07.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d18_07.png"
+  },
+  {
+    "word": "跳绳",
+    "file": "read_d18_08.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d18_08.png"
+  },
+  {
+    "word": "踢足球",
+    "file": "read_d18_09.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d18_09.png"
+  },
+  {
+    "word": "跳远",
+    "file": "read_d18_10.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d18_10.png"
+  },
+  {
+    "word": "打排球",
+    "file": "read_d18_11.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d18_11.png"
+  },
+  {
+    "word": "做广播体操",
+    "file": "read_d18_12.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d18_12.png"
+  },
+  {
+    "word": "鞋子",
+    "file": "read_d19_01.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d19_01.png"
+  },
+  {
+    "word": "打雷",
+    "file": "read_d19_02.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d19_02.png"
+  },
+  {
+    "word": "打猎",
+    "file": "read_d19_03.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d19_03.png"
+  },
+  {
+    "word": "叠被子",
+    "file": "read_d19_04.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d19_04.png"
+  },
+  {
+    "word": "吹气球",
+    "file": "read_d19_06.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d19_06.png"
+  },
+  {
+    "word": "帽子",
+    "file": "read_d19_07.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d19_07.png"
+  },
+  {
+    "word": "水壶",
+    "file": "read_d19_08.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d19_08.png"
+  },
+  {
+    "word": "苹果",
+    "file": "read_d19_09.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d19_09.png"
+  },
+  {
+    "word": "跳棋",
+    "file": "read_d19_10.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d19_10.png"
+  },
+  {
+    "word": "田野",
+    "file": "read_d19_11.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d19_11.png"
+  },
+  {
+    "word": "饼干",
+    "file": "read_d19_13.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d19_13.png"
+  },
+  {
+    "word": "雨伞",
+    "file": "read_d19_14.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d19_14.png"
+  },
+  {
+    "word": "题目",
+    "file": "read_d19_16.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d19_16.png"
+  },
+  {
+    "word": "望远镜",
+    "file": "read_d19_17.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d19_17.png"
+  },
+  {
+    "word": "车厢",
+    "file": "read_d19_18.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d19_18.png"
+  },
+  {
+    "word": "门口",
+    "file": "read_d19_19.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d19_19.png"
+  },
+  {
+    "word": "生日",
+    "file": "read_d19_20.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d19_20.png"
+  },
+  {
+    "word": "丢手绢",
+    "file": "read_d19_22.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d19_22.png"
+  },
+  {
+    "word": "水彩笔",
+    "file": "read_d19_23.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d19_23.png"
+  },
+  {
+    "word": "闹钟",
+    "file": "read_d18_01.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d18_01.png"
+  },
+  {
+    "word": "堆雪人",
+    "file": "read_d19_12.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d19_12.png"
+  },
+  {
+    "word": "秒表",
+    "file": "read_d19_21.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d19_21.png"
+  },
+  {
+    "word": "留下来",
+    "file": "read_d13_18.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d13_18.png"
+  },
+  {
+    "word": "憋气",
+    "file": "read_d14_06.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d14_06.png"
+  },
+  {
+    "word": "写字",
+    "file": "read_d14_30.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d14_30.png"
+  },
+  {
+    "word": "手枪",
+    "file": "read_d17_08.webp",
+    "status": "generated",
+    "source": "output/imagegen/reading-originals/read_d17_08.png"
   }
 ]

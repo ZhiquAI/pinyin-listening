@@ -1,9 +1,22 @@
-import { useEffect, useMemo, useRef } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { layoutPinyinWriting } from '../content/pinyinWriting';
 
 export function PinyinWriting({ pinyin, replay }: { pinyin: string; replay: number }) {
   const svgRef = useRef<SVGSVGElement>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [canScroll, setCanScroll] = useState(false);
   const layout = useMemo(() => layoutPinyinWriting(pinyin), [pinyin]);
+
+  useEffect(() => {
+    const element = scrollRef.current;
+    if (!element) return;
+    const measure = () => setCanScroll(element.scrollWidth > element.clientWidth + 1);
+    measure();
+    const observer = typeof ResizeObserver === 'undefined' ? null : new ResizeObserver(measure);
+    observer?.observe(element);
+    window.addEventListener('resize', measure);
+    return () => { observer?.disconnect(); window.removeEventListener('resize', measure); };
+  }, [layout.width]);
 
   useEffect(() => {
     const svg = svgRef.current;
@@ -65,7 +78,9 @@ export function PinyinWriting({ pinyin, replay }: { pinyin: string; replay: numb
   }, [layout, replay]);
 
   return (
-    <svg ref={svgRef} className="pinyin-writing" viewBox={`0 0 ${layout.width} ${layout.height}`} role="img" aria-label={`拼音 ${pinyin}，四线三格书写示范`}>
+    <div className="pinyin-container">
+    <div ref={scrollRef} className="pinyin-scroll" onTouchStart={(event) => event.stopPropagation()}>
+    <svg ref={svgRef} className="pinyin-writing" style={{ minWidth: `${layout.width * 0.48}px` }} viewBox={`0 0 ${layout.width} ${layout.height}`} role="img" aria-label={`拼音 ${pinyin}，四线三格书写示范`}>
       {Array.from({ length: layout.rows }, (_, row) => (
         <g key={row} className="writing-grid" aria-hidden="true">
           {[20, 60, 100, 140].map((y, i) => <line key={y} x1="4" x2={layout.width - 4} y1={row * 168 + y} y2={row * 168 + y} className={i === 1 || i === 2 ? 'inner-line' : ''} />)}
@@ -79,5 +94,8 @@ export function PinyinWriting({ pinyin, replay }: { pinyin: string; replay: numb
       </g>
       <circle className="writing-pen" r="4" visibility="hidden" />
     </svg>
+    </div>
+    {canScroll && <span className="pinyin-scroll-hint" aria-hidden="true">左右滑动查看</span>}
+    </div>
   );
 }

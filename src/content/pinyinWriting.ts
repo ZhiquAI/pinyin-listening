@@ -59,30 +59,20 @@ export interface WritingStroke { path: string; x: number; y: number; character: 
 export interface WritingLayout { width: number; height: number; rows: number; strokes: WritingStroke[]; }
 export function layoutPinyinWriting(pinyin: string): WritingLayout {
   const syllables = pinyin.normalize('NFC').trim().split(/\s+/).filter(Boolean).map((s) => Array.from(s).map(getWritingGlyph).filter((g): g is WritingGlyph => Boolean(g)));
-  const rows: WritingGlyph[][][] = [[]];
-  let rowWidth = 0;
-  for (const syllable of syllables) {
-    const width = syllable.reduce((sum, glyph) => sum + glyph.width + 4, 0);
-    if (rowWidth && rowWidth + 24 + width > 310) { rows.push([]); rowWidth = 0; }
-    rows[rows.length - 1].push(syllable);
-    rowWidth += (rowWidth ? 24 : 0) + width;
-  }
-  const widths = rows.map((row) => row.reduce((sum, syllable) => sum + syllable.reduce((n, glyph) => n + glyph.width + 4, 0), 0) + Math.max(0, row.length - 1) * 24);
-  const width = Math.max(280, ...widths.map((w) => w + 32));
+  const lineWidth = syllables.reduce((sum, syllable) => sum + syllable.reduce((n, glyph) => n + glyph.width + 4, 0), 0) + Math.max(0, syllables.length - 1) * 24;
+  const width = Math.max(280, lineWidth + 32);
   const strokes: WritingStroke[] = [];
-  rows.forEach((row, rowIndex) => {
-    let x = (width - widths[rowIndex]) / 2;
-    row.forEach((syllable) => {
-      const tones: WritingStroke[] = [];
-      for (const glyph of syllable) {
-        for (const path of glyph.strokes) strokes.push({ path, x, y: rowIndex * 168, character: glyph.character });
-        if (glyph.tone) tones.push({ path: glyph.tone.path, x: x + glyph.tone.x, y: rowIndex * 168 + glyph.tone.y, character: glyph.character });
-        x += glyph.width + 4;
-      }
-      // 音节字母写完后再补声调。
-      strokes.push(...tones);
-      x += 24;
-    });
-  });
-  return { width, height: rows.length * 168 - 8, rows: rows.length, strokes };
+  let x = (width - lineWidth) / 2;
+  for (const syllable of syllables) {
+    const tones: WritingStroke[] = [];
+    for (const glyph of syllable) {
+      for (const path of glyph.strokes) strokes.push({ path, x, y: 0, character: glyph.character });
+      if (glyph.tone) tones.push({ path: glyph.tone.path, x: x + glyph.tone.x, y: glyph.tone.y, character: glyph.character });
+      x += glyph.width + 4;
+    }
+    // 音节字母写完后再补声调。
+    strokes.push(...tones);
+    x += 24;
+  }
+  return { width, height: 160, rows: 1, strokes };
 }

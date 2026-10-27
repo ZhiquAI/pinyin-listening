@@ -64,10 +64,22 @@ export const ParentRecordingModal: React.FC<ParentRecordingModalProps> = ({
     }
   }, [isOpen, item]);
 
+  // 关闭弹窗时释放麦克风，未保存的录音不会写入词库。
+  useEffect(() => {
+    if (!isOpen && mediaRecorderRef.current?.state === 'recording') {
+      mediaRecorderRef.current.stop();
+      mediaRecorderRef.current.stream.getTracks().forEach((track) => track.stop());
+      if (timerRef.current) clearInterval(timerRef.current);
+      setIsRecording(false);
+    }
+  }, [isOpen]);
+
   // 清理
   useEffect(() => {
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
+      if (mediaRecorderRef.current?.state === 'recording') mediaRecorderRef.current.stop();
+      mediaRecorderRef.current?.stream.getTracks().forEach((track) => track.stop());
       if (previewAudioRef.current) {
         previewAudioRef.current.pause();
         previewAudioRef.current = null;

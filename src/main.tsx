@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState, useCallback, useRef } from 'react';
 import { createRoot } from 'react-dom/client';
-import { finalTable, getLearnedItems, initialTable, wholeSyllableTable } from './content/schema';
+import { getLearnedItems } from './content/schema';
 import { toneLabel } from './content/pinyin';
 import { getVocabularyImage } from './content/vocabularyImages';
 import {
@@ -14,7 +14,6 @@ import {
 import {
   playItemNaturally,
   stopAnySpeech,
-  speakText,
 } from './features/audio';
 import {
   loadStarredIds,
@@ -40,11 +39,12 @@ import {
   syncAllAudiosToGitHub,
 } from './features/githubSync';
 import { enhanceAudioBlob } from './features/audioDSP';
-import { ParentRecordingModal } from './components/ParentRecordingModal';
 import { PinyinWriting } from './components/PinyinWriting';
+import { ReadingPage, readingDays } from './components/ReadingPage';
+import { LettersPage } from './components/LettersPage';
 import './styles.css';
 
-type Tab = 'read' | 'today' | 'basics' | 'parent';
+type Tab = 'practice' | 'read' | 'today' | 'basics' | 'parent';
 type MaskMode = 'all' | 'hidePinyin' | 'hideHanzi';
 type AudioMode = 'spelling' | 'word';
 
@@ -70,8 +70,17 @@ function Icon({ name }: { name: IconName }) {
 }
 
 function App() {
-  const [tab, setTab] = useState<Tab>('read');
-  const courseDialogRef = useRef<HTMLDialogElement>(null);
+  const [tab, setTab] = useState<Tab>(() => {
+    const saved = localStorage.getItem('pinyin_last_module');
+    return saved === 'read' || saved === 'basics' ? saved : 'practice';
+  });
+  const [readingDay, setReadingDay] = useState(() => {
+    const saved = Number(localStorage.getItem('pinyin_reading_day'));
+    return saved >= 1 && saved <= readingDays.length ? saved : 1;
+  });
+  const readingDaysDialogRef = useRef<HTMLDialogElement>(null);
+  useEffect(() => { if (tab === 'practice' || tab === 'read' || tab === 'basics') localStorage.setItem('pinyin_last_module', tab); }, [tab]);
+  useEffect(() => { localStorage.setItem('pinyin_reading_day', String(readingDay)); }, [readingDay]);
   const settingsDialogRef = useRef<HTMLDialogElement>(null);
   const [selectedWeek, setSelectedWeek] = useState<number>(() => {
     if (typeof window !== 'undefined' && window.localStorage) {
@@ -132,9 +141,9 @@ function App() {
         setSyncProgress(`${cur}/${total}`);
       });
       if (res.success > 0) {
-        setSyncStatusMsg(`✓ 成功同步 ${res.success} 条原声音频至 GitHub 仓库！GitHub Actions 正在自动发布。`);
+        setSyncStatusMsg(`✓ 已上传 ${res.success} 条录音${res.failed ? `，${res.failed} 条失败` : ''}。网站发布后可在其他设备收听。`);
       } else {
-        setSyncStatusMsg('暂无需要同步的录音。');
+        setSyncStatusMsg(res.failed ? `同步失败：${res.failed} 条录音未上传，请检查网络和令牌。` : '暂无需要同步的录音。');
       }
     } catch (err: unknown) {
       setSyncStatusMsg(`同步失败：${err instanceof Error ? err.message : String(err)}`);
@@ -158,16 +167,8 @@ function App() {
   };
   const maxDragDistanceRef = useRef<number>(0);
 
-  // 家长真人原声录制室状态
-  const [recordingItem, setRecordingItem] = useState<DictationItem | null>(null);
-  const [isRecordModalOpen, setIsRecordModalOpen] = useState<boolean>(false);
   const [, setCustomAudioVersion] = useState<number>(0);
-
-  const openRecordModal = (item: DictationItem) => {
-    stopSpellingAudio(); resetWriting();
-    setRecordingItem(item);
-    setIsRecordModalOpen(true);
-  };
+  const [uploadStatus, setUploadStatus] = useState('');
 
   // 卡片实时即录即播状态（纯手动录制，点击开始，录完再次点击完成保存）
   const [isInlineRecording, setIsInlineRecording] = useState(false);
@@ -300,7 +301,7 @@ function App() {
                 setSaveStatus('✓ 本地已保存 · 正在同步GitHub…');
                 syncSingleAudioToGitHub(targetId, enhancedDataUrl, currentItem?.character)
                   .then(() => {
-                    setSaveStatus('✓ 已同步至GitHub！');
+                    setSaveStatus('✓ 已上传，网站发布后可在其他设备收听');
                     setTimeout(() => setSaveStatus(''), 2500);
                   })
                   .catch((syncErr) => {
@@ -319,8 +320,15 @@ function App() {
                 if (typeof reader.result === 'string') {
                   saveCustomAudioData(targetId, reader.result);
                   setCustomAudioVersion((v) => v + 1);
-                  setSaveStatus('✓ 已保存');
-                  setTimeout(() => setSaveStatus(''), 1500);
+                  if (getGitHubToken()) {
+                    setSaveStatus('已保存，正在同步…');
+                    syncSingleAudioToGitHub(targetId, reader.result)
+                      .then(() => setSaveStatus('已上传，网站发布后可在其他设备收听'))
+                      .catch(() => setSaveStatus('已保存在本机，同步失败，请检查网络和令牌'));
+                  } else {
+                    setSaveStatus('✓ 已保存');
+                    setTimeout(() => setSaveStatus(''), 1500);
+                  }
                 }
               };
               reader.readAsDataURL(audioBlob);
@@ -395,6 +403,10 @@ function App() {
       stopInlineRecording();
     }
   }, [currentCardIndex, selectedWeek, selectedDayIndex, stopInlineRecording]);
+
+  useEffect(() => {
+    if (tab !== 'read' && isInlineRecording) stopInlineRecording();
+  }, [tab]);
 
   // 今日闯关卡旧状态
   const [selectedItem, setSelectedItem] = useState(getLearnedItems()[0]);
@@ -554,7 +566,7 @@ function App() {
       const nextIdx = currentCardIndex + 1;
       stopSpellingAudio(); resetWriting();      setIsSpeaking(false);      setCurrentCardIndex(nextIdx);
       setRevealed(false);
-      if (autoPlayOnFlip && currentDayItems[nextIdx]) {
+      if (autoPlayOnFlip && currentDayItems[nextIdx] && hasCustomAudioData(currentDayItems[nextIdx].id)) {
         handlePlayCurrent(currentDayItems[nextIdx]);
       }
     } else {
@@ -569,7 +581,7 @@ function App() {
       const prevIdx = currentCardIndex - 1;
       stopSpellingAudio(); resetWriting();      setIsSpeaking(false);      setCurrentCardIndex(prevIdx);
       setRevealed(false);
-      if (autoPlayOnFlip && currentDayItems[prevIdx]) {
+      if (autoPlayOnFlip && currentDayItems[prevIdx] && hasCustomAudioData(currentDayItems[prevIdx].id)) {
         handlePlayCurrent(currentDayItems[prevIdx]);
       }
     }
@@ -589,7 +601,7 @@ function App() {
     if (tab !== 'read' || isCompleted) return;
 
     function onKeyDown(e: KeyboardEvent) {
-      if (document.querySelector('dialog[open]') || isRecordModalOpen) return;
+      if (document.querySelector('dialog[open]')) return;
       if (e.target instanceof Element && e.target.closest('button, input, select, textarea, a')) return;
 
       if (e.key === 'ArrowRight') {
@@ -606,7 +618,7 @@ function App() {
 
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
-  }, [tab, isCompleted, isRecordModalOpen, handleNextCard, handlePrevCard, handlePlayCurrent]);
+  }, [tab, isCompleted, handleNextCard, handlePrevCard, handlePlayCurrent]);
 
   // 触摸手势
   function handleTouchStart(e: React.TouchEvent) {
@@ -730,18 +742,26 @@ function App() {
     <div className="app-shell">
       <header className="topbar">
         <div className="brand-mark"><span className="brand-dot" />拼音小岛</div>
-        <button className="course-picker" onClick={() => courseDialogRef.current?.showModal()} aria-haspopup="dialog">
-          <span>
-            {currentWeekData?.days[selectedDayIndex]?.dayLabel
-              ? currentWeekData.days[selectedDayIndex].dayLabel.replace(/ · 《.+?》.*/, '')
-              : `第${selectedWeek}周 · 课时选择`}
-          </span>
-          <Icon name="down" />
-        </button>
+        {tab === 'practice' ? (
+          <button className="course-picker" onClick={() => readingDaysDialogRef.current?.showModal()} aria-haspopup="dialog"><span>第{readingDay}天 · {readingDays[readingDay - 1].title}</span><Icon name="down" /></button>
+        ) : tab === 'read' ? (
+          <div className="inline-course-picker" aria-label="选择听写课时">
+            <select aria-label="选择具体课时" value={`${selectedWeek}:${selectedDayIndex}`} onChange={(event) => {
+              const [week, day] = event.target.value.split(':').map(Number);
+              stopSpellingAudio(); resetWriting(); setIsSpeaking(false);
+              setSelectedWeek(week); setSelectedDayIndex(day);
+            }}>
+              {availableWeeks.flatMap((week) => (getWeekData(week)?.days ?? []).map((day, index) => (
+                <option key={`${week}:${index}`} value={`${week}:${index}`}>{day.dayLabel.match(/^\d+月\d+日\s*[（(]周[一二三四五六日天][）)]/)?.[0] ?? day.dayLabel}</option>
+              )))}
+            </select>
+          </div>
+        ) : <span className="topbar-context">{tab === 'basics' ? '字母表' : tab === 'today' ? '闯关' : '家长记录'}</span>}
         <button className="icon-button settings-button" aria-label="练习设置" onClick={() => settingsDialogRef.current?.showModal()} aria-haspopup="dialog"><Icon name="settings" /></button>
       </header>
 
-      <main className={tab === 'read' ? 'learning-main' : 'secondary-main'}>
+      <main className={tab === 'read' || tab === 'practice' ? 'learning-main' : 'secondary-main'}>
+        {tab === 'practice' && <ReadingPage day={readingDay} onDayChange={setReadingDay} onOpenDays={() => readingDaysDialogRef.current?.showModal()} onChallenge={() => setTab('today')} />}
         {/* iPad 滑动卡片点读舞台 */}
         {tab === 'read' && (
           <section className="ipad-stage">
@@ -823,7 +843,8 @@ function App() {
                 </div>
               </div>
             ) : currentItem ? (
-              /* 单张大卡片 (支持左右滑动) */
+              /* 左右居中翻页，卡片保留滑动手势。 */
+              <div className="card-stage-frame">
               <div
                 className="swipe-canvas"
                 onTouchStart={handleTouchStart}
@@ -846,32 +867,7 @@ function App() {
                   aria-label="点读练习卡"
                 >
                   <div className="card-top-row">
-                    <div className="card-top-left">
-                      <span className="card-progress" aria-live="polite">{currentCardIndex + 1} / {currentDayItems.length}</span>
-                      {hasCustomAudioData(currentItem.id) ? (
-                        <button
-                          className="custom-voice-badge active"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            openRecordModal(currentItem);
-                          }}
-                          title="已录制家长原声，点击管理"
-                        >
-                          💖 家长原声
-                        </button>
-                      ) : (
-                        <button
-                          className="custom-voice-badge empty"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            openRecordModal(currentItem);
-                          }}
-                          title="录入我的声音"
-                        >
-                          🎙 录我声音
-                        </button>
-                      )}
-                    </div>
+                    <span className="card-progress" aria-live="polite">{currentCardIndex + 1} / {currentDayItems.length}</span>
                     <button
                       className={`star-btn ${starredIds[currentItem.id] ? 'starred' : ''}`}
                       onClick={(e) => toggleStar(currentItem.id, e)}
@@ -926,28 +922,36 @@ function App() {
                           replay={writingReplay.itemId === currentItem.id ? writingReplay.count : 0}
                         />
                       </div>
-                      <p className="writing-caption">听一听，看看拼音怎么写</p>
-                    <div className="card-action-buttons">
-                      <button
-                        className={`listen-button play-btn ${isSpeaking ? 'speaking' : ''} ${hasCustomAudioData(currentItem.id) ? 'has-custom-voice' : 'need-record'}`}
-                        onMouseDown={(e) => e.stopPropagation()}
-                        onTouchStart={(e) => e.stopPropagation()}
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          if (maskMode !== 'all') setRevealed(true);
-                          handlePlayCurrent();
-                        }}
-                      >
-                        <Icon name="speaker" />
-                        <span>
-                          {isSpeaking
-                            ? '正在朗读…'
-                            : hasCustomAudioData(currentItem.id)
-                            ? '▶ 点读我的原声'
-                            : '🎙 尚未录音 · 点此录入'}
-                        </span>
-                      </button>
 
+                  </div>
+                  </div>
+
+                  {/* 底部翻牌或发音提示 */}
+                  <div className="card-tap-indicator">
+                    {isInlineRecording ? (
+                      <span style={{ color: '#be123c', fontWeight: 600 }}>录音中… 再点底部按钮完成保存</span>
+                    ) : maskMode !== 'all' && !revealed ? (
+                      <span className="reveal-badge">轻触揭晓答案 · 左右滑动换词</span>
+                    ) : hasCustomAudioData(currentItem.id) ? (
+                      <span>{isSpeaking ? '正在播放我的真实原声…' : '已启用我的原声 · 轻触卡片点读'}</span>
+                    ) : (
+                      <span>点击底部「录我声音」为宝贝配音</span>
+                    )}
+                  </div>
+                </div>
+              </div>
+                <div className="side-pager" aria-label="词语翻页">
+                  <button className="page-arrow" onClick={handlePrevCard} disabled={currentCardIndex === 0} aria-label="上一个词"><Icon name="left" /></button>
+                  <button className="page-arrow next" onClick={handleNextCard} aria-label={currentCardIndex === currentDayItems.length - 1 ? '完成本课练习' : '下一个词'}><Icon name={currentCardIndex === currentDayItems.length - 1 ? 'check' : 'right'} /></button>
+                </div>
+              </div>
+            ) : (
+              <div className="empty-report">该课时暂无词条</div>
+            )}
+
+            {!isCompleted && currentItem && (
+              <div className="practice-bottom">
+                <div className="bottom-record-controls">
                       <button
                         className={`inline-record-btn ${isInlineRecording ? 'recording' : ''} ${hasCustomAudioData(currentItem.id) ? 'recorded' : ''}`}
                         onMouseDown={(e) => e.stopPropagation()}
@@ -983,6 +987,27 @@ function App() {
                         </span>
                       </button>
 
+                  <button
+                        disabled={!hasCustomAudioData(currentItem.id) || isInlineRecording}
+                        className={`listen-button play-btn ${isSpeaking ? 'speaking' : ''} ${hasCustomAudioData(currentItem.id) ? 'has-custom-voice' : 'need-record'}`}
+                        onMouseDown={(e) => e.stopPropagation()}
+                        onTouchStart={(e) => e.stopPropagation()}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          if (maskMode !== 'all') setRevealed(true);
+                          handlePlayCurrent();
+                        }}
+                      >
+                        <Icon name="speaker" />
+                        <span>
+                          {isSpeaking
+                            ? '正在朗读…'
+                            : hasCustomAudioData(currentItem.id)
+                            ? '听拼读'
+                            : '先录音再点读'}
+                        </span>
+                      </button>
+
                       {hasCustomAudioData(currentItem.id) && !isInlineRecording && (
                         <button
                           className="inline-reset-btn"
@@ -998,31 +1023,9 @@ function App() {
                           删除录音
                         </button>
                       )}
-                    </div>
-                  </div>
-                  </div>
 
-                  {/* 底部翻牌或发音提示 */}
-                  <div className="card-tap-indicator">
-                    {isInlineRecording ? (
-                      <span style={{ color: '#be123c', fontWeight: 600 }}>录音中… 录完后点击上方红色按钮即可完成保存</span>
-                    ) : maskMode !== 'all' && !revealed ? (
-                      <span className="reveal-badge">轻触揭晓答案 · 左右滑动换词</span>
-                    ) : hasCustomAudioData(currentItem.id) ? (
-                      <span>{isSpeaking ? '正在播放我的真实原声…' : '已启用我的原声 · 轻触卡片点读'}</span>
-                    ) : (
-                      <span>尚未录入原声 · 点上方【录我声音】为宝贝配音</span>
-                    )}
-                  </div>
                 </div>
-              </div>
-            ) : (
-              <div className="empty-report">该课时暂无词条</div>
-            )}
-
-            {!isCompleted && currentItem && (
-              <div className="word-pager" aria-label="词语翻页">
-                <button className="page-arrow" onClick={handlePrevCard} disabled={currentCardIndex === 0} aria-label="上一个词"><Icon name="left" /></button>
+                <div className="word-pager" aria-label="词语进度">
                 <div className="page-dots">
                   {currentDayItems.map((it, idx) => (
                     <button
@@ -1032,13 +1035,13 @@ function App() {
                       onClick={() => {
                         stopSpellingAudio(); resetWriting();                        setIsSpeaking(false);                        setCurrentCardIndex(idx);
                         setRevealed(false);
-                        if (autoPlayOnFlip) handlePlayCurrent(it);
+                        if (autoPlayOnFlip && hasCustomAudioData(it.id)) handlePlayCurrent(it);
                       }}
                       aria-label={`第${idx + 1}个词`}
                     ><span /></button>
                   ))}
                 </div>
-                <button className="page-arrow next" onClick={handleNextCard} aria-label={currentCardIndex === currentDayItems.length - 1 ? '完成本课练习' : '下一个词'}><Icon name={currentCardIndex === currentDayItems.length - 1 ? 'check' : 'right'} /></button>
+              </div>
               </div>
             )}
           </section>
@@ -1146,107 +1149,8 @@ function App() {
           </section>
         )}
 
-        {/* 基础拼音馆 */}
-        {tab === 'basics' && (
-          <section className="basics-page">
-            <div className="basics-intro">
-              <div>
-                <p className="eyebrow">基础拼音馆</p>
-                <h2>标准呼读音，把字母认熟认准。</h2>
-              </div>
-              <button
-                className="secondary-button"
-                onClick={() => speakText('声母 韵母 整体认读音节')}
-              >
-                ▶ 听听简介
-              </button>
-            </div>
-            <div className="table-section">
-              <div className="table-title">
-                <span className="table-icon blue">声</span>
-                <div>
-                  <h3>声母表 (23个)</h3>
-                  <p>发音轻短，点击播放标准呼读音</p>
-                </div>
-              </div>
-              <div className="letter-grid">
-                {initialTable.map((letter) => (
-                  <button
-                    key={letter}
-                    onClick={() => handlePlayCurrent({
-                      id: letter,
-                      character: letter,
-                      pinyin: letter,
-                      week: 5,
-                      dayLabel: '',
-                      category: '声母',
-                      teachingSteps: [letter],
-                    })}
-                  >
-                    {letter}
-                    <small>听呼读</small>
-                  </button>
-                ))}
-              </div>
-            </div>
-            <div className="table-section warm">
-              <div className="table-title">
-                <span className="table-icon coral">韵</span>
-                <div>
-                  <h3>韵母表 (24个)</h3>
-                  <p>声音响亮拉长，点击试听原声</p>
-                </div>
-              </div>
-              <div className="letter-grid">
-                {finalTable.map((letter) => (
-                  <button
-                    key={letter}
-                    onClick={() => handlePlayCurrent({
-                      id: letter,
-                      character: letter,
-                      pinyin: letter,
-                      week: 5,
-                      dayLabel: '',
-                      category: '韵母',
-                      teachingSteps: [letter],
-                    })}
-                  >
-                    {letter}
-                    <small>读一读</small>
-                  </button>
-                ))}
-              </div>
-            </div>
-            <div className="table-section violet">
-              <div className="table-title">
-                <span className="table-icon violet-icon">读</span>
-                <div>
-                  <h3>整体认读音节 (16个)</h3>
-                  <p>不拼读，直接整读出来</p>
-                </div>
-              </div>
-              <div className="letter-grid whole">
-                {wholeSyllableTable.map((letter) => (
-                  <button
-                    key={letter}
-                    onClick={() => handlePlayCurrent({
-                      id: letter,
-                      character: letter,
-                      pinyin: letter,
-                      week: 5,
-                      dayLabel: '',
-                      category: '整体认读',
-                      teachingSteps: [letter],
-                    })}
-                  >
-                    {letter}
-                    <small>整体读</small>
-                  </button>
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
+        {/* 基础拼音字母表 */}
+        {tab === 'basics' && <LettersPage />}
 
         {/* 家长记录 */}
         {tab === 'parent' && (
@@ -1324,56 +1228,19 @@ function App() {
       </main>
 
       <nav className="bottom-tabs" aria-label="学习导航">
-        {([['read', '学拼读', 'book'], ['today', '闯关', 'trophy'], ['basics', '拼音馆', 'letters'], ['parent', '我的', 'person']] as const).map(([id, label, icon]) => (
+        {([['practice', '拼读', 'book'], ['read', '听写', 'trophy'], ['basics', '字母表', 'letters']] as const).map(([id, label, icon]) => (
           <button key={id} className={tab === id ? 'bottom-tab active' : 'bottom-tab'} aria-current={tab === id ? 'page' : undefined} onClick={() => { stopSpellingAudio(); resetWriting(); setIsSpeaking(false); setTab(id); }}>
             <Icon name={icon} /><span>{label}</span>
           </button>
         ))}
       </nav>
 
-      <dialog ref={courseDialogRef} className="app-dialog" aria-labelledby="course-title">
-        <div className="dialog-heading"><h2 id="course-title">选择课时</h2><button className="icon-button" aria-label="关闭选课" onClick={() => courseDialogRef.current?.close()}><Icon name="close" /></button></div>
-        <p className="dialog-note">选择周次和当天要练习的内容</p>
-        <div className="course-controls">
-                <div className="week-selector">
-                  {availableWeeks.map((wk) => (
-                    <button
-                      key={wk}
-                      className={wk === selectedWeek ? 'week-pill active' : 'week-pill'}
-                      aria-pressed={wk === selectedWeek}
-                      onClick={() => {
-                        stopSpellingAudio(); resetWriting();
-                        setSelectedWeek(wk);
-                        setSelectedDayIndex(0);
-                      }}
-                    >
-                      第{wk}周
-                    </button>
-                  ))}
-                </div>
-
-                {/* 课时下拉 */}
-                {currentWeekData && (
-                  <select
-                    className="day-select"
-                    value={selectedDayIndex}
-                    onChange={(e) => {
-                      stopSpellingAudio(); resetWriting();
-                      setSelectedDayIndex(parseInt(e.target.value, 10));
-                    }}
-                    aria-label="选择具体课时"
-                  >
-                    {currentWeekData.days.map((d, idx) => (
-                      <option key={idx} value={idx}>
-                        {d.dayLabel} ({d.items.length}词){d.dayLabel.includes('10月27日') ? ' ⭐ [最新]' : ''}
-                      </option>
-                    ))}
-                  </select>
-                )}
-
-        </div>
-        <button className="dialog-done" onClick={() => { stopSpellingAudio(); resetWriting(); setIsSpeaking(false); setTab('read'); courseDialogRef.current?.close(); }}>开始练习</button>
+      <dialog ref={readingDaysDialogRef} className="app-dialog days-dialog" aria-labelledby="reading-days-title">
+        <div className="dialog-heading"><h2 id="reading-days-title">选择拼读内容</h2><button className="icon-button" aria-label="关闭拼读目录" onClick={() => readingDaysDialogRef.current?.close()}><Icon name="close" /></button></div>
+        <p className="dialog-note">按每日拼读练习顺序选择</p>
+        <div className="reading-days">{readingDays.map((entry) => <button key={entry.day} aria-current={entry.day === readingDay ? 'true' : undefined} onClick={() => { setReadingDay(entry.day); readingDaysDialogRef.current?.close(); }}><span>第{entry.day}天</span><strong>{entry.title}</strong><small>{entry.items.length}词</small></button>)}</div>
       </dialog>
+
       <dialog ref={settingsDialogRef} className="app-dialog" aria-labelledby="settings-title">
         <div className="dialog-heading"><h2 id="settings-title">练习设置</h2><button className="icon-button" aria-label="关闭设置" onClick={() => settingsDialogRef.current?.close()}><Icon name="close" /></button></div>
         <section className="setting-section"><h3>朗读方式</h3>
@@ -1435,17 +1302,44 @@ function App() {
           <p className="dialog-note">点一下卡片或朗读按钮，即可揭晓答案。</p>
         </section>
         <label className="setting-switch"><span>换词时自动朗读</span><input type="checkbox" role="switch" checked={autoPlayOnFlip} onChange={(e) => setAutoPlayOnFlip(e.target.checked)} /></label>
-        {currentItem && <button className="record-entry" onClick={() => { settingsDialogRef.current?.close(); openRecordModal(currentItem); }}><Icon name="mic" /><span>{hasCustomAudioData(currentItem.id) ? '管理' : '录制'}「{currentItem.character}」的家长原声</span><Icon name="right" /></button>}
+        {tab === 'read' && currentItem && <>
+          <label className="record-entry upload-entry"><Icon name="mic" /><span>上传「{currentItem.character}」的录音</span><input type="file" accept="audio/*" onChange={async (event) => {
+            const file = event.currentTarget.files?.[0];
+            const targetId = currentItem.id;
+            const targetWord = currentItem.character;
+            event.currentTarget.value = '';
+            if (!file) return;
+            setUploadStatus('正在处理录音…');
+            try {
+              let data: string;
+              try { data = await enhanceAudioBlob(file); }
+              catch { data = await new Promise<string>((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = () => typeof reader.result === 'string' ? resolve(reader.result) : reject(new Error('读取失败'));
+                reader.onerror = () => reject(new Error('读取失败'));
+                reader.readAsDataURL(file);
+              }); }
+              saveCustomAudioData(targetId, data);
+              setCustomAudioVersion((v) => v + 1);
+              setUploadStatus(`「${targetWord}」的录音已保存。`);
+            } catch { setUploadStatus('无法读取音频，请换一个文件重试。'); }
+          }} /></label>
+          {uploadStatus && <p className="dialog-note" role="status">{uploadStatus}</p>}
+        </>}
+
+        <button className="record-entry" onClick={() => { settingsDialogRef.current?.close(); setTab('parent'); }}><Icon name="person" /><span>家长记录与重点词</span><Icon name="right" /></button>
 
         {/* iPad GitHub 录音同步中心 */}
         <section className="setting-section github-sync-section">
           <h3>☁️ iPad 录音同步至 GitHub</h3>
           <p className="dialog-note" style={{ marginBottom: 8 }}>
-            输入 GitHub Token 后，iPad 录完的声音可一键直接推送到 GitHub 仓库并自动全网发布，任何设备打开网站都能听到！
+            输入具有当前仓库 Contents 写入权限的 GitHub Token。录音完成后自动上传，网站重新发布后可在其他设备收听。录音会公开，Token 保存在当前浏览器。
           </p>
           <div className="github-token-input-group">
             <input
               type="password"
+              aria-label="GitHub Token"
+              autoComplete="off"
               className="token-input"
               placeholder="输入 GitHub Personal Access Token (PAT)"
               value={githubTokenInput}
@@ -1481,19 +1375,6 @@ function App() {
         <button className="dialog-done" onClick={() => settingsDialogRef.current?.close()}>完成</button>
       </dialog>
 
-      {/* 家长自录真人原声工作台 (支持流水线连续录音) */}
-      <ParentRecordingModal
-        item={recordingItem || currentItem || null}
-        isOpen={isRecordModalOpen}
-        onClose={() => setIsRecordModalOpen(false)}
-        onAudioUpdated={() => setCustomAudioVersion((v) => v + 1)}
-        itemsList={currentDayItems}
-        currentIndex={currentCardIndex}
-        onNavigate={(newIdx) => {
-          setCurrentCardIndex(newIdx);
-          setRecordingItem(currentDayItems[newIdx]);
-        }}
-      />
     </div>
   );
 }

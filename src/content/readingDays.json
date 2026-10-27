@@ -1,0 +1,2296 @@
+[
+  {
+    "day": 1,
+    "title": "b p m f",
+    "items": [
+      {
+        "id": "read_d01_01",
+        "character": "爸爸",
+        "pinyin": "bà ba"
+      },
+      {
+        "id": "read_d01_02",
+        "character": "妈妈",
+        "pinyin": "mā ma"
+      },
+      {
+        "id": "read_d01_03",
+        "character": "伯伯",
+        "pinyin": "bó bo"
+      },
+      {
+        "id": "read_d01_04",
+        "character": "婆婆",
+        "pinyin": "pó po"
+      },
+      {
+        "id": "read_d01_05",
+        "character": "秘密",
+        "pinyin": "mì mi"
+      },
+      {
+        "id": "read_d01_06",
+        "character": "爬坡",
+        "pinyin": "pá pō"
+      },
+      {
+        "id": "read_d01_07",
+        "character": "瀑布",
+        "pinyin": "pù bù"
+      },
+      {
+        "id": "read_d01_08",
+        "character": "父母",
+        "pinyin": "fù mǔ"
+      },
+      {
+        "id": "read_d01_09",
+        "character": "抹布",
+        "pinyin": "mā bù"
+      },
+      {
+        "id": "read_d01_10",
+        "character": "大米",
+        "pinyin": "dà mǐ"
+      },
+      {
+        "id": "read_d01_11",
+        "character": "木筏",
+        "pinyin": "mù fá"
+      },
+      {
+        "id": "read_d01_12",
+        "character": "木马",
+        "pinyin": "mù mǎ"
+      },
+      {
+        "id": "read_d01_13",
+        "character": "笔墨",
+        "pinyin": "bǐ mò"
+      },
+      {
+        "id": "read_d01_14",
+        "character": "密码",
+        "pinyin": "mì mǎ"
+      },
+      {
+        "id": "read_d01_15",
+        "character": "魔法",
+        "pinyin": "mó fǎ"
+      },
+      {
+        "id": "read_d01_16",
+        "character": "布匹",
+        "pinyin": "bù pǐ"
+      },
+      {
+        "id": "read_d01_17",
+        "character": "皮肤",
+        "pinyin": "pí fū"
+      },
+      {
+        "id": "read_d01_18",
+        "character": "枇杷",
+        "pinyin": "pí pa"
+      },
+      {
+        "id": "read_d01_19",
+        "character": "拔牙",
+        "pinyin": "bá yá"
+      },
+      {
+        "id": "read_d01_20",
+        "character": "抚摸",
+        "pinyin": "fǔ mō"
+      },
+      {
+        "id": "read_d01_21",
+        "character": "皮衣",
+        "pinyin": "pí yī"
+      },
+      {
+        "id": "read_d01_22",
+        "character": "批发",
+        "pinyin": "pī fā"
+      },
+      {
+        "id": "read_d01_23",
+        "character": "斧子",
+        "pinyin": "fǔ zi"
+      }
+    ]
+  },
+  {
+    "day": 2,
+    "title": "d t n l",
+    "items": [
+      {
+        "id": "read_d02_01",
+        "character": "马路",
+        "pinyin": "mǎ lù"
+      },
+      {
+        "id": "read_d02_02",
+        "character": "泥土",
+        "pinyin": "ní tǔ"
+      },
+      {
+        "id": "read_d02_03",
+        "character": "肚皮",
+        "pinyin": "dù pí"
+      },
+      {
+        "id": "read_d02_04",
+        "character": "答题",
+        "pinyin": "dá tí"
+      },
+      {
+        "id": "read_d02_05",
+        "character": "弟弟",
+        "pinyin": "dì di"
+      },
+      {
+        "id": "read_d02_06",
+        "character": "嘀嗒",
+        "pinyin": "dī dā"
+      },
+      {
+        "id": "read_d02_07",
+        "character": "哪里",
+        "pinyin": "nǎ lǐ"
+      },
+      {
+        "id": "read_d02_08",
+        "character": "大马",
+        "pinyin": "dà mǎ"
+      },
+      {
+        "id": "read_d02_09",
+        "character": "努力",
+        "pinyin": "nǔ lì"
+      },
+      {
+        "id": "read_d02_10",
+        "character": "土地",
+        "pinyin": "tǔ dì"
+      },
+      {
+        "id": "read_d02_11",
+        "character": "徒弟",
+        "pinyin": "tú dì"
+      },
+      {
+        "id": "read_d02_12",
+        "character": "地图",
+        "pinyin": "dì tú"
+      },
+      {
+        "id": "read_d02_13",
+        "character": "喇叭",
+        "pinyin": "lǎ ba"
+      },
+      {
+        "id": "read_d02_14",
+        "character": "蜡笔",
+        "pinyin": "là bǐ"
+      },
+      {
+        "id": "read_d02_15",
+        "character": "踏步",
+        "pinyin": "tà bù"
+      },
+      {
+        "id": "read_d02_16",
+        "character": "法律",
+        "pinyin": "fǎ lǜ"
+      },
+      {
+        "id": "read_d02_17",
+        "character": "大度",
+        "pinyin": "dà dù"
+      },
+      {
+        "id": "read_d02_18",
+        "character": "打赌",
+        "pinyin": "dǎ dǔ"
+      },
+      {
+        "id": "read_d02_19",
+        "character": "理发",
+        "pinyin": "lǐ fà"
+      },
+      {
+        "id": "read_d02_20",
+        "character": "拖地",
+        "pinyin": "tuō dì"
+      },
+      {
+        "id": "read_d02_21",
+        "character": "拔萝卜",
+        "pinyin": "bá luó bo"
+      },
+      {
+        "id": "read_d02_22",
+        "character": "打靶",
+        "pinyin": "dǎ bǎ"
+      },
+      {
+        "id": "read_d02_23",
+        "character": "骆驼",
+        "pinyin": "luò tuo"
+      },
+      {
+        "id": "read_d02_24",
+        "character": "驴",
+        "pinyin": "lǘ"
+      }
+    ]
+  },
+  {
+    "day": 3,
+    "title": "g k h",
+    "items": [
+      {
+        "id": "read_d03_01",
+        "character": "画画",
+        "pinyin": "huà huà"
+      },
+      {
+        "id": "read_d03_02",
+        "character": "打鼓",
+        "pinyin": "dǎ gǔ"
+      },
+      {
+        "id": "read_d03_03",
+        "character": "狐狸",
+        "pinyin": "hú li"
+      },
+      {
+        "id": "read_d03_04",
+        "character": "葫芦",
+        "pinyin": "hú lu"
+      },
+      {
+        "id": "read_d03_05",
+        "character": "拔河",
+        "pinyin": "bá hé"
+      },
+      {
+        "id": "read_d03_06",
+        "character": "隔壁",
+        "pinyin": "gé bì"
+      },
+      {
+        "id": "read_d03_07",
+        "character": "哥哥",
+        "pinyin": "gē ge"
+      },
+      {
+        "id": "read_d03_08",
+        "character": "贺卡",
+        "pinyin": "hè kǎ"
+      },
+      {
+        "id": "read_d03_09",
+        "character": "顾客",
+        "pinyin": "gù kè"
+      },
+      {
+        "id": "read_d03_10",
+        "character": "可乐",
+        "pinyin": "kě lè"
+      },
+      {
+        "id": "read_d03_11",
+        "character": "刻苦",
+        "pinyin": "kè kǔ"
+      },
+      {
+        "id": "read_d03_12",
+        "character": "可怕",
+        "pinyin": "kě pà"
+      },
+      {
+        "id": "read_d03_13",
+        "character": "河马",
+        "pinyin": "hé mǎ"
+      },
+      {
+        "id": "read_d03_14",
+        "character": "姑姑",
+        "pinyin": "gū gu"
+      },
+      {
+        "id": "read_d03_15",
+        "character": "蘑菇",
+        "pinyin": "mó gu"
+      },
+      {
+        "id": "read_d03_16",
+        "character": "荷花",
+        "pinyin": "hé huā"
+      },
+      {
+        "id": "read_d03_17",
+        "character": "图画",
+        "pinyin": "tú huà"
+      },
+      {
+        "id": "read_d03_18",
+        "character": "火锅",
+        "pinyin": "huǒ guō"
+      },
+      {
+        "id": "read_d03_19",
+        "character": "瓜果",
+        "pinyin": "guā guǒ"
+      },
+      {
+        "id": "read_d03_20",
+        "character": "花朵",
+        "pinyin": "huā duǒ"
+      },
+      {
+        "id": "read_d03_21",
+        "character": "果皮",
+        "pinyin": "guǒ pí"
+      },
+      {
+        "id": "read_d03_22",
+        "character": "大火",
+        "pinyin": "dà huǒ"
+      },
+      {
+        "id": "read_d03_23",
+        "character": "西瓜",
+        "pinyin": "xī guā"
+      },
+      {
+        "id": "read_d03_24",
+        "character": "梨花",
+        "pinyin": "lí huā"
+      },
+      {
+        "id": "read_d03_25",
+        "character": "哈密瓜",
+        "pinyin": "hā mì guā"
+      },
+      {
+        "id": "read_d03_26",
+        "character": "喝茶",
+        "pinyin": "hē chá"
+      }
+    ]
+  },
+  {
+    "day": 4,
+    "title": "i u ü y w",
+    "items": [
+      {
+        "id": "read_d04_01",
+        "character": "雨衣",
+        "pinyin": "yǔ yī"
+      },
+      {
+        "id": "read_d04_02",
+        "character": "乌鸦",
+        "pinyin": "wū yā"
+      },
+      {
+        "id": "read_d04_03",
+        "character": "鲤鱼",
+        "pinyin": "lǐ yú"
+      },
+      {
+        "id": "read_d04_04",
+        "character": "蚂蚁",
+        "pinyin": "mǎ yǐ"
+      },
+      {
+        "id": "read_d04_05",
+        "character": "玉米",
+        "pinyin": "yù mǐ"
+      },
+      {
+        "id": "read_d04_06",
+        "character": "鸭子",
+        "pinyin": "yā zi"
+      },
+      {
+        "id": "read_d04_07",
+        "character": "牙齿",
+        "pinyin": "yá chǐ"
+      },
+      {
+        "id": "read_d04_08",
+        "character": "鸡窝",
+        "pinyin": "jī wō"
+      },
+      {
+        "id": "read_d04_09",
+        "character": "织布",
+        "pinyin": "zhī bù"
+      },
+      {
+        "id": "read_d04_10",
+        "character": "阿姨",
+        "pinyin": "ā yí"
+      },
+      {
+        "id": "read_d04_11",
+        "character": "屋子",
+        "pinyin": "wū zi"
+      },
+      {
+        "id": "read_d04_12",
+        "character": "衣服",
+        "pinyin": "yī fu"
+      },
+      {
+        "id": "read_d04_13",
+        "character": "椅子",
+        "pinyin": "yǐ zi"
+      },
+      {
+        "id": "read_d04_14",
+        "character": "大雾",
+        "pinyin": "dà wù"
+      },
+      {
+        "id": "read_d04_15",
+        "character": "下雨",
+        "pinyin": "xià yǔ"
+      },
+      {
+        "id": "read_d04_16",
+        "character": "鸭梨",
+        "pinyin": "yā lí"
+      },
+      {
+        "id": "read_d04_17",
+        "character": "袜子",
+        "pinyin": "wà zi"
+      },
+      {
+        "id": "read_d04_18",
+        "character": "桌椅",
+        "pinyin": "zhuō yǐ"
+      },
+      {
+        "id": "read_d04_19",
+        "character": "木屋",
+        "pinyin": "mù wū"
+      },
+      {
+        "id": "read_d04_20",
+        "character": "娃娃",
+        "pinyin": "wá wa"
+      },
+      {
+        "id": "read_d04_21",
+        "character": "鳄鱼",
+        "pinyin": "è yú"
+      }
+    ]
+  },
+  {
+    "day": 5,
+    "title": "j q x",
+    "items": [
+      {
+        "id": "read_d05_01",
+        "character": "机器",
+        "pinyin": "jī qì"
+      },
+      {
+        "id": "read_d05_02",
+        "character": "积木",
+        "pinyin": "jī mù"
+      },
+      {
+        "id": "read_d05_03",
+        "character": "母鸡",
+        "pinyin": "mǔ jī"
+      },
+      {
+        "id": "read_d05_04",
+        "character": "骑马",
+        "pinyin": "qí mǎ"
+      },
+      {
+        "id": "read_d05_05",
+        "character": "起立",
+        "pinyin": "qǐ lì"
+      },
+      {
+        "id": "read_d05_06",
+        "character": "马戏",
+        "pinyin": "mǎ xì"
+      },
+      {
+        "id": "read_d05_07",
+        "character": "复习",
+        "pinyin": "fù xí"
+      },
+      {
+        "id": "read_d05_08",
+        "character": "打气",
+        "pinyin": "dǎ qì"
+      },
+      {
+        "id": "read_d05_09",
+        "character": "集体",
+        "pinyin": "jí tǐ"
+      },
+      {
+        "id": "read_d05_10",
+        "character": "西瓜",
+        "pinyin": "xī guā"
+      },
+      {
+        "id": "read_d05_11",
+        "character": "下棋",
+        "pinyin": "xià qí"
+      },
+      {
+        "id": "read_d05_12",
+        "character": "国家",
+        "pinyin": "guó jiā"
+      },
+      {
+        "id": "read_d05_13",
+        "character": "记录",
+        "pinyin": "jì lù"
+      },
+      {
+        "id": "read_d05_14",
+        "character": "巨大",
+        "pinyin": "jù dà"
+      },
+      {
+        "id": "read_d05_15",
+        "character": "菊花",
+        "pinyin": "jú huā"
+      },
+      {
+        "id": "read_d05_16",
+        "character": "歌曲",
+        "pinyin": "gē qǔ"
+      },
+      {
+        "id": "read_d05_17",
+        "character": "乐趣",
+        "pinyin": "lè qù"
+      },
+      {
+        "id": "read_d05_18",
+        "character": "过去",
+        "pinyin": "guò qù"
+      },
+      {
+        "id": "read_d05_19",
+        "character": "必须",
+        "pinyin": "bì xū"
+      },
+      {
+        "id": "read_d05_20",
+        "character": "加法",
+        "pinyin": "jiā fǎ"
+      },
+      {
+        "id": "read_d05_21",
+        "character": "国旗",
+        "pinyin": "guó qí"
+      },
+      {
+        "id": "read_d05_22",
+        "character": "搭积木",
+        "pinyin": "dā jī mù"
+      },
+      {
+        "id": "read_d05_23",
+        "character": "大家",
+        "pinyin": "dà jiā"
+      },
+      {
+        "id": "read_d05_24",
+        "character": "垃圾",
+        "pinyin": "lā jī"
+      },
+      {
+        "id": "read_d05_25",
+        "character": "胡须",
+        "pinyin": "hú xū"
+      },
+      {
+        "id": "read_d05_26",
+        "character": "许多",
+        "pinyin": "xǔ duō"
+      }
+    ]
+  },
+  {
+    "day": 6,
+    "title": "z c s",
+    "items": [
+      {
+        "id": "read_d06_01",
+        "character": "生字",
+        "pinyin": "shēng zì"
+      },
+      {
+        "id": "read_d06_02",
+        "character": "词语",
+        "pinyin": "cí yǔ"
+      },
+      {
+        "id": "read_d06_03",
+        "character": "句子",
+        "pinyin": "jù zi"
+      },
+      {
+        "id": "read_d06_04",
+        "character": "字母",
+        "pinyin": "zì mǔ"
+      },
+      {
+        "id": "read_d06_05",
+        "character": "仔细",
+        "pinyin": "zǐ xì"
+      },
+      {
+        "id": "read_d06_06",
+        "character": "自己",
+        "pinyin": "zì jǐ"
+      },
+      {
+        "id": "read_d06_07",
+        "character": "瓷器",
+        "pinyin": "cí qì"
+      },
+      {
+        "id": "read_d06_08",
+        "character": "擦洗",
+        "pinyin": "cā xǐ"
+      },
+      {
+        "id": "read_d06_09",
+        "character": "泼洒",
+        "pinyin": "pō sǎ"
+      },
+      {
+        "id": "read_d06_10",
+        "character": "绿色",
+        "pinyin": "lǜ sè"
+      },
+      {
+        "id": "read_d06_11",
+        "character": "紫色",
+        "pinyin": "zǐ sè"
+      },
+      {
+        "id": "read_d06_12",
+        "character": "杂技",
+        "pinyin": "zá jì"
+      },
+      {
+        "id": "read_d06_13",
+        "character": "桔子",
+        "pinyin": "jú zi"
+      },
+      {
+        "id": "read_d06_14",
+        "character": "盒子",
+        "pinyin": "hé zi"
+      },
+      {
+        "id": "read_d06_15",
+        "character": "司机",
+        "pinyin": "sī jī"
+      },
+      {
+        "id": "read_d06_16",
+        "character": "打字",
+        "pinyin": "dǎ zì"
+      },
+      {
+        "id": "read_d06_17",
+        "character": "子女",
+        "pinyin": "zǐ nǚ"
+      },
+      {
+        "id": "read_d06_18",
+        "character": "歌词",
+        "pinyin": "gē cí"
+      },
+      {
+        "id": "read_d06_19",
+        "character": "速度",
+        "pinyin": "sù dù"
+      },
+      {
+        "id": "read_d06_20",
+        "character": "祖国",
+        "pinyin": "zǔ guó"
+      },
+      {
+        "id": "read_d06_21",
+        "character": "宿舍",
+        "pinyin": "sù shè"
+      },
+      {
+        "id": "read_d06_22",
+        "character": "祖父",
+        "pinyin": "zǔ fù"
+      },
+      {
+        "id": "read_d06_23",
+        "character": "祖母",
+        "pinyin": "zǔ mǔ"
+      },
+      {
+        "id": "read_d06_24",
+        "character": "粗细",
+        "pinyin": "cū xì"
+      }
+    ]
+  },
+  {
+    "day": 7,
+    "title": "zh ch sh r",
+    "items": [
+      {
+        "id": "read_d07_01",
+        "character": "擦桌子",
+        "pinyin": "cā zhuō zi"
+      },
+      {
+        "id": "read_d07_02",
+        "character": "折纸",
+        "pinyin": "zhé zhǐ"
+      },
+      {
+        "id": "read_d07_03",
+        "character": "日出",
+        "pinyin": "rì chū"
+      },
+      {
+        "id": "read_d07_04",
+        "character": "竹子",
+        "pinyin": "zhú zi"
+      },
+      {
+        "id": "read_d07_05",
+        "character": "日历",
+        "pinyin": "rì lì"
+      },
+      {
+        "id": "read_d07_06",
+        "character": "爪子",
+        "pinyin": "zhuǎ zi"
+      },
+      {
+        "id": "read_d07_07",
+        "character": "值日",
+        "pinyin": "zhí rì"
+      },
+      {
+        "id": "read_d07_08",
+        "character": "蜡烛",
+        "pinyin": "là zhú"
+      },
+      {
+        "id": "read_d07_09",
+        "character": "说话",
+        "pinyin": "shuō huà"
+      },
+      {
+        "id": "read_d07_10",
+        "character": "数字",
+        "pinyin": "shù zì"
+      },
+      {
+        "id": "read_d07_11",
+        "character": "读书",
+        "pinyin": "dú shū"
+      },
+      {
+        "id": "read_d07_12",
+        "character": "日子",
+        "pinyin": "rì zi"
+      },
+      {
+        "id": "read_d07_13",
+        "character": "师傅",
+        "pinyin": "shī fu"
+      },
+      {
+        "id": "read_d07_14",
+        "character": "厨师",
+        "pinyin": "chú shī"
+      },
+      {
+        "id": "read_d07_15",
+        "character": "热茶",
+        "pinyin": "rè chá"
+      },
+      {
+        "id": "read_d07_16",
+        "character": "直尺",
+        "pinyin": "zhí chǐ"
+      },
+      {
+        "id": "read_d07_17",
+        "character": "蜘蛛",
+        "pinyin": "zhī zhū"
+      },
+      {
+        "id": "read_d07_18",
+        "character": "汽车",
+        "pinyin": "qì chē"
+      },
+      {
+        "id": "read_d07_19",
+        "character": "知识",
+        "pinyin": "zhī shi"
+      },
+      {
+        "id": "read_d07_20",
+        "character": "历史",
+        "pinyin": "lì shǐ"
+      },
+      {
+        "id": "read_d07_21",
+        "character": "扎针",
+        "pinyin": "zhā zhēn"
+      },
+      {
+        "id": "read_d07_22",
+        "character": "尺子",
+        "pinyin": "chǐ zi"
+      },
+      {
+        "id": "read_d07_23",
+        "character": "插图",
+        "pinyin": "chā tú"
+      },
+      {
+        "id": "read_d07_24",
+        "character": "沙发",
+        "pinyin": "shā fā"
+      },
+      {
+        "id": "read_d07_25",
+        "character": "泥沙",
+        "pinyin": "ní shā"
+      },
+      {
+        "id": "read_d07_26",
+        "character": "沙子",
+        "pinyin": "shā zi"
+      },
+      {
+        "id": "read_d07_27",
+        "character": "蛇",
+        "pinyin": "shé"
+      },
+      {
+        "id": "read_d07_28",
+        "character": "狮子",
+        "pinyin": "shī zi"
+      },
+      {
+        "id": "read_d07_29",
+        "character": "书架",
+        "pinyin": "shū jià"
+      }
+    ]
+  },
+  {
+    "day": 8,
+    "title": "语文园地二",
+    "items": [
+      {
+        "id": "read_d08_01",
+        "character": "字母",
+        "pinyin": "zì mǔ"
+      },
+      {
+        "id": "read_d08_02",
+        "character": "蜘蛛",
+        "pinyin": "zhī zhū"
+      },
+      {
+        "id": "read_d08_03",
+        "character": "擦玻璃",
+        "pinyin": "cā bō li"
+      },
+      {
+        "id": "read_d08_04",
+        "character": "牙齿",
+        "pinyin": "yá chǐ"
+      },
+      {
+        "id": "read_d08_05",
+        "character": "宿舍",
+        "pinyin": "sù shè"
+      },
+      {
+        "id": "read_d08_06",
+        "character": "读书",
+        "pinyin": "dú shū"
+      },
+      {
+        "id": "read_d08_07",
+        "character": "拔河",
+        "pinyin": "bá hé"
+      },
+      {
+        "id": "read_d08_08",
+        "character": "打靶",
+        "pinyin": "dǎ bǎ"
+      },
+      {
+        "id": "read_d08_09",
+        "character": "瀑布",
+        "pinyin": "pù bù"
+      },
+      {
+        "id": "read_d08_10",
+        "character": "歌曲",
+        "pinyin": "gē qǔ"
+      },
+      {
+        "id": "read_d08_11",
+        "character": "斧子",
+        "pinyin": "fǔ zi"
+      },
+      {
+        "id": "read_d08_12",
+        "character": "地图",
+        "pinyin": "dì tú"
+      },
+      {
+        "id": "read_d08_13",
+        "character": "喝茶",
+        "pinyin": "hē chá"
+      },
+      {
+        "id": "read_d08_14",
+        "character": "骑马",
+        "pinyin": "qí mǎ"
+      },
+      {
+        "id": "read_d08_15",
+        "character": "吃西瓜",
+        "pinyin": "chī xī guā"
+      },
+      {
+        "id": "read_d08_16",
+        "character": "拖地",
+        "pinyin": "tuō dì"
+      },
+      {
+        "id": "read_d08_17",
+        "character": "理发",
+        "pinyin": "lǐ fà"
+      },
+      {
+        "id": "read_d08_18",
+        "character": "拔萝卜",
+        "pinyin": "bá luó bo"
+      },
+      {
+        "id": "read_d08_19",
+        "character": "鳄鱼",
+        "pinyin": "è yú"
+      },
+      {
+        "id": "read_d08_20",
+        "character": "菠萝",
+        "pinyin": "bō luó"
+      },
+      {
+        "id": "read_d08_21",
+        "character": "骆驼",
+        "pinyin": "luò tuo"
+      },
+      {
+        "id": "read_d08_22",
+        "character": "驴",
+        "pinyin": "lǘ"
+      },
+      {
+        "id": "read_d08_23",
+        "character": "鸭梨",
+        "pinyin": "yā lí"
+      },
+      {
+        "id": "read_d08_24",
+        "character": "乌鸦",
+        "pinyin": "wū yā"
+      },
+      {
+        "id": "read_d08_25",
+        "character": "桔子",
+        "pinyin": "jú zi"
+      },
+      {
+        "id": "read_d08_26",
+        "character": "蚂蚁",
+        "pinyin": "mǎ yǐ"
+      }
+    ]
+  },
+  {
+    "day": 9,
+    "title": "ai ei ui（一）",
+    "items": [
+      {
+        "id": "read_d09_01",
+        "character": "奶奶",
+        "pinyin": "nǎi nai"
+      },
+      {
+        "id": "read_d09_02",
+        "character": "妹妹",
+        "pinyin": "mèi mei"
+      },
+      {
+        "id": "read_d09_03",
+        "character": "排队",
+        "pinyin": "pái duì"
+      },
+      {
+        "id": "read_d09_04",
+        "character": "白菜",
+        "pinyin": "bái cài"
+      },
+      {
+        "id": "read_d09_05",
+        "character": "梅花",
+        "pinyin": "méi huā"
+      },
+      {
+        "id": "read_d09_06",
+        "character": "书柜",
+        "pinyin": "shū guì"
+      },
+      {
+        "id": "read_d09_07",
+        "character": "茶杯",
+        "pinyin": "chá bēi"
+      },
+      {
+        "id": "read_d09_08",
+        "character": "乌龟",
+        "pinyin": "wū guī"
+      },
+      {
+        "id": "read_d09_09",
+        "character": "回来",
+        "pinyin": "huí lái"
+      },
+      {
+        "id": "read_d09_10",
+        "character": "女孩",
+        "pinyin": "nǚ hái"
+      },
+      {
+        "id": "read_d09_11",
+        "character": "白鸽",
+        "pinyin": "bái gē"
+      },
+      {
+        "id": "read_d09_12",
+        "character": "袋鼠",
+        "pinyin": "dài shǔ"
+      },
+      {
+        "id": "read_d09_13",
+        "character": "飞机",
+        "pinyin": "fēi jī"
+      },
+      {
+        "id": "read_d09_14",
+        "character": "白兔",
+        "pinyin": "bái tù"
+      },
+      {
+        "id": "read_d09_15",
+        "character": "火柴",
+        "pinyin": "huǒ chái"
+      },
+      {
+        "id": "read_d09_16",
+        "character": "杯子",
+        "pinyin": "bēi zi"
+      },
+      {
+        "id": "read_d09_17",
+        "character": "退步",
+        "pinyin": "tuì bù"
+      },
+      {
+        "id": "read_d09_18",
+        "character": "洒水",
+        "pinyin": "sǎ shuǐ"
+      },
+      {
+        "id": "read_d09_19",
+        "character": "孩子",
+        "pinyin": "hái zi"
+      },
+      {
+        "id": "read_d09_20",
+        "character": "比赛",
+        "pinyin": "bǐ sài"
+      },
+      {
+        "id": "read_d09_21",
+        "character": "喝水",
+        "pinyin": "hē shuǐ"
+      },
+      {
+        "id": "read_d09_22",
+        "character": "奇怪",
+        "pinyin": "qí guài"
+      },
+      {
+        "id": "read_d09_23",
+        "character": "开水",
+        "pinyin": "kāi shuǐ"
+      },
+      {
+        "id": "read_d09_24",
+        "character": "回家",
+        "pinyin": "huí jiā"
+      }
+    ]
+  },
+  {
+    "day": 10,
+    "title": "ai ei ui（二）",
+    "items": [
+      {
+        "id": "read_d10_01",
+        "character": "害怕",
+        "pinyin": "hài pà"
+      },
+      {
+        "id": "read_d10_02",
+        "character": "废纸",
+        "pinyin": "fèi zhǐ"
+      },
+      {
+        "id": "read_d10_03",
+        "character": "队伍",
+        "pinyin": "duì wu"
+      },
+      {
+        "id": "read_d10_04",
+        "character": "开会",
+        "pinyin": "kāi huì"
+      },
+      {
+        "id": "read_d10_05",
+        "character": "海豚",
+        "pinyin": "hǎi tún"
+      },
+      {
+        "id": "read_d10_06",
+        "character": "话梅",
+        "pinyin": "huà méi"
+      },
+      {
+        "id": "read_d10_07",
+        "character": "快乐",
+        "pinyin": "kuài lè"
+      },
+      {
+        "id": "read_d10_08",
+        "character": "美丽",
+        "pinyin": "měi lì"
+      },
+      {
+        "id": "read_d10_09",
+        "character": "水果",
+        "pinyin": "shuǐ guǒ"
+      },
+      {
+        "id": "read_d10_10",
+        "character": "海带",
+        "pinyin": "hǎi dài"
+      },
+      {
+        "id": "read_d10_11",
+        "character": "美术",
+        "pinyin": "měi shù"
+      },
+      {
+        "id": "read_d10_12",
+        "character": "黑色",
+        "pinyin": "hēi sè"
+      },
+      {
+        "id": "read_d10_13",
+        "character": "彩旗",
+        "pinyin": "cǎi qí"
+      },
+      {
+        "id": "read_d10_14",
+        "character": "皮带",
+        "pinyin": "pí dài"
+      },
+      {
+        "id": "read_d10_15",
+        "character": "桂花",
+        "pinyin": "guì huā"
+      },
+      {
+        "id": "read_d10_16",
+        "character": "尾巴",
+        "pinyin": "wěi ba"
+      },
+      {
+        "id": "read_d10_17",
+        "character": "火腿",
+        "pinyin": "huǒ tuǐ"
+      },
+      {
+        "id": "read_d10_18",
+        "character": "奶嘴",
+        "pinyin": "nǎi zuǐ"
+      },
+      {
+        "id": "read_d10_19",
+        "character": "猜谜语",
+        "pinyin": "cāi mí yǔ"
+      },
+      {
+        "id": "read_d10_20",
+        "character": "吹喇叭",
+        "pinyin": "chuī lǎ ba"
+      }
+    ]
+  },
+  {
+    "day": 11,
+    "title": "ao ou iu（一）",
+    "items": [
+      {
+        "id": "read_d11_01",
+        "character": "小桥",
+        "pinyin": "xiǎo qiáo"
+      },
+      {
+        "id": "read_d11_02",
+        "character": "流水",
+        "pinyin": "liú shuǐ"
+      },
+      {
+        "id": "read_d11_03",
+        "character": "垂柳",
+        "pinyin": "chuí liǔ"
+      },
+      {
+        "id": "read_d11_04",
+        "character": "桃花",
+        "pinyin": "táo huā"
+      },
+      {
+        "id": "read_d11_05",
+        "character": "小牛",
+        "pinyin": "xiǎo niú"
+      },
+      {
+        "id": "read_d11_06",
+        "character": "毛笔",
+        "pinyin": "máo bǐ"
+      },
+      {
+        "id": "read_d11_07",
+        "character": "荷花",
+        "pinyin": "hé huā"
+      },
+      {
+        "id": "read_d11_08",
+        "character": "跳舞",
+        "pinyin": "tiào wǔ"
+      },
+      {
+        "id": "read_d11_09",
+        "character": "高矮",
+        "pinyin": "gāo ǎi"
+      },
+      {
+        "id": "read_d11_10",
+        "character": "葡萄",
+        "pinyin": "pú tao"
+      },
+      {
+        "id": "read_d11_11",
+        "character": "跑步",
+        "pinyin": "pǎo bù"
+      },
+      {
+        "id": "read_d11_12",
+        "character": "海鸥",
+        "pinyin": "hǎi ōu"
+      },
+      {
+        "id": "read_d11_13",
+        "character": "小猴",
+        "pinyin": "xiǎo hóu"
+      },
+      {
+        "id": "read_d11_14",
+        "character": "皮球",
+        "pinyin": "pí qiú"
+      },
+      {
+        "id": "read_d11_15",
+        "character": "书包",
+        "pinyin": "shū bāo"
+      },
+      {
+        "id": "read_d11_16",
+        "character": "老师",
+        "pinyin": "lǎo shi"
+      },
+      {
+        "id": "read_d11_17",
+        "character": "高楼",
+        "pinyin": "gāo lóu"
+      },
+      {
+        "id": "read_d11_18",
+        "character": "教室",
+        "pinyin": "jiào shì"
+      },
+      {
+        "id": "read_d11_19",
+        "character": "走路",
+        "pinyin": "zǒu lù"
+      },
+      {
+        "id": "read_d11_20",
+        "character": "花狗",
+        "pinyin": "huā gǒu"
+      },
+      {
+        "id": "read_d11_21",
+        "character": "报纸",
+        "pinyin": "bào zhǐ"
+      },
+      {
+        "id": "read_d11_22",
+        "character": "休息",
+        "pinyin": "xiū xi"
+      },
+      {
+        "id": "read_d11_23",
+        "character": "手帕",
+        "pinyin": "shǒu pà"
+      },
+      {
+        "id": "read_d11_24",
+        "character": "知道",
+        "pinyin": "zhī dào"
+      },
+      {
+        "id": "read_d11_25",
+        "character": "道理",
+        "pinyin": "dào lǐ"
+      }
+    ]
+  },
+  {
+    "day": 12,
+    "title": "ao ou iu（二）",
+    "items": [
+      {
+        "id": "read_d12_01",
+        "character": "告诉",
+        "pinyin": "gào sù"
+      },
+      {
+        "id": "read_d12_02",
+        "character": "早操",
+        "pinyin": "zǎo cāo"
+      },
+      {
+        "id": "read_d12_03",
+        "character": "梳头",
+        "pinyin": "shū tóu"
+      },
+      {
+        "id": "read_d12_04",
+        "character": "要求",
+        "pinyin": "yāo qiú"
+      },
+      {
+        "id": "read_d12_05",
+        "character": "纽扣",
+        "pinyin": "niǔ kòu"
+      },
+      {
+        "id": "read_d12_06",
+        "character": "优秀",
+        "pinyin": "yōu xiù"
+      },
+      {
+        "id": "read_d12_07",
+        "character": "禾苗",
+        "pinyin": "hé miáo"
+      },
+      {
+        "id": "read_d12_08",
+        "character": "跳水",
+        "pinyin": "tiào shuǐ"
+      },
+      {
+        "id": "read_d12_09",
+        "character": "打球",
+        "pinyin": "dǎ qiú"
+      },
+      {
+        "id": "read_d12_10",
+        "character": "牙膏",
+        "pinyin": "yá gāo"
+      },
+      {
+        "id": "read_d12_11",
+        "character": "考试",
+        "pinyin": "kǎo shì"
+      },
+      {
+        "id": "read_d12_12",
+        "character": "脑袋",
+        "pinyin": "nǎo dai"
+      },
+      {
+        "id": "read_d12_13",
+        "character": "水牛",
+        "pinyin": "shuǐ niú"
+      },
+      {
+        "id": "read_d12_14",
+        "character": "没有",
+        "pinyin": "méi yǒu"
+      },
+      {
+        "id": "read_d12_15",
+        "character": "水蜜桃",
+        "pinyin": "shuǐ mì táo"
+      },
+      {
+        "id": "read_d12_16",
+        "character": "握手",
+        "pinyin": "wò shǒu"
+      },
+      {
+        "id": "read_d12_17",
+        "character": "小刀",
+        "pinyin": "xiǎo dāo"
+      },
+      {
+        "id": "read_d12_18",
+        "character": "毛皮",
+        "pinyin": "máo pí"
+      },
+      {
+        "id": "read_d12_19",
+        "character": "油菜",
+        "pinyin": "yóu cài"
+      },
+      {
+        "id": "read_d12_20",
+        "character": "头发",
+        "pinyin": "tóu fa"
+      },
+      {
+        "id": "read_d12_21",
+        "character": "老牛",
+        "pinyin": "lǎo niú"
+      },
+      {
+        "id": "read_d12_22",
+        "character": "嘴巴",
+        "pinyin": "zuǐ ba"
+      },
+      {
+        "id": "read_d12_23",
+        "character": "推车",
+        "pinyin": "tuī chē"
+      },
+      {
+        "id": "read_d12_24",
+        "character": "桂花",
+        "pinyin": "guì huā"
+      },
+      {
+        "id": "read_d12_25",
+        "character": "梨花",
+        "pinyin": "lí huā"
+      }
+    ]
+  },
+  {
+    "day": 13,
+    "title": "ao ou iu（三）",
+    "items": [
+      {
+        "id": "read_d13_01",
+        "character": "菊花",
+        "pinyin": "jú huā"
+      },
+      {
+        "id": "read_d13_02",
+        "character": "梅花",
+        "pinyin": "méi huā"
+      },
+      {
+        "id": "read_d13_03",
+        "character": "玫瑰花",
+        "pinyin": "méi gui huā"
+      },
+      {
+        "id": "read_d13_04",
+        "character": "喇叭花",
+        "pinyin": "lǎ ba huā"
+      },
+      {
+        "id": "read_d13_05",
+        "character": "石榴花",
+        "pinyin": "shí liu huā"
+      },
+      {
+        "id": "read_d13_06",
+        "character": "手表",
+        "pinyin": "shǒu biǎo"
+      },
+      {
+        "id": "read_d13_07",
+        "character": "小鸟",
+        "pinyin": "xiǎo niǎo"
+      },
+      {
+        "id": "read_d13_08",
+        "character": "多少",
+        "pinyin": "duō shǎo"
+      },
+      {
+        "id": "read_d13_09",
+        "character": "招手",
+        "pinyin": "zhāo shǒu"
+      },
+      {
+        "id": "read_d13_10",
+        "character": "水沟",
+        "pinyin": "shuǐ gōu"
+      },
+      {
+        "id": "read_d13_11",
+        "character": "菠菜",
+        "pinyin": "bō cài"
+      },
+      {
+        "id": "read_d13_12",
+        "character": "宝贝",
+        "pinyin": "bǎo bèi"
+      },
+      {
+        "id": "read_d13_13",
+        "character": "钥匙",
+        "pinyin": "yào shi"
+      },
+      {
+        "id": "read_d13_14",
+        "character": "优秀",
+        "pinyin": "yōu xiù"
+      },
+      {
+        "id": "read_d13_15",
+        "character": "手套",
+        "pinyin": "shǒu tào"
+      },
+      {
+        "id": "read_d13_16",
+        "character": "秋游",
+        "pinyin": "qiū yóu"
+      },
+      {
+        "id": "read_d13_17",
+        "character": "走木桥",
+        "pinyin": "zǒu mù qiáo"
+      },
+      {
+        "id": "read_d13_18",
+        "character": "留下来",
+        "pinyin": "liú xià lái"
+      },
+      {
+        "id": "read_d13_19",
+        "character": "皱眉头",
+        "pinyin": "zhòu méi tóu"
+      }
+    ]
+  },
+  {
+    "day": 14,
+    "title": "ie üe er（一）",
+    "items": [
+      {
+        "id": "read_d14_01",
+        "character": "夜色",
+        "pinyin": "yè sè"
+      },
+      {
+        "id": "read_d14_02",
+        "character": "雪花",
+        "pinyin": "xuě huā"
+      },
+      {
+        "id": "read_d14_03",
+        "character": "写作业",
+        "pinyin": "xiě zuò yè"
+      },
+      {
+        "id": "read_d14_04",
+        "character": "学习",
+        "pinyin": "xué xí"
+      },
+      {
+        "id": "read_d14_05",
+        "character": "切菜",
+        "pinyin": "qiē cài"
+      },
+      {
+        "id": "read_d14_06",
+        "character": "憋气",
+        "pinyin": "biē qì"
+      },
+      {
+        "id": "read_d14_07",
+        "character": "落叶",
+        "pinyin": "luò yè"
+      },
+      {
+        "id": "read_d14_08",
+        "character": "叶子",
+        "pinyin": "yè zi"
+      },
+      {
+        "id": "read_d14_09",
+        "character": "日月",
+        "pinyin": "rì yuè"
+      },
+      {
+        "id": "read_d14_10",
+        "character": "耳朵",
+        "pinyin": "ěr duo"
+      },
+      {
+        "id": "read_d14_11",
+        "character": "白雪",
+        "pinyin": "bái xuě"
+      },
+      {
+        "id": "read_d14_12",
+        "character": "喜鹊",
+        "pinyin": "xǐ què"
+      },
+      {
+        "id": "read_d14_13",
+        "character": "女儿",
+        "pinyin": "nǚ ér"
+      },
+      {
+        "id": "read_d14_14",
+        "character": "儿子",
+        "pinyin": "ér zi"
+      },
+      {
+        "id": "read_d14_15",
+        "character": "阅读",
+        "pinyin": "yuè dú"
+      },
+      {
+        "id": "read_d14_16",
+        "character": "布鞋",
+        "pinyin": "bù xié"
+      },
+      {
+        "id": "read_d14_17",
+        "character": "蝴蝶",
+        "pinyin": "hú dié"
+      },
+      {
+        "id": "read_d14_18",
+        "character": "谢谢",
+        "pinyin": "xiè xie"
+      },
+      {
+        "id": "read_d14_19",
+        "character": "贴画",
+        "pinyin": "tiē huà"
+      },
+      {
+        "id": "read_d14_20",
+        "character": "大街",
+        "pinyin": "dà jiē"
+      },
+      {
+        "id": "read_d14_21",
+        "character": "学校",
+        "pinyin": "xué xiào"
+      },
+      {
+        "id": "read_d14_22",
+        "character": "爷爷",
+        "pinyin": "yé ye"
+      },
+      {
+        "id": "read_d14_23",
+        "character": "野兔",
+        "pinyin": "yě tù"
+      },
+      {
+        "id": "read_d14_24",
+        "character": "月牙",
+        "pinyin": "yuè yá"
+      },
+      {
+        "id": "read_d14_25",
+        "character": "黑夜",
+        "pinyin": "hēi yè"
+      },
+      {
+        "id": "read_d14_26",
+        "character": "节日",
+        "pinyin": "jié rì"
+      },
+      {
+        "id": "read_d14_27",
+        "character": "乐器",
+        "pinyin": "yuè qì"
+      },
+      {
+        "id": "read_d14_28",
+        "character": "茄子",
+        "pinyin": "qié zi"
+      },
+      {
+        "id": "read_d14_29",
+        "character": "姐姐",
+        "pinyin": "jiě jie"
+      },
+      {
+        "id": "read_d14_30",
+        "character": "写字",
+        "pinyin": "xiě zì"
+      }
+    ]
+  },
+  {
+    "day": 15,
+    "title": "ie üe er（二）",
+    "items": [
+      {
+        "id": "read_d15_01",
+        "character": "乐曲",
+        "pinyin": "yuè qǔ"
+      },
+      {
+        "id": "read_d15_02",
+        "character": "耳机",
+        "pinyin": "ěr jī"
+      },
+      {
+        "id": "read_d15_03",
+        "character": "月球",
+        "pinyin": "yuè qiú"
+      },
+      {
+        "id": "read_d15_04",
+        "character": "发觉",
+        "pinyin": "fā jué"
+      },
+      {
+        "id": "read_d15_05",
+        "character": "口诀",
+        "pinyin": "kǒu jué"
+      },
+      {
+        "id": "read_d15_06",
+        "character": "特别",
+        "pinyin": "tè bié"
+      },
+      {
+        "id": "read_d15_07",
+        "character": "结束",
+        "pinyin": "jié shù"
+      },
+      {
+        "id": "read_d15_08",
+        "character": "味道",
+        "pinyin": "wèi dào"
+      },
+      {
+        "id": "read_d15_09",
+        "character": "科学",
+        "pinyin": "kē xué"
+      },
+      {
+        "id": "read_d15_10",
+        "character": "野外",
+        "pinyin": "yě wài"
+      },
+      {
+        "id": "read_d15_11",
+        "character": "跳跃",
+        "pinyin": "tiào yuè"
+      },
+      {
+        "id": "read_d15_12",
+        "character": "铁路",
+        "pinyin": "tiě lù"
+      },
+      {
+        "id": "read_d15_13",
+        "character": "缺少",
+        "pinyin": "quē shǎo"
+      },
+      {
+        "id": "read_d15_14",
+        "character": "麻雀",
+        "pinyin": "má què"
+      },
+      {
+        "id": "read_d15_15",
+        "character": "小学",
+        "pinyin": "xiǎo xué"
+      },
+      {
+        "id": "read_d15_16",
+        "character": "越来越好",
+        "pinyin": "yuè lái yuè hǎo"
+      }
+    ]
+  },
+  {
+    "day": 16,
+    "title": "an en in un ün",
+    "items": [
+      {
+        "id": "read_d16_01",
+        "character": "蓝天",
+        "pinyin": "lán tiān"
+      },
+      {
+        "id": "read_d16_02",
+        "character": "白云",
+        "pinyin": "bái yún"
+      },
+      {
+        "id": "read_d16_03",
+        "character": "草原",
+        "pinyin": "cǎo yuán"
+      },
+      {
+        "id": "read_d16_04",
+        "character": "森林",
+        "pinyin": "sēn lín"
+      },
+      {
+        "id": "read_d16_05",
+        "character": "轮船",
+        "pinyin": "lún chuán"
+      },
+      {
+        "id": "read_d16_06",
+        "character": "漫画",
+        "pinyin": "màn huà"
+      },
+      {
+        "id": "read_d16_07",
+        "character": "弹琴",
+        "pinyin": "tán qín"
+      },
+      {
+        "id": "read_d16_08",
+        "character": "炎热",
+        "pinyin": "yán rè"
+      },
+      {
+        "id": "read_d16_09",
+        "character": "打针",
+        "pinyin": "dǎ zhēn"
+      },
+      {
+        "id": "read_d16_10",
+        "character": "语文",
+        "pinyin": "yǔ wén"
+      },
+      {
+        "id": "read_d16_11",
+        "character": "嫩绿",
+        "pinyin": "nèn lǜ"
+      },
+      {
+        "id": "read_d16_12",
+        "character": "灰尘",
+        "pinyin": "huī chén"
+      },
+      {
+        "id": "read_d16_13",
+        "character": "邻居",
+        "pinyin": "lín jū"
+      },
+      {
+        "id": "read_d16_14",
+        "character": "辛苦",
+        "pinyin": "xīn kǔ"
+      },
+      {
+        "id": "read_d16_15",
+        "character": "满足",
+        "pinyin": "mǎn zú"
+      },
+      {
+        "id": "read_d16_16",
+        "character": "军人",
+        "pinyin": "jūn rén"
+      },
+      {
+        "id": "read_d16_17",
+        "character": "春节",
+        "pinyin": "chūn jié"
+      },
+      {
+        "id": "read_d16_18",
+        "character": "孙女",
+        "pinyin": "sūn nǚ"
+      },
+      {
+        "id": "read_d16_19",
+        "character": "棍子",
+        "pinyin": "gùn zi"
+      },
+      {
+        "id": "read_d16_20",
+        "character": "准备",
+        "pinyin": "zhǔn bèi"
+      },
+      {
+        "id": "read_d16_21",
+        "character": "冠军",
+        "pinyin": "guàn jūn"
+      },
+      {
+        "id": "read_d16_22",
+        "character": "圆圈",
+        "pinyin": "yuán quān"
+      },
+      {
+        "id": "read_d16_23",
+        "character": "蚯蚓",
+        "pinyin": "qiū yǐn"
+      },
+      {
+        "id": "read_d16_24",
+        "character": "粉笔",
+        "pinyin": "fěn bǐ"
+      }
+    ]
+  },
+  {
+    "day": 17,
+    "title": "ang eng ing ong（一）",
+    "items": [
+      {
+        "id": "read_d17_01",
+        "character": "游泳",
+        "pinyin": "yóu yǒng"
+      },
+      {
+        "id": "read_d17_02",
+        "character": "骑自行车",
+        "pinyin": "qí zì xíng chē"
+      },
+      {
+        "id": "read_d17_03",
+        "character": "打乒乓球",
+        "pinyin": "dǎ pīng pāng qiú"
+      },
+      {
+        "id": "read_d17_04",
+        "character": "明亮",
+        "pinyin": "míng liàng"
+      },
+      {
+        "id": "read_d17_05",
+        "character": "大象",
+        "pinyin": "dà xiàng"
+      },
+      {
+        "id": "read_d17_06",
+        "character": "帮忙",
+        "pinyin": "bāng máng"
+      },
+      {
+        "id": "read_d17_07",
+        "character": "灯笼",
+        "pinyin": "dēng long"
+      },
+      {
+        "id": "read_d17_08",
+        "character": "手枪",
+        "pinyin": "shǒu qiāng"
+      },
+      {
+        "id": "read_d17_09",
+        "character": "蜜蜂",
+        "pinyin": "mì fēng"
+      },
+      {
+        "id": "read_d17_10",
+        "character": "朋友",
+        "pinyin": "péng yǒu"
+      },
+      {
+        "id": "read_d17_11",
+        "character": "门窗",
+        "pinyin": "mén chuāng"
+      },
+      {
+        "id": "read_d17_12",
+        "character": "英雄",
+        "pinyin": "yīng xióng"
+      },
+      {
+        "id": "read_d17_13",
+        "character": "放风筝",
+        "pinyin": "fàng fēng zheng"
+      },
+      {
+        "id": "read_d17_14",
+        "character": "跑步",
+        "pinyin": "pǎo bù"
+      },
+      {
+        "id": "read_d17_15",
+        "character": "跳高",
+        "pinyin": "tiào gāo"
+      },
+      {
+        "id": "read_d17_16",
+        "character": "电影",
+        "pinyin": "diàn yǐng"
+      },
+      {
+        "id": "read_d17_17",
+        "character": "熊猫",
+        "pinyin": "xióng māo"
+      },
+      {
+        "id": "read_d17_18",
+        "character": "电冰箱",
+        "pinyin": "diàn bīng xiāng"
+      },
+      {
+        "id": "read_d17_19",
+        "character": "红旗",
+        "pinyin": "hóng qí"
+      }
+    ]
+  },
+  {
+    "day": 18,
+    "title": "ang eng ing ong（二）",
+    "items": [
+      {
+        "id": "read_d18_01",
+        "character": "闹钟",
+        "pinyin": "nào zhōng"
+      },
+      {
+        "id": "read_d18_02",
+        "character": "长颈鹿",
+        "pinyin": "cháng jǐng lù"
+      },
+      {
+        "id": "read_d18_03",
+        "character": "广场",
+        "pinyin": "guǎng chǎng"
+      },
+      {
+        "id": "read_d18_04",
+        "character": "打羽毛球",
+        "pinyin": "dǎ yǔ máo qiú"
+      },
+      {
+        "id": "read_d18_05",
+        "character": "房屋",
+        "pinyin": "fáng wū"
+      },
+      {
+        "id": "read_d18_06",
+        "character": "爬山",
+        "pinyin": "pá shān"
+      },
+      {
+        "id": "read_d18_07",
+        "character": "北京",
+        "pinyin": "běi jīng"
+      },
+      {
+        "id": "read_d18_08",
+        "character": "跳绳",
+        "pinyin": "tiào shéng"
+      },
+      {
+        "id": "read_d18_09",
+        "character": "踢足球",
+        "pinyin": "tī zú qiú"
+      },
+      {
+        "id": "read_d18_10",
+        "character": "跳远",
+        "pinyin": "tiào yuǎn"
+      },
+      {
+        "id": "read_d18_11",
+        "character": "打排球",
+        "pinyin": "dǎ pái qiú"
+      },
+      {
+        "id": "read_d18_12",
+        "character": "做广播体操",
+        "pinyin": "zuò guǎng bō tǐ cāo"
+      }
+    ]
+  },
+  {
+    "day": 19,
+    "title": "语文园地三",
+    "items": [
+      {
+        "id": "read_d19_01",
+        "character": "鞋子",
+        "pinyin": "xié zi"
+      },
+      {
+        "id": "read_d19_02",
+        "character": "打雷",
+        "pinyin": "dǎ léi"
+      },
+      {
+        "id": "read_d19_03",
+        "character": "打猎",
+        "pinyin": "dǎ liè"
+      },
+      {
+        "id": "read_d19_04",
+        "character": "叠被子",
+        "pinyin": "dié bèi zi"
+      },
+      {
+        "id": "read_d19_05",
+        "character": "喝水",
+        "pinyin": "hē shuǐ"
+      },
+      {
+        "id": "read_d19_06",
+        "character": "吹气球",
+        "pinyin": "chuī qì qiú"
+      },
+      {
+        "id": "read_d19_07",
+        "character": "帽子",
+        "pinyin": "mào zi"
+      },
+      {
+        "id": "read_d19_08",
+        "character": "水壶",
+        "pinyin": "shuǐ hú"
+      },
+      {
+        "id": "read_d19_09",
+        "character": "苹果",
+        "pinyin": "píng guǒ"
+      },
+      {
+        "id": "read_d19_10",
+        "character": "跳棋",
+        "pinyin": "tiào qí"
+      },
+      {
+        "id": "read_d19_11",
+        "character": "田野",
+        "pinyin": "tián yě"
+      },
+      {
+        "id": "read_d19_12",
+        "character": "堆雪人",
+        "pinyin": "duī xuě rén"
+      },
+      {
+        "id": "read_d19_13",
+        "character": "饼干",
+        "pinyin": "bǐng gān"
+      },
+      {
+        "id": "read_d19_14",
+        "character": "雨伞",
+        "pinyin": "yǔ sǎn"
+      },
+      {
+        "id": "read_d19_15",
+        "character": "汽车",
+        "pinyin": "qì chē"
+      },
+      {
+        "id": "read_d19_16",
+        "character": "题目",
+        "pinyin": "tí mù"
+      },
+      {
+        "id": "read_d19_17",
+        "character": "望远镜",
+        "pinyin": "wàng yuǎn jìng"
+      },
+      {
+        "id": "read_d19_18",
+        "character": "车厢",
+        "pinyin": "chē xiāng"
+      },
+      {
+        "id": "read_d19_19",
+        "character": "门口",
+        "pinyin": "mén kǒu"
+      },
+      {
+        "id": "read_d19_20",
+        "character": "生日",
+        "pinyin": "shēng rì"
+      },
+      {
+        "id": "read_d19_21",
+        "character": "秒表",
+        "pinyin": "miǎo biǎo"
+      },
+      {
+        "id": "read_d19_22",
+        "character": "丢手绢",
+        "pinyin": "diū shǒu juàn"
+      },
+      {
+        "id": "read_d19_23",
+        "character": "水彩笔",
+        "pinyin": "shuǐ cǎi bǐ"
+      }
+    ]
+  }
+]
